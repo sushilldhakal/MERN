@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <!-- <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" /> -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/bootstrap-dropdown.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/bootstrap-select.min.js"
+    ></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/slick.min.js"
+    ></script> -->
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/modernizr.min.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/bootstrap-dropdown.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/bootstrap-select.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/sm-core-css.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/sm-clean.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/sm-blue.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/sm-mint.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/sm-simple.min.css"
+    />
+
+    <!-- air datepicker css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/datepicker.min.css"
+    />
+
+    <!-- ion range slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/ion.rangeSlider.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinFlat.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinHTML5.min.css"> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/css/ion.rangeSlider.skinModern.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinNice.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinSimple.min.css"> -->
+
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/ion.rangeSlider.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/datepicker.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/datepicker.en.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/WOW.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/sushilldhakal/lordbuddha/master/assets/js/jquery.smartmenus.min.js"
+    ></script>
+    <script type="text/javascript">
+      jQuery(function($) {
+        // SmartMenus init
+        $(function() {
+          $("#main-menu").smartmenus({
+            subMenusSubOffsetX: 1,
+            subMenusSubOffsetY: -8
+          });
+        });
+        // SmartMenus mobile menu toggle button
+        $(function() {
+          var $mainMenuState = $("#main-menu-state");
+          if ($mainMenuState.length) {
+            // animate mobile menu
+            $mainMenuState.change(function(e) {
+              var $menu = $("#main-menu");
+              if (this.checked) {
+                $menu.hide().slideDown(250, function() {
+                  $menu.css("display", "");
+                });
+              } else {
+                $menu.show().slideUp(250, function() {
+                  $menu.css("display", "");
+                });
+              }
+            });
+            // hide mobile menu beforeunload
+            $(window).bind("beforeunload unload", function() {
+              if ($mainMenuState[0].checked) {
+                $mainMenuState[0].click();
+              }
+            });
+          }
+        });
+        //end
+
+        $("#top-mobile-menu").click(function() {
+          $(".ws-theme-topnavbar-collapse").toggle("slide");
+          $(this).toggleClass("open");
+        });
+
+        // $(document).ready(function() {
+        //   // grab the initial top offset of the navigation
+        //   var stickyNavTop = $("#header").offset().top + 40;
+
+        //   // our function that decides weather the navigation bar should have "fixed" css position or not.
+        //   var stickyNav = function() {
+        //     var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+
+        //     // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+        //     // otherwise change it back to relative
+        //     if (scrollTop > stickyNavTop) {
+        //       $("#header").addClass("sticky");
+        //     } else {
+        //       $("#header").removeClass("sticky");
+        //     }
+        //   };
+
+        //   stickyNav();
+        //   // and run it again every time you scroll
+        //   $(window).scroll(function() {
+        //     stickyNav();
+        //   });
+        // });
+
+        //  $(document).ready(function(){
+        // $('.ws-travel-banner').slick({
+        // 		dots: true,
+        // 		autoplay: true,
+        // 		arrows: false,
+        // 		infinite: true,
+        // 		autoplaySpeed:14000,
+        // 		speed: 1000,
+        // 		slidesToShow: 1,
+        // 		adaptiveHeight: true,
+        // 		fade: true,
+        // 		draggable: true,
+        // 		slidesToScroll: 1,
+        //   			touchThreshold: 1000,
+        // 		cssEase: 'ease'
+        // });
+
+        // $('.ws-travel-banner').on('swipe', function(event, slick, currentSlide){
+        // 	$('.ws-featured-slider-contents').removeClass('animated fadeInUp');
+        // 	$('.slick-active .ws-featured-slider-contents').addClass('animated fadeInUp');
+        // });
+
+        // $('.ws-travel-banner').on('beforeChange ', function(event,slick, currentSlide) {
+        //         $('.ws-featured-slider-contents').addClass('hidden');
+        // 	// $('.slick-active .ws-featured-slider-contents').addClass('animated fadeInUp');
+        //     });
+        // $('.ws-travel-banner').on('afterChange ', function(event,slick, currentSlide) {
+        //         $('.ws-featured-slider-contents').removeClass('hidden animated fadeInUp');
+        // 	$('.slick-active .ws-featured-slider-contents').addClass('animated fadeInUp');
+        //     });
+
+        $(".range-datepicker").datepicker({
+          language: "en",
+          range: true,
+          minDate: new Date() // Now can select only dates, which goes after today
+        });
+        //header cart
+        //  $("#header-cart").on("mouseenter", function() {
+        //   $(".woo-cart").addClass('active');
+        // });
+        //  $("#header-cart").mouseleave(function() {
+        //   $(".woo-cart").removeClass('active');
+        // });
+
+        //search form header
+        $(".dispaly-search-form").click(function() {
+          $("#search-form").addClass("is-visible");
+        });
+        $(".close-action").click(function() {
+          $("#search-form").removeClass("is-visible");
+        });
+
+        $("#ws-min-price").ionRangeSlider({
+          type: "double",
+          min: 500,
+          max: 20000,
+          grid: true,
+          force_edges: true
+        });
+
+        // wow = new WOW({
+        //   animateClass: "animated",
+        //   offset: 0,
+        //   callback: function(box) {
+        //     console.log("WOW: animating <" + box.tagName.toLowerCase() + ">");
+        //   }
+        // });
+        // wow.init();
+
+        //   $('.multiple-items').slick({
+        //   infinite: true,
+        //   speed: 300,
+        //   arrows: true,
+        //   slidesToShow: 2,
+        //   slidesToScroll:2,
+        //   draggable: true,
+        // autoplay: true,
+        // 	autoplaySpeed: 6000,
+        //   responsive: [
+        //     {
+        //       breakpoint: 991.99,
+        //       settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         infinite: true,
+        //         dots:true,
+        //         arrows:false,
+        //         draggable: true
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 767.99,
+        //       settings: {
+        //         slidesToShow: 2,
+        //         slidesToScroll: 2,
+        //         infinite: true,
+        //         dots:true,
+        //         draggable: true,
+        //         arrows:false
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 575.99,
+        //       settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         infinite: true,
+        //         dots:true,
+        //         arrows:false,
+        //         draggable: true
+        //       }
+        //     }
+        //     // You can unslick at a given breakpoint now by adding:
+        //     // settings: "unslick"
+        //     // instead of a settings object
+        //   ]
+        // });
+
+        // $('.ws-travel-testimonial-slider').slick({
+        // 	dots: true,
+        // 	arrows:false,
+        // 	infinite: true,
+        // 	speed: 900,
+        // 	slidesToShow: 1,
+        // 	centerMode: true,
+        // 	autoplay: true,
+        // 	autoplaySpeed: 6000,
+        // 	variableWidth: true
+        // });
+        //  $('.slider-single').slick({
+        // 	slidesToShow: 1,
+        // 	slidesToScroll: 1,
+        // 	arrows: false,
+        // 	autoplay: false,
+        // 	autoplaySpeed: 6000,
+        // 	fade: false,
+        // 	adaptiveHeight: true,
+        // 	infinite: false,
+        // 	useTransform: true,
+        // 	speed: 400,
+        // 	cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        //  });
+
+        //  $('.slider-nav')
+        //  	.on('init', function(event, slick) {
+        //  		$('.slider-nav .slick-slide.slick-current').addClass('is-active');
+        //  	})
+        //  	.slick({
+        //  		slidesToShow: 3,
+        //  		slidesToScroll: 3,
+        //  		dots: false,
+        //  		focusOnSelect: false,
+        //  		infinite: true,
+        //  		draggable: true,
+        //  		centerMode:true,
+        //  		responsive: [
+        //  		{
+        //  			breakpoint: 1200,
+        //  			settings: {
+        //  				slidesToShow: 2,
+        //  				slidesToScroll: 2,
+        //  			}
+        //  		}, {
+        //  			breakpoint: 768,
+        //  			settings: {
+        //  				slidesToShow: 2,
+        //  				slidesToScroll: 2,
+        // 			}
+        //  		},
+        //  		{
+        //  			breakpoint: 575,
+        //  			settings: {
+        //  				slidesToShow: 1,
+        //  				slidesToScroll: 1,
+        // 			}
+        //  		}]
+        //  	});
+
+        // $(".slider-single").on("afterChange", function(
+        //   event,
+        //   slick,
+        //   currentSlide
+        // ) {
+        //   $(".slider-nav").slick("slickGoTo", currentSlide);
+        //   var currrentNavSlideElem =
+        //     '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+        //   $(".slider-nav .slick-slide.is-active").removeClass("is-active");
+        //   $(currrentNavSlideElem).addClass("is-active");
+        // });
+
+        // $(".slider-nav").on("click", ".slick-slide", function(event) {
+        //   event.preventDefault();
+        //   var goToSingleSlide = $(this).data("slick-index");
+
+        //   $(".slider-single").slick("slickGoTo", goToSingleSlide);
+        // });
+
+        $(document).ready(larg);
+
+        $(window).resize(larg);
+
+        function larg() {
+          var interval = setInterval(function() {
+            if (jQuery(".btn-group.bootstrap-select").length > 0) {
+              if (Modernizr.mq("(min-width: 992px)")) {
+                var bannerHeight = $("#ws-advance-form").outerHeight();
+                $(
+                  ".ws-theme-addons-banner-slider,.ws-travel-banner .slick-list"
+                ).height(bannerHeight + 120);
+              } else {
+                var windowHeight = $(window).height();
+                $(
+                  ".ws-theme-addons-banner-slider,.ws-travel-banner .slick-list"
+                ).height(500);
+              }
+              clearInterval(interval);
+            }
+          }, 1000);
+        }
+
+        $("#onload").hide();
+      });
+    </script>
+  </body>
+</html>

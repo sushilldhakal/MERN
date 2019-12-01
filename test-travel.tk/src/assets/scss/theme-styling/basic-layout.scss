@@ -1,0 +1,1660 @@
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background-color: $primary;
+}
+
+::selection {
+    color: $white; 
+    background-color: $primary;
+}
+.collapse{
+  display:none;
+  &.in{
+    display:block;
+  }
+} 
+.no-list-style{
+  list-style:none;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+
+  &.in {
+    opacity: 1;
+  }
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+     transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+     transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+     transition-timing-function: ease;
+}
+.clearfix{
+  @include clearfix();
+} 
+
+//button styling
+.btn {
+    display: inline;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    @include no-select();
+    @include border-all( 1px, solid, transparent);
+    @include padding(.375rem, .75rem,.375rem, .75rem);
+    @include rhythm(16, 24);
+    @include border-radius(0.25rem);
+    @include transition(transition, color .15s, background-color .15s, border-color .15s);
+    @include transition-timing-function(ease-in-out);
+
+  &-primary{
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+
+    &:hover{
+      background-color: transparent;
+      color:$primary;
+      &:focus{
+        color:$primary;
+      }
+    }
+  }
+  
+  &-outline-primary {
+      border: 2px solid $primary;
+      background-color: transparent;
+      color: $primary;
+  
+      &:hover{
+        background-color: $primary;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  &-default{
+      border-color: $default;
+      background-color: $default;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$default;
+        &:focus{
+          color:$default;
+        }
+      }
+  }
+  &-outline-default {
+      border: 2px solid $default;
+      background-color: transparent;
+      color: $default;
+  
+      &:hover{
+        background-color: $default;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  &-secondary{
+      border-color: $secondary;
+      background-color: $secondary;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$secondary;
+        &:focus{
+          color:$secondary;
+        }
+      }
+  }
+  &-outline-secondary {
+      border: 2px solid $secondary;
+      background-color: transparent;
+      color: $secondary;
+  
+      &:hover{
+        background-color: $secondary;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  &-success{
+      border-color: $success;
+      background-color: $success;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$success;
+        &:focus{
+          color:$success;
+        }
+      }
+  }
+  &-outline-success {
+      border: 2px solid $success;
+      background-color: transparent;
+      color: $success;
+  
+      &:hover{
+        background-color: $success;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  &-info{
+      border-color: $info;
+      background-color: $info;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$info;
+        &:focus{
+          color:$info;
+        }
+      }
+  }
+  &-outline-info {
+      border: 2px solid $info;
+      background-color: transparent;
+      color: $info;
+  
+      &:hover{
+        background-color: $info;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  &-warning{
+      border-color: $warning;
+      background-color: $warning;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$warning;
+        &:focus{
+          color:$warning;
+        }
+      }
+  }
+  &-outline-warning {
+      border: 2px solid $warning;
+      background-color: transparent;
+      color: $warning;
+  
+      &:hover{
+        background-color: $warning;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  &-danger{
+      border-color: $danger;
+      background-color: $danger;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$danger;
+        &:focus{
+          color:$danger;
+        }
+      }
+  }
+  &-outline-danger {
+      border: 2px solid $danger;
+      background-color: transparent;
+      color: $danger;
+  
+      &:hover{
+        background-color: $danger;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  
+  &-black{
+      border-color: $black;
+      background-color: $black;
+      color: $white;
+  
+      &:hover{
+        background-color: transparent;
+        color:$black;
+        &:focus{
+          color:$black;
+        }
+      }
+  }
+  &-outline-black {
+      border: 2px solid $black;
+      background-color: transparent;
+      color: $black;
+  
+      &:hover{
+        background-color: $black;
+        color:$white;
+        &:focus{
+          color:$white;
+        }
+      }
+  }
+  
+  &-lg{
+    @include padding(0.7rem, 2rem,0.7rem, 2rem);
+  }
+  &-sm{
+    @include padding(0.4rem, 1rem, 0.4rem, 1rem);
+  }
+  &-rounded{
+    @include border-radius(30px);
+  }
+  &.disabled{
+      pointer-events: none;
+      @include opacity(.65);
+  }
+}
+.center-block {
+  @include center-block();
+}
+.pull{
+  &-right {
+    float: right !important;
+  }
+  &-left {
+    float: left !important;
+  }
+}
+.hide,.hidden {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.affix {
+  position: fixed;
+}
+.text{
+  &-justify {
+    text-align: justify;
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
+  @include mob{
+    &-sm-left {
+      text-align: left;
+    }
+    &-sm-right {
+      text-align: right;
+    }
+    &-sm-center {
+      text-align: center;
+    }
+  }
+  @include tab-screen{
+    &-md-left {
+      text-align: left;
+    }
+    &-md-right {
+      text-align: right;
+    }
+    &-md-center {
+      text-align: center;
+    }
+  }
+  @include mid-screen{
+    &-lg-left {
+      text-align: left;
+    }
+    &-lg-right {
+      text-align: right;
+    }
+    &-lg-center {
+      text-align: center;
+    }
+  }
+  @include large-screen{
+    &-xl-left {
+      text-align: left;
+    }
+    &-xl-right {
+      text-align: right;
+    }
+    &-xl-center {
+      text-align: center;
+    }
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}
+
+.font{
+  &-weight-light {
+    font-weight: 300;
+  }
+  &-weight-normal {
+    font-weight: 400;
+  }
+  &-weight-500 {
+    font-weight:500;
+  }
+  &-weight-600 {
+    font-weight: 600;
+  }
+  &-weight-bold {
+    font-weight: 700;
+  }
+  &-italic {
+    font-style: italic;
+  }
+}
+.text{
+  &-white {
+    color: $white;
+  }
+  &-primary {
+    color: $primary;
+    &[href]:hover,&[href]:focus{
+      color: darken($primary, 15%);
+    }
+  }
+  &-default {
+    color: $default;
+    &[href]:hover,&[href]:focus{
+      color: darken($default, 15%);
+    }
+  }
+  &-secondary {
+    color: $secondary;
+    &[href]:hover,&[href]:focus{
+      color: darken($secondary, 15%);
+    }
+  }
+  &-success {
+    color: $success;
+    &[href]:hover,&[href]:focus{
+      color: darken($success, 15%);
+    }
+  }
+  &-info {
+    color: $info;
+    &[href]:hover,&[href]:focus{
+      color: darken($info, 15%);
+    }
+  }
+  &-warning {
+    color: $warning;
+    &[href]:hover,&[href]:focus{
+      color: darken($warning, 15%);
+    }
+  }
+  &-danger {
+    color: $danger;
+    &[href]:hover,&[href]:focus{
+      color: darken($danger, 15%);
+    }
+  }
+  &-light {
+    color: $light-white;
+    &[href]:hover,&[href]:focus{
+      color: darken($light-white, 15%);
+    }
+  }
+  &-dark {
+    color: $dark-black;
+    &[href]:hover,&[href]:focus{
+      color: darken($dark-black, 15%);
+    }
+  }
+  &-muted {
+    color: $muted;
+  }
+  &-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+
+}
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
+.bg{
+  &-primary {
+    background-color: $primary;
+    &[href]:hover, 
+    &[href]:focus{
+      background-color: darken($primary, 15%);
+      color:$white;
+    }
+  }
+  &-secondary {
+    background-color: $secondary;
+    &[href]:hover, 
+    &[href]:focus{
+      background-color: darken($secondary, 15%);
+      color:$white;
+    }
+  }
+
+  &-success {
+    background-color: $success;
+    &[href]:hover, 
+    &[href]:focus{
+      background-color: darken($success, 15%);
+      color:$white;
+    }
+  }
+  &-info {
+    background-color: $info;
+    &[href]:hover, 
+    &[href]:focus{
+      background-color: darken($info, 15%);
+      color:$white;
+    }
+  }
+  &-warning {
+    background-color: $warning;
+    &[href]:hover, 
+    &[href]:focus{
+      background-color: darken($warning, 15%);
+      color:$white;
+    }
+  }
+  &-danger {
+    background-color: $danger;
+    &[href]:hover, 
+      &[href]:focus{
+        background-color: darken($danger, 15%);
+        color:$white;
+      }
+  }
+  &-light {
+    background-color: $light-white;
+    &[href]:hover, 
+      &[href]:focus{
+        background-color: darken($light-white, 15%);
+      }
+  }
+  &-dark {
+    background-color: $dark-black;
+    &[href]:hover, 
+      &[href]:focus{
+        background-color: darken($dark-black, 15%);;
+        color:$white;
+      }
+  }
+  &-black{
+    background-color: $black;
+  }
+  &-white {
+    background-color: $white;
+  }
+  &-transparent {
+    background-color: transparent;
+  }
+}
+  
+.border {
+  @include border-all(1px, solid, $border-color);
+  &-top {
+    @include border('top',1px,solid,$border-color);
+  }
+  &-right {
+    @include border('right',1px,solid,$border-color);
+  }
+  &-bottom {
+    @include border('bottom',1px,solid,$border-color);
+  }
+  &-left {
+    @include border('left',1px,solid,$border-color);
+  }
+  &-0 {
+    border: 0;
+  }
+  &-top-0 {
+    border-top: 0;
+  }
+  &-right-0 {
+    border-right: 0;
+  }
+  &-bottom-0 {
+    border-bottom: 0;
+  }
+  &-left-0 {
+    border-left: 0;
+  }
+  &-primary {
+    border-color: $primary;
+  }
+  &-secondary {
+    border-color: $secondary;
+  }
+  &-success {
+    border-color: $success;
+  }
+  &-info {
+    border-color: $info;
+  }
+  &-warning {
+    border-color: $warning;
+  }
+  &-danger {
+    border-color: $danger;
+  }
+  &-light {
+    border-color: $light-white;
+  }
+  &-dark {
+    border-color: $dark-black;
+  }
+  &-white {
+    border-color: $white;
+  }
+}
+
+
+.rounded {
+  @include border-radius(0.25rem);
+  &-top {
+    @include border-top-radius(0.25rem)
+  }
+  &-right {
+    @include border-right-radius(0.25rem)
+  }
+  &-bottom {
+    @include border-bottom-radius(0.25rem)
+  }
+  &-left {
+    @include border-left-radius(0.25rem)
+  }
+  &-circle {
+    @include border-radius(50%);
+  }
+  &-0 {
+    @include border-radius(0);
+  }
+}
+
+.d {
+  &-none {
+    display: none;
+  }
+  &-inline {
+    display: inline;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+  &-block {
+    display: block;
+  }
+  &-table {
+    display: table;
+  }
+  &-table-row {
+    display: table-row;
+  }
+  &-table-cell {
+    display: table-cell;
+  }
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  &:before {
+    display: block;
+    content: "";
+  }
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  &-21by9::before {
+    @include padding(42.857143%, null, null,null);
+  }
+  &-16by9::before {
+    @include padding(56.25%, null, null,null);
+  }
+  &-4by3::before {
+    @include padding(75%, null, null,null);
+  }
+  &-1by1::before {
+    @include padding(100%, null, null,null);
+  }
+}
+.alert {
+  position: relative;
+  @include padding(0.75rem, 1.25rem, 0.75rem, 1.25rem);
+  @include margin(null,null,1rem,null);
+  @include border-all(1px,solid,transparent);
+  @include border-radius(0.25rem);
+
+  &-heading {
+    color: inherit;
+  }
+  &-link {
+    font-weight: 700;
+  }
+  &-dismissible {
+    @include padding(null, 4rem, null,null);
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include padding(0.75rem, 1.25rem, 0.75rem, 1.25rem);
+      color: inherit;
+    }
+  }
+  &-primary {
+    color: $white;
+    background-color:rgba($primary, 1 );
+    border-color: darken($primary, 5%);
+    hr {
+      border-top-color: lighten($primary, 5%);
+    }
+    .alert-link {
+      color: #002752;
+    }
+  }
+  &-secondary {
+    color: $white;
+    background-color:rgba($secondary, 1 );
+    border-color: darken($secondary, 5%);
+    hr {
+      border-top-color: lighten($secondary, 5%);
+    }
+    .alert-link {
+      color: #202326;
+    }
+  }
+  &-success {
+    color: $white;
+    background-color:rgba($success, 1 );
+    border-color: darken($success, 5%);
+    hr {
+      border-top-color: lighten($success, 5%);
+    }
+    .alert-link {
+      color: #0b2e13;
+    }
+  }
+  &-info {
+    color: $white;
+    background-color:rgba($info, 1 );
+    border-color: darken($info, 5%);
+    hr {
+      border-top-color: lighten($info, 5%);
+    }
+    .alert-link {
+      color: #062c33;
+    }
+  }
+  &-warning {
+    color: $white;
+    background-color:rgba($warning, 1 );
+    border-color: darken($warning, 5%);
+    hr {
+      border-top-color: lighten($warning, 5%);
+    }
+    .alert-link {
+      color: #533f03;
+    }
+  }
+  &-danger {
+    color: $white;
+    background-color:rgba($danger, 1 );
+    border-color: darken($danger, 5%);
+    hr {
+      border-top-color: lighten($danger, 5%);
+    }
+    .alert-link {
+      color: #491217;
+    }
+  }
+  &-light {
+    color: $dark-black;
+    background-color:rgba($light-white, 1 );
+    border-color: darken($light-white, 5%);
+    hr {
+      border-top-color: lighten($light-white, 5%);
+    }
+    .alert-link {
+      color: #686868;
+    }
+  }
+  &-dark {
+    color: $white;
+    background-color:rgba($dark-black, 1 );
+    border-color: darken($dark-black, 5%);
+    hr {
+      border-top-color: lighten($dark-black, 5%);
+    }
+    .alert-link {
+      color: #040505;
+    }
+  }
+}
+
+//toast alert
+.toast{
+  &-info {
+      background-color: $info;
+  }
+  &-warning {
+      background-color: $warning;
+  }
+  &-success {
+      background-color: $success;
+  }
+  &-error {
+      background-color: $danger;
+  }
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+
+  &:empty {
+    display: none;
+  }
+  &-pill {
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+  }
+  &-primary {
+    color: $white;
+    background-color: $primary;
+    &[href]:hover,&[href]:focus{
+      color: $white;
+      text-decoration: none;
+      background-color: darken($primary, 15%);
+    }
+  }
+  &-secondary {
+    color: $white;
+    background-color: #6c757d;
+    &[href]:hover,&[href]:focus{
+      color: $white;
+      text-decoration: none;
+      background-color: #545b62;
+    }
+  }
+  &-success {
+    color: $white;
+    background-color: $success;
+    &[href]:hover,&[href]:focus{
+      color: $white;
+      text-decoration: none;
+      background-color: #1e7e34;
+    }
+  }
+  &-info {
+    color: $white;
+    background-color: $info;
+    &[href]:hover,&[href]:focus{
+      color: $white;
+      text-decoration: none;
+      background-color: #117a8b;
+    }
+  }
+  &-warning {
+    color: #212529;
+    background-color: #ffc107;
+    &[href]:hover,&[href]:focus{
+      color: #212529;
+      text-decoration: none;
+      background-color: #d39e00;
+    }
+  }
+  &-danger {
+    color: $white;
+    background-color: #dc3545;
+
+    &[href]:hover,&[href]:focus{
+      color: $white;
+      text-decoration: none;
+      background-color: #bd2130;
+    }
+  }
+  &-light {
+    color: #212529;
+    background-color: #f8f9fa;
+
+     &[href]:hover,&[href]:focus{
+      color: #212529;
+      text-decoration: none;
+      background-color: #dae0e5;
+    }
+  }
+  &-dark {
+    color: $white;
+    background-color: #343a40;
+    &[href]:hover,&[href]:focus{
+      color: $white;
+      text-decoration: none;
+      background-color: #1d2124;
+    }
+  }
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+//blockquots
+.bq{
+  &-primary {
+    border-left-color: $primary;
+    .bq-title {
+        color: $primary;
+    }
+  }
+  &-secondary {
+    border-left-color: $secondary;
+    .bq-title {
+        color: $secondary;
+    }
+  }
+  &-default {
+    border-left-color: $default;
+    .bq-title {
+        color: $default;
+    }
+  }
+  &-info {
+    border-left-color: $info;
+    .bq-title {
+        color: $info;
+    }
+  }
+  &-warning {
+    border-left-color: $warning;
+    .bq-title {
+        color: $warning;
+    }
+  }
+  &-success {
+    border-left-color: $success;
+    .bq-title {
+        color: $success;
+    }
+  }
+  &-warning {
+    border-left-color: $warning;
+    .bq-title {
+        color: $warning;
+    }
+  }
+  &-danger {
+    border-left-color: $danger;
+    .bq-title {
+        color: $danger;
+    }
+  }
+} 
+
+//call to action block
+.cta-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid $muted;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+
+  &-primary{
+    border-left-color: $primary;
+  }
+  &-secondary{
+    border-left-color: $secondary;
+  }
+  &-default{
+    border-left-color: $default;
+  }
+  &-info{
+    border-left-color: $info;
+  }
+  &-success{
+    border-left-color: $success;
+  }
+  &-warning{
+    border-left-color: $warning;
+  }
+  &-danger{
+    border-left-color: $danger;
+  }
+
+
+}
+/**
+ * Margin padding Sets
+ */
+$mt-number: mt;
+$mr-number: mr;
+$mb-number: mb;
+$ml-number: ml;
+$mv-number: mv;
+$mh-number: mh;
+$m-number: m;
+
+$pt-number: pt;
+$pr-number: pr;
+$pb-number: pb;
+$pl-number: pl;
+$pv-number: pv;
+$ph-number: ph;
+$p-number: p;
+
+$i: 0;
+@while $i < 50 {
+  .#{$mt-number}-#{$i} {
+    margin-top: 0px + $i;
+  }
+  .#{$mr-number}-#{$i} {
+    margin-right: 0px + $i;
+  }
+  .#{$mb-number}-#{$i} {
+    margin-bottom: 0px + $i;
+  }
+  .#{$ml-number}-#{$i} {
+    margin-left: 0px + $i;
+  }
+  .#{$mv-number}-#{$i} {
+    margin-top: 0px + $i;
+    margin-bottom: 0px + $i;
+  }
+  .#{$mh-number}-#{$i} {
+    margin-left: 0px + $i;
+    margin-right: 0px + $i;
+  }
+  .#{$m-number}-#{$i} {
+    margin: 0px + $i;
+  }
+  
+  .#{$pt-number}-#{$i} {
+    padding-top: 0px + $i;
+  }
+  .#{$pr-number}-#{$i} {
+    padding-right: 0px + $i;
+  }
+  .#{$pb-number}-#{$i} {
+    padding-bottom: 0px + $i;
+  }
+  .#{$pl-number}-#{$i} {
+    padding-left: 0px + $i;
+  }
+  .#{$pv-number}-#{$i} {
+    padding-top: 0px + $i;
+    padding-bottom: 0px + $i;
+  }
+  .#{$ph-number}-#{$i} {
+    padding-left: 0px + $i;
+    padding-right: 0px + $i;
+  }
+  .#{$p-number}-#{$i} {
+    padding: 0px + $i;
+  }
+  $i: $i + 5;
+}
+
+.margin-0{
+  margin:0;
+}
+.padding-0{
+  padding:0;
+}
+.mr-1 {
+    margin-right: 1px !important
+}
+.mr-3 {
+    margin-right: 3px !important
+}
+.ml-1 {
+    margin-left: 1px !important
+}
+.ml-3 {
+    margin-left: 3px !important
+}
+.mt-1 {
+    margin-top: 1px !important
+}
+.mt-3 {
+    margin-top: 3px !important
+}
+.mb-1 {
+    margin-bottom: 1px !important
+}
+.mb-3 {
+    margin-bottom: 3px !important
+}
+
+@media only screen and (max-width: 991px) {
+    .mb-10-sm {
+        margin-bottom: 10px !important
+    }
+    .mb-15-sm {
+        margin-bottom: 15px !important
+    }
+    .mb-20-sm {
+        margin-bottom: 20px !important
+    }
+    .mb-25-sm {
+        margin-bottom: 25px !important
+    }
+    .mb-30-sm {
+        margin-bottom: 30px !important
+    }
+    .mb-40-sm {
+        margin-bottom: 40px !important
+    }
+    .mb-50-sm {
+        margin-bottom: 50px !important
+    }
+    .mt-10-sm {
+        margin-top: 10px !important
+    }
+    .mt-15-sm {
+        margin-top: 15px !important
+    }
+    .mt-20-sm {
+        margin-top: 20px !important
+    }
+    .mt-25-sm {
+        margin-top: 25px !important
+    }
+    .mt-30-sm {
+        margin-top: 30px !important
+    }
+    .mt-40-sm {
+        margin-top: 40px !important
+    }
+    .mt-50-sm {
+        margin-top: 50px !important
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mb-0-xs {
+        margin-bottom: 0px !important
+    }
+    .mb-10-xs {
+        margin-bottom: 10px !important
+    }
+    .mb-15-xs {
+        margin-bottom: 15px !important
+    }
+    .mb-20-xs {
+        margin-bottom: 20px !important
+    }
+    .mb-25-xs {
+        margin-bottom: 25px !important
+    }
+    .mb-30-xs {
+        margin-bottom: 30px !important
+    }
+    .mb-40-xs {
+        margin-bottom: 40px !important
+    }
+    .mb-50-xs {
+        margin-bottom: 50px !important
+    }
+    .mt-10-xs {
+        margin-top: 10px !important
+    }
+    .mt-15-xs {
+        margin-top: 15px !important
+    }
+    .mt-20-xs {
+        margin-top: 20px !important
+    }
+    .mt-25-xs {
+        margin-top: 25px !important
+    }
+    .mt-30-xs {
+        margin-top: 30px !important
+    }
+    .mt-40-xs {
+        margin-top: 40px !important
+    }
+    .mt-50-xs {
+        margin-top: 50px !important
+    }
+}
+
+@media (max-width: 479px) {
+    .mb-0-xss {
+        margin-bottom: 0px !important
+    }
+    .mb-10-xss {
+        margin-bottom: 10px !important
+    }
+    .mb-15-xss {
+        margin-bottom: 15px !important
+    }
+    .mb-20-xss {
+        margin-bottom: 20px !important
+    }
+    .mb-25-xss {
+        margin-bottom: 25px !important
+    }
+    .mb-30-xss {
+        margin-bottom: 30px !important
+    }
+    .mb-40-xss {
+        margin-bottom: 40px !important
+    }
+    .mb-50-xss {
+        margin-bottom: 50px !important
+    }
+}
+
+
+/**
+ * Typography
+ */
+.font10 {
+    font-size: 10px !important;
+}
+.font12 {
+    font-size: 12px !important;
+}
+.font13 {
+    font-size: 13px !important;
+}
+.font14 {
+    font-size: 14px !important;
+}
+.font15 {
+    font-size: 15px !important;
+}
+.font16 {
+    font-size: 16px !important;
+}
+.font18 {
+    font-size: 18px !important;
+}
+.font20 {
+    font-size: 20px !important;
+}
+.font22 {
+    font-size: 22px !important;
+}
+.font24 {
+    font-size: 24px !important;
+}
+.font26 {
+    font-size: 26px !important;
+}
+.font28 {
+    font-size: 28px !important;
+}
+.font300 {
+    font-weight: 300 !important;
+}
+.font400 {
+    font-weight: 400 !important;
+}
+.font600 {
+    font-weight: 600 !important;
+}
+.font700 {
+    font-weight: 700 !important;
+}
+.font800 {
+    font-weight: 800 !important;
+}
+.font900 {
+    font-weight: 900 !important;
+}
+.line10 {
+    line-height: 10px !important;
+}
+.line12 {
+    line-height: 12px !important;
+}
+.line14 {
+    line-height: 14px !important;
+}
+.line16 {
+    line-height: 16px !important;
+}
+.line18 {
+    line-height: 18px !important;
+}
+.line20 {
+    line-height: 20px !important;
+}
+.line22 {
+    line-height: 22px !important;
+}
+.line24 {
+    line-height: 24px !important;
+}
+.line26 {
+    line-height: 26px !important;
+}
+.line28 {
+    line-height: 28px !important;
+}
+.line30 {
+    line-height: 30px !important;
+}
+
+
+
+@media (max-width:991.99px){
+    .hidden-above-md{
+        display:none;
+    }
+    
+}
+@media (min-width:992px){
+    .visible-under-md{
+        display:none;
+    }
+}
+@media (max-width:991.99px){
+    .hidden-above-sm{
+        display:none;
+    }
+    
+}
+@media (min-width:992px){
+    .hidden-under-sm{
+        display:none;
+    }
+}
+
+@media (max-width:767.99px){
+    .hidden-above-xs{
+        display:none;
+    }
+    
+}
+@media (min-width:768px){
+    .visible-under-xs{
+        display:none;
+    }
+}
+
+
+
+//wave effect on click
+
+@mixin waves-transition($transition){
+    -webkit-transition: $transition;
+    -moz-transition: $transition; 
+    -o-transition: $transition;
+    transition: $transition;  
+}
+
+@mixin waves-transform($string){
+    -webkit-transform: $string;
+    -moz-transform: $string;
+    -ms-transform: $string;
+    -o-transform: $string;
+    transform: $string;
+}
+
+@mixin waves-box-shadow($shadow){
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    .waves-ripple {
+        position: absolute;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-top:-50px;
+        margin-left:-50px;
+        opacity: 0;
+        background: rgba(0,0,0,0.2);
+        $gradient: rgba(0,0,0,0.2) 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.5) 60%,rgba(255,255,255,0) 70%;
+        background: -webkit-radial-gradient($gradient);
+        background: -o-radial-gradient($gradient);
+        background: -moz-radial-gradient($gradient);
+        background: radial-gradient($gradient);
+        @include waves-transition(all 0.5s ease-out);
+        -webkit-transition-property: -webkit-transform, opacity;
+        -moz-transition-property: -moz-transform, opacity;
+        -o-transition-property: -o-transform, opacity;
+        transition-property: transform, opacity;
+        @include waves-transform(scale(0) translate(0,0));
+        pointer-events: none;
+    }
+
+    &.waves-light .waves-ripple {
+        background: rgba(255,255,255,0.4);
+        $gradient: rgba(255,255,255,0.2) 0,rgba(255,255,255,.3) 40%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 70%;
+        background: -webkit-radial-gradient($gradient);
+        background: -o-radial-gradient($gradient);
+        background: -moz-radial-gradient($gradient);
+        background: radial-gradient($gradient);
+    }
+    
+    &.waves-classic .waves-ripple {
+        background: rgba(0,0,0,0.2);
+    }
+    
+    &.waves-classic.waves-light .waves-ripple {
+        background: rgba(255,255,255,0.4);
+    }
+}
+
+.waves-notransition {
+    @include waves-transition(none #{"!important"});
+}
+
+.waves-button, 
+.waves-circle {
+    @include waves-transform(translateZ(0));
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.waves-button,
+.waves-button:hover,
+.waves-button:visited,
+.waves-button-input {
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1em;
+    line-height:1em;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.waves-button {
+    padding: 0.85em 1.1em;
+    border-radius: 0.2em;
+}
+
+.waves-button-input {
+    margin: 0;
+    padding: 0.85em 1.1em;
+}
+
+.waves-input-wrapper {
+    border-radius: 0.2em;
+    vertical-align: bottom;
+
+    &.waves-button {
+        padding: 0;
+    }
+
+    .waves-button-input {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.waves-circle {
+    text-align: center;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 50%;
+}
+
+.waves-float {
+    -webkit-mask-image: none;
+    @include waves-box-shadow(0px 1px 1.5px 1px rgba(0, 0, 0, 0.12));
+    @include waves-transition(all 300ms);
+
+    &:active {
+        @include waves-box-shadow(0px 8px 20px 1px rgba(0, 0, 0, 0.30));
+    }
+}
+
+.waves-block {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-nav {
+  position: relative;
+  background: #3092c0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f4e79), color-stop(100%, #4b4a73));
+  background-image: -webkit-linear-gradient(top, #4f4e79, #4b4a73);
+  background-image: -moz-linear-gradient(to bottom, #4f4e79, #4b4a73);
+  background-image: -o-linear-gradient(to bottom, #4f4e79, #4b4a73);
+  background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-nav:after {
+  clear: both;
+  content: "\00a0";
+  display: block;
+  height: 0;
+  font: 0px/0 serif;
+  overflow: hidden;
+}
+
+.nav-brand {
+  float: left;
+  margin: 0;
+}
+
+.nav-brand a {
+  display: block;
+  padding: 10px 10px 10px 20px;
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 29px;
+  text-decoration: none;
+}
+
+#main-menu {
+  clear: both;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  #main-menu {
+    clear: none;
+  }
+}
+
+
+/* Mega menus */
+/* apply the animations just in desktop view */
+
+@media (min-width:768px) {
+  /* prevent text rendering degrade during animation in Mac browsers */
+  #main-menu {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  /* show animation */
+  #main-menu ul.show-animation {
+    -webkit-animation: show-animation 0.2s;
+    animation: show-animation 0.2s;
+  }
+  @-webkit-keyframes show-animation {
+    0% {
+      -webkit-transform: scale3d(0, 0, 1);
+      opacity: 0;
+    }
+    60% {
+      -webkit-transform: scale3d(1.05, 1.05, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+  }
+  @keyframes show-animation {
+    0% {
+      transform: scale3d(0, 0, 1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale3d(1.05, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+  }
+  /* hide animation */
+  #main-menu ul.hide-animation {
+    -webkit-animation: hide-animation 0.2s;
+    animation: hide-animation 0.2s;
+  }
+  @-webkit-keyframes hide-animation {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale3d(0, 0, 1);
+      opacity: 0;
+    }
+  }
+  @keyframes hide-animation {
+    0% {
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale3d(0, 0, 1);
+      opacity: 0;
+    }
+  }
+}

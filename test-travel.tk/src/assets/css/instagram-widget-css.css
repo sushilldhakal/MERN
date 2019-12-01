@@ -1,0 +1,1028 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 36, ../sass/instagram-widget-css.scss */
+.clearfix:before, .clearfix:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/* line 41, ../sass/instagram-widget-css.scss */
+.clearfix::after {
+  clear: both;
+}
+
+/* line 46, ../sass/instagram-widget-css.scss */
+.before-footer-wrap .widget.ws_theme_addons_instagram .widget-title {
+  display: none;
+}
+/* line 50, ../sass/instagram-widget-css.scss */
+.before-footer-wrap .widget.ws_theme_addons_instagram ul.full-width li {
+  width: 16.6666%;
+}
+@media (max-width: 991.99px) {
+  /* line 50, ../sass/instagram-widget-css.scss */
+  .before-footer-wrap .widget.ws_theme_addons_instagram ul.full-width li {
+    width: 25%;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 50, ../sass/instagram-widget-css.scss */
+  .before-footer-wrap .widget.ws_theme_addons_instagram ul.full-width li {
+    width: 33.333%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 50, ../sass/instagram-widget-css.scss */
+  .before-footer-wrap .widget.ws_theme_addons_instagram ul.full-width li {
+    width: 50%;
+  }
+}
+
+/* line 65, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget {
+  color: #555;
+}
+/* line 67, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget p, .widget.ws_theme_addons_widget strong, .widget.ws_theme_addons_widget span {
+  color: #555;
+}
+/* line 69, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget p a, .widget.ws_theme_addons_widget strong a, .widget.ws_theme_addons_widget span a {
+  color: inherit;
+}
+/* line 75, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget strong a, .widget.ws_theme_addons_widget span a {
+  color: inherit;
+}
+/* line 81, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget span a {
+  color: inherit;
+}
+
+/* line 88, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget {
+  position: relative;
+}
+/* line 90, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget .widget {
+  padding: 0;
+}
+/* line 97, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget ul li:before {
+  content: none;
+}
+/* line 100, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_widget ul li:after {
+  content: none;
+}
+
+/* line 108, ../sass/instagram-widget-css.scss */
+.travel-log-front-page-full-width-widget .ws_theme_addons_Twitter, .travel-log-front-page-full-width-widget .ws_theme_addons_facebook,
+.travel-log-front-page-full-width-widget .ws_theme_addons_weather_widget {
+  padding: 0 15px;
+}
+/* line 115, ../sass/instagram-widget-css.scss */
+.travel-log-front-page-full-width-widget .ws_theme_addons_weather_widget {
+  margin-bottom: 30px;
+}
+
+/* line 123, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram .follow-button {
+  display: none;
+}
+/* line 127, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul li {
+  width: 16.6667%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+/* line 137, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul li:hover .fancybox, .widget.ws_theme_addons_instagram ul li:hover .insta-profile {
+  position: absolute;
+  top: 43%;
+  left: 55%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 143, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul li:hover span.insta-feed-img:before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 991.99px) {
+  /* line 127, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul li {
+    width: 25%;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 127, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul li {
+    width: 33.333%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 127, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul li {
+    width: 50%;
+  }
+}
+/* line 156, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul span.insta-feed-img {
+  position: relative;
+  display: block;
+}
+/* line 159, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul span.insta-feed-img:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 170, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul span.insta-feed-img img {
+  width: 100%;
+  display: block;
+}
+/* line 175, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul .fancybox, .widget.ws_theme_addons_instagram ul .insta-profile {
+  position: absolute;
+  top: -200%;
+  left: 55%;
+  margin-left: -30px;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 182, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul .fancybox i, .widget.ws_theme_addons_instagram ul .insta-profile i {
+  font-size: 25px;
+}
+/* line 186, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul .insta-profile {
+  margin-left: inherit;
+}
+/* line 189, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul .insta-profile i {
+  font-size: 25px;
+}
+/* line 195, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul.three-columns li {
+  border-bottom: none !important;
+  width: 33.333%;
+}
+@media (max-width: 991.99px) {
+  /* line 195, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.three-columns li {
+    width: 100%;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 195, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.three-columns li {
+    width: 33.333%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 195, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.three-columns li {
+    width: 50%;
+  }
+}
+/* line 210, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul.two-columns li {
+  border-bottom: none !important;
+  width: 50%;
+}
+@media (max-width: 991.99px) {
+  /* line 210, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.two-columns li {
+    width: 100%;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 210, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.two-columns li {
+    width: 33.333%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 210, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.two-columns li {
+    width: 50%;
+  }
+}
+/* line 226, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_instagram ul.full-width li {
+  border-bottom: none !important;
+  width: 16.6666%;
+}
+@media (max-width: 991.99px) {
+  /* line 226, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.full-width li {
+    width: 100%;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 226, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.full-width li {
+    width: 33.333%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 226, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_instagram ul.full-width li {
+    width: 50%;
+  }
+}
+
+/* line 248, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .widget {
+  padding: 0;
+}
+/* line 251, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .widget-wrap {
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+/* line 255, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .widget-wrap::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+/* line 261, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .widget-wrap::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+/* line 267, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .widget-wrap::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+/* line 272, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .follow-button {
+  display: none;
+}
+/* line 275, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .fb-target-links {
+  color: #4267B2;
+}
+/* line 278, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper {
+  margin-bottom: 5px;
+}
+/* line 280, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-top-header {
+  background-color: #fff;
+}
+/* line 283, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-left {
+  display: inline;
+  float: left;
+}
+/* line 287, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle {
+  width: calc( 100% - 80px );
+  float: left;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+/* line 293, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .Icon-fb-verified .dashicons {
+  border-radius: 50%;
+  background: #5890FF;
+  position: relative;
+  width: 19px;
+  height: 19px;
+}
+/* line 299, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .Icon-fb-verified .dashicons:before {
+  color: #fff;
+  line-height: 10px;
+  position: absolute;
+  left: 1px;
+  top: 5px;
+  font-size: 16px;
+}
+/* line 309, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-screenname {
+  display: block;
+}
+/* line 313, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio p, .widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio .widget.ws_theme_addons_widget strong, .widget.ws_theme_addons_widget .widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio strong, .widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio .widget.ws_theme_addons_widget span, .widget.ws_theme_addons_widget .widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio span {
+  margin: 5px 0;
+  font-size: 12px;
+}
+/* line 317, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio .phone-icon {
+  background-image: url(../img/phone.png);
+}
+/* line 321, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio .globe-icon {
+  background-image: url(../img/globe.png);
+}
+/* line 324, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio .type-icon {
+  background-image: url(../img/org.png);
+}
+/* line 327, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-header-middle .ProfileHeaderCard-bio span.fb-icons {
+  float: left;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  background-size: contain;
+  margin-right: 5px;
+}
+/* line 340, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-feed-bottom {
+  margin: 10px 0 0px;
+  clear: both;
+  border-top: 1px solid #ced0d4;
+  border-bottom: 1px solid #ced0d4;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* line 350, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-feed-bottom-icons {
+  width: 33.3333%;
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 10px 0;
+  border-right: 1px solid #ced0d4;
+}
+/* line 358, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-feed-bottom-icons:hover a {
+  color: #4267B2;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+}
+/* line 366, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-feed-bottom-icons a:hover .dashicon {
+  color: #5890ff;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+}
+/* line 374, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .facebook-feed-wrapper .facebook-feed-bottom-icons:last-of-type {
+  border-right: none;
+}
+/* line 379, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul li {
+  background-color: #fff;
+}
+/* line 385, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width li {
+  float: left;
+  margin-bottom: 10px !important;
+  margin-top: 0px;
+  padding-bottom: 0px !important;
+  padding-top: 0px;
+  padding-left: 0;
+  border-bottom: none !important;
+  width: 100%;
+}
+/* line 395, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half {
+  min-height: 1px;
+  position: relative;
+  width: 100%;
+  float: left;
+}
+/* line 400, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 10px 10px 5px;
+}
+/* line 405, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 0px 0 0px;
+}
+/* line 410, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-footer-right {
+  float: right;
+  padding: 0 10px;
+  position: relative;
+}
+/* line 415, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react {
+  float: left;
+  padding: 0 10px;
+  position: relative;
+}
+/* line 419, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react i {
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/fb-icons.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 3px auto 0;
+  float: left;
+}
+/* line 429, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react .react-1 {
+  background-position: -17px -240px;
+}
+/* line 432, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react .react-2 {
+  background-position: -34px -240px;
+}
+/* line 435, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react .react-3 {
+  background-position: -68px -223px;
+}
+/* line 438, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react .react-4 {
+  background-position: -34px -223px;
+}
+/* line 441, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info .fb-react .react-5 {
+  background-position: 0 -240px;
+}
+/* line 446, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .col-half-footer-info span.fb-share-num:before {
+  content: '.';
+  position: absolute;
+  left: -2px;
+  top: -3px;
+}
+/* line 454, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .facebook-bottom .facebook-bottom-icons {
+  width: 33.333%;
+  display: block;
+  padding-right: 5px;
+  position: relative;
+  float: left;
+  padding: 5px;
+  border-top: 1px solid #ced0d4;
+  margin-top: 5px;
+}
+/* line 464, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .facebook-bottom .facebook-bottom-icons span {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/fb-icons.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+}
+/* line 473, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .facebook-bottom .facebook-bottom-icons .fb-like {
+  background-position: -63px -164px;
+}
+/* line 476, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .facebook-bottom .facebook-bottom-icons .fb-comment {
+  background-position: -42px -164px;
+}
+/* line 479, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-footer .facebook-bottom .facebook-bottom-icons .fb-share {
+  background-position: -84px -164px;
+}
+/* line 488, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-content img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+/* line 494, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header {
+  padding: 10px 10px 0;
+  color: #333;
+}
+/* line 498, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header a:hover {
+  color: #4267B2;
+}
+/* line 500, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header a:hover span {
+  color: #4267B2;
+}
+/* line 503, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header a:hover strong, .widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header a:hover .widget.ws_theme_addons_widget span, .widget.ws_theme_addons_widget .widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header a:hover span {
+  color: #4267B2;
+}
+/* line 508, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header span.caption {
+  padding: 0px 0 5px;
+  color: #333;
+  display: block;
+}
+/* line 512, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header span.caption a {
+  color: #4267B2;
+}
+/* line 514, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header span.caption a:hover {
+  text-decoration: underline;
+}
+/* line 520, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header span.fb-pp {
+  margin: 0 10px 0 0;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  float: left;
+}
+/* line 527, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header span.fb-name {
+  position: relative;
+  width: calc( 100% - 40px );
+  text-align: left;
+  display: block;
+}
+/* line 533, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header span.fb-posted-date {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  font-size: 11px;
+  font-style: italic;
+}
+/* line 541, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header .fb-user-icon {
+  width: 40px;
+}
+/* line 544, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header .fb-user-name {
+  width: calc( 100% - 40px );
+}
+/* line 547, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header .fb-user-name, .widget.ws_theme_addons_facebook ul.full-width .col-half .col-half-header .fb-user-icon {
+  display: block;
+  float: left;
+}
+/* line 554, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_facebook .fb-react a i:last-of-type {
+  padding-right: 18px;
+}
+
+/* line 564, ../sass/instagram-widget-css.scss */
+.Icon--verified {
+  width: 20px;
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h64v72H0z%22%2F%3E%3Cpath%20fill%3D%22%231da1f2%22%20d%3D%22M3%2037.315c0%204.125%202.162%207.726%205.363%209.624-.056.467-.09.937-.09%201.42%200%206.103%204.72%2011.045%2010.546%2011.045%201.295%200%202.542-.234%203.687-.686C24.22%2062.4%2027.827%2064.93%2032%2064.93c4.174%200%207.782-2.53%209.49-6.213%201.148.45%202.39.685%203.69.685%205.826%200%2010.546-4.94%2010.546-11.045%200-.483-.037-.953-.093-1.42C58.83%2045.04%2061%2041.44%2061%2037.314c0-4.37-2.42-8.15-5.933-9.946.427-1.203.658-2.5.658-3.865%200-6.104-4.72-11.045-10.545-11.045-1.302%200-2.543.232-3.69.688-1.707-3.685-5.315-6.216-9.49-6.216-4.173%200-7.778%202.53-9.492%206.216-1.146-.455-2.393-.688-3.688-.688-5.827%200-10.545%204.94-10.545%2011.045%200%201.364.23%202.662.656%203.864C5.42%2029.163%203%2032.944%203%2037.314z%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M17.87%2039.08l7.015%206.978c.585.582%201.35.873%202.116.873.77%200%201.542-.294%202.127-.883.344-.346%2015.98-15.974%2015.98-15.974%201.172-1.172%201.172-3.07%200-4.243-1.17-1.17-3.07-1.172-4.242%200l-13.87%2013.863-4.892-4.868c-1.174-1.168-3.074-1.164-4.242.01-1.168%201.176-1.163%203.075.01%204.244z%22%2F%3E%3C%2Fsvg%3E);
+  display: inline-block;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: text-bottom;
+  padding-left: 0;
+}
+
+/* line 574, ../sass/instagram-widget-css.scss */
+.TweetAuthor-decoratedName {
+  padding-right: 5px;
+}
+
+/* line 582, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .widget-wrap, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .widget-wrap,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .widget-wrap {
+  font-family: Open Sans;
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+/* line 588, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .widget-wrap::-webkit-scrollbar-track, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .widget-wrap::-webkit-scrollbar-track,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .widget-wrap::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+/* line 594, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .widget-wrap::-webkit-scrollbar, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .widget-wrap::-webkit-scrollbar,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .widget-wrap::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+/* line 600, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .widget-wrap::-webkit-scrollbar-thumb, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .widget-wrap::-webkit-scrollbar-thumb,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .widget-wrap::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+/* line 607, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .widget-wrap a:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .widget-wrap a:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .widget-wrap a:hover {
+  color: #1b95e0;
+}
+/* line 612, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twetter-feed-wrapper, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twetter-feed-wrapper,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper {
+  background: #fff;
+  padding: 15px 10px 5px;
+}
+@media (max-width: 500px) {
+  /* line 618, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_Twitter .twetter-feed-wrapper .twitter-top-header .twitter-header-left, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left,
+  .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left {
+    width: 100%;
+  }
+  /* line 620, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_Twitter .twetter-feed-wrapper .twitter-top-header .twitter-header-left span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left span,
+  .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left span {
+    text-align: center;
+  }
+}
+/* line 628, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-link-text, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-link-text,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-link-text {
+  color: #1b95e0;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+/* line 634, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-link-text:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-link-text:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-link-text:hover {
+  text-decoration: underline;
+}
+/* line 638, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-left, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-left,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-left {
+  display: inline;
+  float: left;
+}
+/* line 641, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-left span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-left span,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-left span {
+  display: block;
+}
+/* line 644, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-left span img, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-left span img,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-left span img {
+  border-radius: 50%;
+}
+/* line 649, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle {
+  display: inline;
+  float: left;
+  width: calc( 100% - 80px );
+  padding-left: 5px;
+}
+@media (max-width: 500px) {
+  /* line 649, ../sass/instagram-widget-css.scss */
+  .widget.ws_theme_addons_Twitter .twitter-header-middle, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle,
+  .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle {
+    width: 100%;
+  }
+}
+/* line 657, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .js-tooltip, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .js-tooltip,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .js-tooltip, .widget.ws_theme_addons_Twitter .twitter-header-middle .ProfileHeaderCard-bio, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .ProfileHeaderCard-bio,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .ProfileHeaderCard-bio, .widget.ws_theme_addons_Twitter .twitter-header-middle .ProfileHeaderCard-url, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .ProfileHeaderCard-url,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .ProfileHeaderCard-url {
+  float: left;
+  clear: both;
+}
+/* line 662, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .ProfileHeaderCard-screenname, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .ProfileHeaderCard-screenname,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .ProfileHeaderCard-screenname {
+  float: left;
+  clear: both;
+}
+/* line 666, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .twitter-follow-button, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .twitter-follow-button,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .twitter-follow-button {
+  position: relative;
+  float: right;
+  padding: 3px 5px;
+  background: #F7F9FB;
+  border: 1px solid #E1E8ED;
+  border-radius: 5px;
+  top: -20px;
+}
+/* line 675, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .twitter-follow-button .dashicons-businessman, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .twitter-follow-button .dashicons-businessman,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .twitter-follow-button .dashicons-businessman {
+  height: 15px;
+  overflow: hidden;
+  position: relative;
+  font-size: 18px;
+  top: 2px;
+  left: 3px;
+}
+/* line 683, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .twitter-follow-button .dashicons-plus, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .twitter-follow-button .dashicons-plus,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .twitter-follow-button .dashicons-plus {
+  position: absolute;
+  left: -1px;
+  font-size: 10px;
+  top: 7px;
+}
+/* line 689, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .twitter-follow-button span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .twitter-follow-button span,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .twitter-follow-button span {
+  color: #57ACEE;
+}
+/* line 693, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .ProfileHeaderCard-bio, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .ProfileHeaderCard-bio,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .ProfileHeaderCard-bio {
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+/* line 696, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .ProfileHeaderCard-bio a, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .ProfileHeaderCard-bio a,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .ProfileHeaderCard-bio a {
+  color: #1b95e0;
+}
+/* line 698, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-header-middle .ProfileHeaderCard-bio a:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle .ProfileHeaderCard-bio a:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle .ProfileHeaderCard-bio a:hover {
+  text-decoration: underline;
+}
+/* line 705, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-feed-bottom, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-feed-bottom,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-feed-bottom {
+  padding: 5px 0;
+  border-bottom: 1px solid #DCE3E8;
+  border-top: 1px solid #DCE3E8;
+  margin-top: 10px;
+  clear: both;
+}
+/* line 711, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-feed-bottom span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-feed-bottom span,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-feed-bottom span {
+  width: 33.333%;
+  display: block;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #DCE3E8;
+}
+/* line 718, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-feed-bottom span:last-of-type, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-feed-bottom span:last-of-type,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-feed-bottom span:last-of-type {
+  border-right: none;
+}
+/* line 721, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .twitter-feed-bottom span a, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-feed-bottom span a,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-feed-bottom span a {
+  clear: both;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* line 732, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #DCE3E8 !important;
+  width: 100%;
+}
+/* line 739, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .col-half-content p, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .col-half-content p,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .col-half-content p, .widget.ws_theme_addons_Twitter .full-width li .col-half-content .widget.ws_theme_addons_widget strong, .widget.ws_theme_addons_widget .widget.ws_theme_addons_Twitter .full-width li .col-half-content strong, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .col-half-content .widget.ws_theme_addons_widget strong, .widget.ws_theme_addons_widget .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .col-half-content strong,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .col-half-content .widget.ws_theme_addons_widget strong,
+.widget.ws_theme_addons_widget .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .col-half-content strong, .widget.ws_theme_addons_Twitter .full-width li .col-half-content .widget.ws_theme_addons_widget span, .widget.ws_theme_addons_widget .widget.ws_theme_addons_Twitter .full-width li .col-half-content span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .col-half-content .widget.ws_theme_addons_widget span, .widget.ws_theme_addons_widget .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .col-half-content span,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .col-half-content .widget.ws_theme_addons_widget span,
+.widget.ws_theme_addons_widget .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .col-half-content span {
+  margin-bottom: 0;
+}
+/* line 743, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom {
+  border: none;
+  margin: 0;
+  padding: 10px 0 0;
+}
+/* line 747, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span {
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+}
+/* line 760, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-comment, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-comment,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-comment {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23657786%22%20d%3D%22M14.046%202.242l-4.148-.01h-.002c-4.374%200-7.8%203.427-7.8%207.802%200%204.098%203.186%207.206%207.465%207.37v3.828c0%20.108.045.286.12.403.143.225.385.347.633.347.138%200%20.277-.038.402-.118.264-.168%206.473-4.14%208.088-5.506%201.902-1.61%203.04-3.97%203.043-6.312v-.017c-.006-4.368-3.43-7.788-7.8-7.79zm3.787%2012.972c-1.134.96-4.862%203.405-6.772%204.643V16.67c0-.414-.334-.75-.75-.75h-.395c-3.66%200-6.318-2.476-6.318-5.886%200-3.534%202.768-6.302%206.3-6.302l4.147.01h.002c3.532%200%206.3%202.766%206.302%206.296-.003%201.91-.942%203.844-2.514%205.176z%22%2F%3E%3C%2Fsvg%3E);
+  transform: scaleX(1);
+}
+/* line 764, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-comment:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-comment:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-comment:hover, .widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-comment:active, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-comment:active,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-comment:active, .widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-comment:focus, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-comment:focus,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-comment:focus {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%231DA1F2%22%20d%3D%22M14.046%202.242l-4.148-.01h-.002c-4.374%200-7.8%203.427-7.8%207.802%200%204.098%203.186%207.206%207.465%207.37v3.828c0%20.108.045.286.12.403.143.225.385.347.633.347.138%200%20.277-.038.402-.118.264-.168%206.473-4.14%208.088-5.506%201.902-1.61%203.04-3.97%203.043-6.312v-.017c-.006-4.368-3.43-7.788-7.8-7.79zm3.787%2012.972c-1.134.96-4.862%203.405-6.772%204.643V16.67c0-.414-.334-.75-.75-.75h-.395c-3.66%200-6.318-2.476-6.318-5.886%200-3.534%202.768-6.302%206.3-6.302l4.147.01h.002c3.532%200%206.3%202.766%206.302%206.296-.003%201.91-.942%203.844-2.514%205.176z%22%2F%3E%3C%2Fsvg%3E);
+}
+/* line 770, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-retweets, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-retweets,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-retweets {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23657786%22%20d%3D%22M23.77%2015.67c-.292-.293-.767-.293-1.06%200l-2.22%202.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414%200-.75.336-.75.75s.336.75.75.75h5.85c1.24%200%202.25%201.01%202.25%202.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06%200s-.294.768%200%201.06l3.5%203.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767%200-1.06zm-10.66%203.28H7.26c-1.24%200-2.25-1.01-2.25-2.25V6.46l2.22%202.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768%200-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06%200l-3.5%203.5c-.294.292-.294.767%200%201.06s.767.293%201.06%200l2.22-2.22V16.7c0%202.068%201.683%203.75%203.75%203.75h5.85c.414%200%20.75-.336.75-.75s-.337-.75-.75-.75z%22%2F%3E%3C%2Fsvg%3E);
+}
+/* line 773, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-retweets:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-retweets:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-retweets:hover, .widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-retweets:active, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-retweets:active,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-retweets:active, .widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-retweets:focus, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-retweets:focus,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-retweets:focus {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%2317BF63%22%20d%3D%22M23.77%2015.67c-.292-.293-.767-.293-1.06%200l-2.22%202.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414%200-.75.336-.75.75s.336.75.75.75h5.85c1.24%200%202.25%201.01%202.25%202.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06%200s-.294.768%200%201.06l3.5%203.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767%200-1.06zm-10.66%203.28H7.26c-1.24%200-2.25-1.01-2.25-2.25V6.46l2.22%202.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768%200-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06%200l-3.5%203.5c-.294.292-.294.767%200%201.06s.767.293%201.06%200l2.22-2.22V16.7c0%202.068%201.683%203.75%203.75%203.75h5.85c.414%200%20.75-.336.75-.75s-.337-.75-.75-.75z%22%2F%3E%3C%2Fsvg%3E);
+}
+/* line 777, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-likes, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-likes,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-likes {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23657786%22%20d%3D%22M12%2021.638h-.014C9.403%2021.59%201.95%2014.856%201.95%208.478c0-3.064%202.525-5.754%205.403-5.754%202.29%200%203.83%201.58%204.646%202.73.813-1.148%202.353-2.73%204.644-2.73%202.88%200%205.404%202.69%205.404%205.755%200%206.375-7.454%2013.11-10.037%2013.156H12zM7.354%204.225c-2.08%200-3.903%201.988-3.903%204.255%200%205.74%207.035%2011.596%208.55%2011.658%201.52-.062%208.55-5.917%208.55-11.658%200-2.267-1.822-4.255-3.902-4.255-2.528%200-3.94%202.936-3.952%202.965-.23.562-1.156.562-1.387%200-.015-.03-1.426-2.965-3.955-2.965z%22%2F%3E%3C%2Fsvg%3E);
+}
+/* line 780, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-likes:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-likes:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-likes:hover, .widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-likes:active, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-likes:active,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-likes:active, .widget.ws_theme_addons_Twitter .full-width li .twitter-feed-bottom span.twitter-likes:focus, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width li .twitter-feed-bottom span.twitter-likes:focus,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width li .twitter-feed-bottom span.twitter-likes:focus {
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23E0245E%22%20d%3D%22M12%2021.638h-.014C9.403%2021.59%201.95%2014.856%201.95%208.478c0-3.064%202.525-5.754%205.403-5.754%202.29%200%203.83%201.58%204.646%202.73.813-1.148%202.353-2.73%204.644-2.73%202.88%200%205.404%202.69%205.404%205.755%200%206.375-7.454%2013.11-10.037%2013.156H12zM7.354%204.225c-2.08%200-3.903%201.988-3.903%204.255%200%205.74%207.035%2011.596%208.55%2011.658%201.52-.062%208.55-5.917%208.55-11.658%200-2.267-1.822-4.255-3.902-4.255-2.528%200-3.94%202.936-3.952%202.965-.23.562-1.156.562-1.387%200-.015-.03-1.426-2.965-3.955-2.965z%22%2F%3E%3C%2Fsvg%3E);
+}
+/* line 791, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half {
+  min-height: 1px;
+  position: relative;
+  width: 100%;
+  float: left;
+}
+/* line 797, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header {
+  padding: 5px 10px 0;
+  color: #333;
+  width: calc( 100% - 40px );
+  float: left;
+}
+/* line 802, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.caption, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.caption,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.caption {
+  padding: 0px 0 5px;
+  color: #333;
+  display: block;
+}
+/* line 806, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.caption a, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.caption a,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.caption a {
+  color: #1b95e0;
+}
+/* line 808, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.caption a:hover, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.caption a:hover,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.caption a:hover {
+  text-decoration: underline;
+}
+/* line 813, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.twitter-pp, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.twitter-pp,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.twitter-pp {
+  margin: 0 10px 0 0;
+  display: inline;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+/* line 820, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.twitter-name, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.twitter-name,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.twitter-name {
+  position: relative;
+}
+/* line 823, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.twitter-name strong, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.twitter-name strong,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.twitter-name strong, .widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.twitter-name .widget.ws_theme_addons_widget span, .widget.ws_theme_addons_widget .widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.twitter-name span, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.twitter-name .widget.ws_theme_addons_widget span, .widget.ws_theme_addons_widget .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.twitter-name span,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.twitter-name .widget.ws_theme_addons_widget span,
+.widget.ws_theme_addons_widget .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.twitter-name span {
+  padding-right: 8px;
+}
+/* line 827, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-header span.twitter-posted-date, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-header span.twitter-posted-date,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-header span.twitter-posted-date {
+  font-size: 11px;
+  display: block;
+}
+/* line 833, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-content, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-content,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-content {
+  padding: 0;
+}
+/* line 836, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .col-half-footer, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .col-half-footer,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .col-half-footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0 10px 15px;
+}
+/* line 842, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .twitter-follow-button, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .twitter-follow-button,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .twitter-follow-button {
+  position: relative;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  background-color: #1b95e0;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 12px;
+}
+/* line 854, ../sass/instagram-widget-css.scss */
+.widget.ws_theme_addons_Twitter .full-width .col-half .twitter-follow-button svg, .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .full-width .col-half .twitter-follow-button svg,
+.travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .full-width .col-half .twitter-follow-button svg {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  width: 20px;
+  fill: #fff;
+  height: 20px;
+  background: #ffffff00 0 0 no-repeat;
+}
+
+/* line 872, ../sass/instagram-widget-css.scss */
+.widget-area .widget.ws_theme_addons_Twitter .twitter-header-middle, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twitter-header-middle,
+.widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle,
+.travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twitter-header-middle {
+  width: calc( 100% - 80px );
+}
+@media (max-width: 991.99px) {
+  /* line 872, ../sass/instagram-widget-css.scss */
+  .widget-area .widget.ws_theme_addons_Twitter .twitter-header-middle, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twitter-header-middle,
+  .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle,
+  .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twitter-header-middle {
+    width: 100%;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 872, ../sass/instagram-widget-css.scss */
+  .widget-area .widget.ws_theme_addons_Twitter .twitter-header-middle, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twitter-header-middle,
+  .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle,
+  .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twitter-header-middle {
+    width: calc( 100% - 80px );
+  }
+}
+@media (max-width: 500px) {
+  /* line 872, ../sass/instagram-widget-css.scss */
+  .widget-area .widget.ws_theme_addons_Twitter .twitter-header-middle, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twitter-header-middle, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twitter-header-middle,
+  .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twitter-header-middle,
+  .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twitter-header-middle {
+    width: 100%;
+  }
+}
+@media (max-width: 991.99px) {
+  /* line 887, ../sass/instagram-widget-css.scss */
+  .widget-area .widget.ws_theme_addons_Twitter .twetter-feed-wrapper .twitter-top-header .twitter-header-left, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left,
+  .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left,
+  .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left {
+    width: 100%;
+  }
+  /* line 889, ../sass/instagram-widget-css.scss */
+  .widget-area .widget.ws_theme_addons_Twitter .twetter-feed-wrapper .twitter-top-header .twitter-header-left span, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left span, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left span,
+  .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left span,
+  .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left span {
+    text-align: center;
+  }
+}
+@media (max-width: 767.99px) {
+  /* line 897, ../sass/instagram-widget-css.scss */
+  .widget-area .widget.ws_theme_addons_Twitter .twetter-feed-wrapper .twitter-top-header .twitter-header-left, .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left, .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_facebook .twetter-feed-wrapper .twitter-top-header .twitter-header-left,
+  .widget-area .travel-log-front-page-full-width-widget .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left,
+  .travel-log-front-page-full-width-widget .widget-area .widget.ws_theme_addons_weather_widget .twetter-feed-wrapper .twitter-top-header .twitter-header-left {
+    width: auto;
+  }
+}
+
+/* line 907, ../sass/instagram-widget-css.scss */
+.twitter-timeline {
+  max-width: 100%;
+  max-height: 1000px;
+}

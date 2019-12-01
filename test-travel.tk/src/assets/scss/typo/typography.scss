@@ -1,0 +1,143 @@
+
+  //typo 
+  body{
+    color:default_font_color;
+  }
+ 
+  @mixin typography($font-size){
+    $base-line-height: $line-height-base;
+    $margin: $base-line-height;
+    
+    body{
+      font-size: $font-size;
+      line-height: $base-line-height;
+      font-family: $base-font-family;
+      color:$dark-black;
+    }
+    h1, .h1 {
+      font-size: $h1-font-size;
+      line-height: $heading-line-height;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    h2, .h2 {
+      font-size: $h2-font-size;
+      line-height: $heading-line-height;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    h3, .h3 {
+      font-size: $h3-font-size;
+      line-height: $heading-line-height;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    h4, .h4 {
+      font-size: $h4-font-size;
+      line-height: $heading-line-height;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    h5, .h5 {
+      font-size: $h5-font-size;
+      line-height: $heading-line-height;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    h6, .h6 {
+      font-size: $h6-font-size;
+      line-height: $heading-line-height;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .lead{
+      font-size: $h5-font-size;
+      font-weight: 300;
+  }
+  .blockquote-footer{
+    display: block;
+    font-size: 80%;
+    color: #6c757d;
+    &:before{
+      content: "\2014 \00A0";
+    }
+  }
+  blockquote{
+    margin-left: 0;
+    padding: .5rem 1rem;
+    border-left: .25rem solid $muted;
+    margin-bottom: 1rem;
+    margin-right:0;
+    font-size: 1.25rem;
+    background-color: $color_grey;
+    &:before,
+    &:after{
+      content:none;
+    }
+    .bq-title{
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    p{
+      padding: 1rem 0 1rem 2rem;
+      font-size: 1.1rem;
+    }
+  }
+  .list-unstyled {
+      padding-left: 0;
+      list-style: none;
+      margin-left:0;
+  }
+  .list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left:0;
+}
+.list-inline-item {
+  display: inline-block;
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+}
+dd{
+  margin-bottom: .5rem;
+  margin-left: 0;
+  margin-right:0;
+}
+pre{
+  display: block;
+  font-size: 87.5%;
+  color: $muted;
+  code {
+    font-size: inherit;
+    color: inherit;
+    word-break: normal;
+    background-color: transparent;
+  }
+  &[class*=language-] {
+      box-shadow: 0 1px 6px 0 rgba(0,0,0,.2), 0 1px 6px 0 rgba(0,0,0,.19);
+      margin: 2.5em 0;
+      overflow: auto;
+      padding: 1em;
+  }
+  &.code-toolbar {
+      position: relative;
+
+      &>.toolbar {
+        position: absolute;
+        top: .3em;
+        right: .3em;
+        cursor:pointer;
+    }
+  }
+  .token.tag {
+      color: $info;
+  }
+} 
+
+
+
+@include typography(14px);

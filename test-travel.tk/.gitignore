@@ -1,7 +1,5 @@
 .DS_STORE
 node_modules
-backend/node_modules
-Dashboard/node_modules
 scripts/flow/*/.flowconfig
 *~
 *.pyc
