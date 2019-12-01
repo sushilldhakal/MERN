@@ -6,10 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 
 const BASE_URL = "http://localhost:8083";
-// import CreatePost from "./components/Post/CreatePost";
-// import ShowPostList from "./components/Post/ShowPostList";
-// import ShowPostDetails from "./components/Post/ShowPostDetails";
-// import UpdatePostInfo from "./components/Post/UpdatePostInfo";
 
 class App extends Component {
   render() {

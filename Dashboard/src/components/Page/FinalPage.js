@@ -19,10 +19,7 @@ import ReactQuill, { Quill, Mixin, Toolbar } from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "../../assets/quill.css";
 
-import CKEditor from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
-class FinalPostPage extends Component {
+class FinalPage extends Component {
   constructor(props) {
     super(props);
 
@@ -62,8 +59,7 @@ class FinalPostPage extends Component {
       uncategorized: false,
       design: false,
       development: false,
-      writing: false,
-      model: "this is atest "
+      writing: false
     };
     // this.fileInput = React.createRef();
 
@@ -72,16 +68,7 @@ class FinalPostPage extends Component {
     this.handleTextareaChange = this.handleTextareaChange.bind(this);
     this.handleCategories = this.handleCategories.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-
-    //this.handleModelChange = this.handleModelChange.bind(this);
   }
-
-  // handleModelChange = model => {
-  //   this.setState({
-  //     model: model
-  //   });
-  //   //this.props.updateState(this.state.model);
-  // };
 
   handleCategories = name => e => {
     this.setState({
@@ -99,22 +86,13 @@ class FinalPostPage extends Component {
     });
   };
 
-  // handleTextareaChange = (content, delta, source, editor) => {
-  //   // console.log(editor.getHTML()); // rich text
-  //   // console.log(editor.getText()); // plain text
-  //   // console.log(editor.getLength()); // number of characters
-  //   this.setState({
-  //     description: editor.getHTML()
-  //   });
-  // };
-
-  handleTextareaChange = (e, editor) => {
-    const data = editor.getData();
-    console.log({ data });
+  handleTextareaChange = (content, delta, source, editor) => {
+    // console.log(editor.getHTML()); // rich text
+    // console.log(editor.getText()); // plain text
+    // console.log(editor.getLength()); // number of characters
     this.setState({
-      description: data
+      description: editor.getHTML()
     });
-    console.log(this.state);
   };
 
   // (value) {
@@ -152,7 +130,7 @@ class FinalPostPage extends Component {
     data.append("writing", this.state.writing);
 
     axios
-      .post("http://localhost:8082/api/posts", data, {})
+      .post("http://localhost:8082/api/pages", data, {})
       .then(res => {
         this.setState({
           title: "",
@@ -167,10 +145,10 @@ class FinalPostPage extends Component {
           development: false,
           writing: false
         });
-        //this.props.history.push("/blog-posts");
+        //this.props.history.push("/blog-pages");
       })
       .catch(err => {
-        console.log("Error in CreatePost!");
+        console.log("Error in Createpage!");
       });
   };
 
@@ -178,54 +156,32 @@ class FinalPostPage extends Component {
     return (
       <Row>
         {/* Editor */}
-        <Form id="form1" className="add-new-post" onSubmit={this.handleSubmit}>
+        <Form id="form1" className="add-new-page" onSubmit={this.handleSubmit}>
           <Col lg="9" md="12">
             <Card small className="mb-3">
               <CardBody>
                 <FormInput
                   type="text"
-                  placeholder="Title of the Post"
+                  placeholder="Title of the Page"
                   name="title"
                   className="form-control mb-3"
                   value={this.state.title}
                   onChange={this.handleInputChange}
                   size="lg"
                 />
-                {/* <ReactQuill
+                <ReactQuill
                   className="add-new-post__editor mb-1"
                   theme="snow"
                   modules={this.modules}
                   formats={this.formats}
                   value={this.state.description}
                   onChange={this.handleTextareaChange || ""}
-                /> */}
-                <CKEditor
-                  editor={ClassicEditor}
-                  data=""
-                  placeholder="Description"
-                  onInit={editor => {
-                    // You can store the "editor" and use when it is needed.
-                    console.log("Editor is ready to use!", editor);
-                  }}
-                  onChange={this.handleTextareaChange}
-                  config={{
-                    ckfinder: {
-                      uploadUrl: "http://localhost/8082/backend/public"
-                    }
-                  }}
-                  // onBlur={(event, editor) => {
-                  //   console.log("Blur.", editor);
-                  // }}
-                  // onFocus={(event, editor) => {
-                  //   console.log("Focus.", editor);
-                  // }}
                 />
-
                 {/* <textarea
                   type="text"
-                  placeholder="Describe this Post"
+                  placeholder="Describe this page"
                   name="description"
-                  className="form-control add-new-post__editor mb-1"
+                  className="form-control add-new-page__editor mb-1"
                   onChange={this.handleInputChange}
                   value={this.state.description}
                 /> */}
@@ -385,4 +341,4 @@ class FinalPostPage extends Component {
   }
 }
 
-export default FinalPostPage;
+export default FinalPage;

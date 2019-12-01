@@ -12,11 +12,10 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
-
-import CreatePost from "./components/Post/CreatePost";
-import ShowPostList from "./components/Post/ShowPostList";
-import ShowPostDetails from "./components/Post/ShowPostDetails";
 import UpdatePostInfo from "./components/Post/UpdatePostInfo";
+import AddNewPage from "./views/AddNewPage";
+
+import Pages from "./views/Pages";
 
 export default [
   {
@@ -31,16 +30,15 @@ export default [
     component: BlogOverview
   },
   {
-    path: "/show-post/:id",
-    layout: DefaultLayout,
-    component: ShowPostDetails
-  },
-  {
     path: "/edit-post/:id",
     layout: DefaultLayout,
     component: UpdatePostInfo
   },
-
+  {
+    path: "/pages",
+    layout: DefaultLayout,
+    component: Pages
+  },
   {
     path: "/user-profile-lite",
     layout: DefaultLayout,
@@ -50,6 +48,11 @@ export default [
     path: "/add-new-post",
     layout: DefaultLayout,
     component: AddNewPost
+  },
+  {
+    path: "/add-new-page",
+    layout: DefaultLayout,
+    component: AddNewPage
   },
   {
     path: "/errors",

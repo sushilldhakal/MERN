@@ -1,6 +1,6 @@
 /*
  |--------------------------------------------------------------------------
- | Travels and Tourss: Blog Add New Post Template
+ | Shards Dashboards: Blog Add New Post Template
  |--------------------------------------------------------------------------
  */
 

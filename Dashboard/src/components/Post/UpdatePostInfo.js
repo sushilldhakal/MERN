@@ -61,12 +61,26 @@ class UpdatePostInfo extends Component {
       status: "",
       visibility: "",
       schedule: "",
-      readability: "ok"
+      readability: "ok",
+      uncategorized: false,
+      design: false,
+      development: false,
+      writing: false
     };
     this.onChangeHandler = this.onChangeHandler.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleTextareaChange = this.handleTextareaChange.bind(this);
+    this.handleCategories = this.handleCategories.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
+
+  handleCategories = name => e => {
+    this.setState({
+      [name]: e.target.checked
+    });
+    console.log(this.state);
+  };
+
   handleInputChange = e => {
     const target = e.target;
     const name = target.name;
@@ -109,7 +123,11 @@ class UpdatePostInfo extends Component {
           status: res.data.status,
           visibility: res.data.visibility,
           schedule: res.data.schedule,
-          readability: res.data.readability
+          readability: res.data.readability,
+          uncategorized: res.data.uncategorized,
+          design: res.data.design,
+          development: res.data.development,
+          writing: res.data.writing
         });
       })
       .catch(err => {
@@ -121,7 +139,8 @@ class UpdatePostInfo extends Component {
     axios
       .delete("http://localhost:8082/api/posts/" + this.props.match.params.id)
       .then(res => {
-        this.props.history.push("/blog-posts");
+        //this.props.history.push("/blog-posts");
+        console.log(this.state);
       })
       .catch(err => {
         console.log("Error form ShowPostDetails_deleteClick");
@@ -142,7 +161,11 @@ class UpdatePostInfo extends Component {
       status: this.state.status,
       visibility: this.state.visibility,
       schedule: this.state.schedule,
-      readability: this.state.readability
+      readability: this.state.readability,
+      uncategorized: this.state.uncategorized,
+      design: this.state.design,
+      development: this.state.development,
+      writing: this.state.writing
     };
     // data.append("profileImg", this.state.profileImg);
     // data.append("title", this.state.title);
@@ -337,32 +360,34 @@ class UpdatePostInfo extends Component {
                       <FormCheckbox
                         className="mb-1"
                         name="uncategorized"
-                        value={this.state.uncategorized}
-                        onChange={this.handleInputChange}
+                        checked={this.state.uncategorized}
+                        onChange={this.handleCategories("uncategorized")}
+                        value="uncategorized"
                       >
                         Uncategorized
                       </FormCheckbox>
                       <FormCheckbox
                         className="mb-1"
                         name="Design"
-                        value={this.state.design}
-                        onChange={this.handleInputChange}
+                        checked={this.state.design}
+                        onChange={this.handleCategories("design")}
+                        value="design"
                       >
                         Design
                       </FormCheckbox>
                       <FormCheckbox
-                        name="Dedevelopmentsign"
-                        value={this.state.development}
-                        onChange={this.handleInputChange}
+                        name="Development"
+                        checked={this.state.development}
                         className="mb-1"
                         value="development"
+                        onChange={this.handleCategories("development")}
                       >
                         Development
                       </FormCheckbox>
                       <FormCheckbox
                         name="Writing"
-                        value={this.state.writing}
-                        onChange={this.handleInputChange}
+                        checked={this.state.writing}
+                        onChange={this.handleCategories("writing")}
                         className="mb-1"
                         value="writing"
                       >

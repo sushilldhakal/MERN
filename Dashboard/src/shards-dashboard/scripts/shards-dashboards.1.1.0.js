@@ -1,6 +1,6 @@
 /*!
-* Travels and Tourss v1.1.0
-* Copyright 2011-2018 Travels and Tours
+* Shards Dashboards v1.1.0
+* Copyright 2011-2018 DesignRevision
 * SEE LICENSE FILE
 */
 (function (global, factory) {
@@ -10,7 +10,7 @@
 }(this, (function () { 'use strict';
 
 if (typeof Chart === 'undefined') {
-  throw new Error('Travels and Tours requires the Chart.js library in order to function properly.');
+  throw new Error('Shards Dashboard requires the Chart.js library in order to function properly.');
 }
 
 window.ShardsDashboards = window.ShardsDashboards ? window.ShardsDashboards : {};

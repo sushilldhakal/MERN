@@ -13,53 +13,41 @@ import {
 
 import axios from "axios";
 import { Link } from "react-router-dom";
-import PostCard from "../components/Post/PostCard";
+import PageCard from "../components/Page/PageCard";
 
 import PageTitle from "../components/common/PageTitle";
 
 import "../App.css";
 
-class BlogPosts extends React.Component {
+class Pages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      pages: []
     };
   }
   componentDidMount() {
     axios
-      .get("http://localhost:8082/api/posts")
+      .get("http://localhost:8082/api/pages")
       .then(res => {
         this.setState({
-          posts: res.data
+          pages: res.data
         });
       })
       .catch(err => {
-        console.log("Error from postList");
-      });
-  }
-
-  onDeleteClick(id) {
-    axios
-      .delete("http://localhost:8082/api/posts/" + this.props.match.params.id)
-      .then(res => {
-        //this.props.history.push("/blog-posts");
-        console.log(this.state);
-      })
-      .catch(err => {
-        console.log("Error form ShowPostDetails_deleteClick");
+        console.log("Error from pageList");
       });
   }
 
   render() {
-    const posts = this.state.posts;
-    console.log("PrintPost: " + posts);
-    let postList;
+    const pages = this.state.pages;
+    console.log("PrintPage: " + pages);
+    let pageList;
 
-    if (!posts) {
-      postList = "there is no post recored!";
+    if (!pages) {
+      pageList = "there is no page recored!";
     } else {
-      postList = posts.map((post, k) => <PostCard post={post} key={k} />);
+      pageList = pages.map((page, k) => <PageCard page={page} key={k} />);
     }
     return (
       <Container fluid className="main-content-container px-4">
@@ -67,7 +55,7 @@ class BlogPosts extends React.Component {
         <Row noGutters className="page-header py-4">
           <PageTitle
             sm="4"
-            title="Blog Posts"
+            title="Pages"
             subtitle="Components"
             className="text-sm-left"
           />
@@ -184,7 +172,7 @@ class BlogPosts extends React.Component {
                 </th>
               </tr>
             </thead>
-            <tbody>{postList}</tbody>
+            <tbody>{pageList}</tbody>
           </table>
 
           <div
@@ -234,4 +222,4 @@ class BlogPosts extends React.Component {
   }
 }
 
-export default BlogPosts;
+export default Pages;

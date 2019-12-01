@@ -1,6 +1,6 @@
 /*
  |--------------------------------------------------------------------------
- | Travels and Tourss: Components Overview Template
+ | Shards Dashboards: Components Overview Template
  |--------------------------------------------------------------------------
  */
 

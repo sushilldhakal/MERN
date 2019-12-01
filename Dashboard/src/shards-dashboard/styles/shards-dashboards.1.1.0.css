@@ -1,16 +1,16 @@
 /*
- * Travels and Tours Lite UI Kit v1.1.0
- * Project URL: https://Travels and Tours.com/downloads/shards-dashboard-lite
- * Based on: Shards UI Kit v2.1.0 (https://Travels and Tours.com/downloads/shards)
+ * Shards Dashboard Lite UI Kit v1.1.0
+ * Project URL: https://designrevision.com/downloads/shards-dashboard-lite
+ * Based on: Shards UI Kit v2.1.0 (https://designrevision.com/downloads/shards)
  * Based on: Bootstrap v4.1.3 (https://getbootstrap.com)
- * Copyright 2017-* Travels and Tours (https://Travels and Tours.com)
+ * Copyright 2017-* DesignRevision (https://designrevision.com)
  * Copyright 2017-* Catalin Vasile (contact@catalin.me)
  * License: MIT
  */
 /*
- * Shards v2.1.0 (https://Travels and Tours.com/downloads/shards/)
+ * Shards v2.1.0 (https://designrevision.com/downloads/shards/)
  * Based on: Bootstrap v4.1.3 (https://getbootstrap.com)
- * Copyright 2017-* Travels and Tours (https://Travels and Tours.com)
+ * Copyright 2017-* DesignRevision (https://designrevision.com)
  * Copyright 2017-* Catalin Vasile (http://catalin.me)
  */
 :root {
@@ -3731,7 +3731,7 @@ a.text-black:hover, a.text-black:focus {
 .with-shadows {
   box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1); }
 
-/* Travels and Tourss Lite Styles */
+/* Shards Dashboards Lite Styles */
 html {
   font-size: 16px;
   font-weight: 500; }

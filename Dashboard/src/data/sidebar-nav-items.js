@@ -17,6 +17,17 @@ export default function() {
       to: "/add-new-post"
     },
     {
+      title: "Pages",
+      htmlBefore: '<i class="material-icons">vertical_split</i>',
+      to: "/pages",
+      child: "Add New Page"
+    },
+    {
+      title: "Add New Page",
+      htmlBefore: '<i class="material-icons">note_add</i>',
+      to: "/add-new-page"
+    },
+    {
       title: "Forms & Components",
       htmlBefore: '<i class="material-icons">view_module</i>',
       to: "/components-overview"

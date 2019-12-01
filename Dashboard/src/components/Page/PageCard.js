@@ -18,20 +18,20 @@ import authorAvatar from "../../images/avatars/1.jpg";
 
 // onDeleteClick(id) {
 //   axios
-//     .delete("http://localhost:8082/api/posts/" + this.props.match.params.id)
+//     .delete("http://localhost:8082/api/pages/" + this.props.match.params.id)
 //     .then(res => {
-//       //this.props.history.push("/blog-posts");
+//       //this.props.history.push("/blog-pages");
 //       console.log(this.state);
 //     })
 //     .catch(err => {
-//       console.log("Error form ShowPostDetails_deleteClick");
+//       console.log("Error form ShowpageDetails_deleteClick");
 //     });
 // };
 
-const PostCard = props => {
-  const post = props.post;
+const PageCard = props => {
+  const page = props.page;
   const backgroundImage = {
-    backgroundImage: "url(" + post.profileImg + ")"
+    backgroundImage: "url(" + page.profileImg + ")"
   };
   // const backgroundImageDefault = {
   //   backgroundImage: "url(" + bannerOneImage + ")"
@@ -42,66 +42,66 @@ const PostCard = props => {
 
   const values = [];
 
-  if (props.post.uncategorized) {
+  if (props.page.uncategorized) {
     values.push("Uncategorized");
   }
-  if (props.post.design) {
+  if (props.page.design) {
     values.push("Design");
   }
-  if (props.post.development) {
+  if (props.page.development) {
     values.push("Development");
   }
-  if (props.post.writing) {
+  if (props.page.writing) {
     values.push("Writing");
   }
 
   console.log(values);
 
-  var finalPostImage = backgroundImage;
+  var finalPageImage = backgroundImage;
 
   return (
     // <Col lg="3" md="6" sm="12" className="mb-4">
-    //   <Card small className="card-post card-post--1">
-    //     <div className="card-post__image" style={finalPostImage}>
+    //   <Card small className="card-page card-page--1">
+    //     <div className="card-page__image" style={finalpageImage}>
     //       <Badge
     //         pill
-    //         className={`card-post__category bg-${post.categoryTheme}`}
+    //         className={`card-page__category bg-${page.categoryTheme}`}
     //       >
-    //         {post.category}
+    //         {page.category}
     //       </Badge>
-    //       <div className="card-post__author d-flex">
+    //       <div className="card-page__author d-flex">
     //         <a
-    //           href={`/edit-post/${post._id}`}
+    //           href={`/edit-page/${page._id}`}
     //           style={avatar}
-    //           className="card-post__author-avatar card-post__author-avatar--small"
+    //           className="card-page__author-avatar card-page__author-avatar--small"
     //         >
-    //           Written by {post.author}
+    //           Written by {page.author}
     //         </a>
     //       </div>
     //     </div>
     //     <CardBody>
     //       <h5 className="card-title">
-    //         <Link className="text-fiord-blue" to={`/edit-post/${post._id}`}>
-    //           {post.title}
+    //         <Link className="text-fiord-blue" to={`/edit-page/${page._id}`}>
+    //           {page.title}
     //         </Link>
     //       </h5>
     //       <div className="card-text d-inline-block mb-3">
-    //         {post.description}
+    //         {page.description}
     //       </div>
-    //       <span className="text-muted">{post.published_date}</span>
+    //       <span className="text-muted">{page.published_date}</span>
     //     </CardBody>
     //   </Card>
     // </Col>
     <tr role="row" className="odd">
       <td className="file-manager__item-icon" tabIndex="0">
         <div>
-          <img src={post.profileImg} className="img-responsive" />
+          <img src={page.profileImg} className="img-responsive" />
         </div>
       </td>
       <td className="text-left">
         <h5 className="file-manager__item-title">
-          <Link className="text-fiord-blue" to={`/edit-post/${post._id}`}>
-            {post.title}
+          <Link className="text-fiord-blue" to={`/edit-page/${page._id}`}>
+            {page.title}
           </Link>
         </h5>
         <span className="file-manager__item-meta">
@@ -109,11 +109,11 @@ const PostCard = props => {
         </span>
       </td>
       <td className="sorting_1">{values.join(", ")}</td>
-      <td>{post.status}</td>
+      <td>{page.status}</td>
       <td className="date column-date" data-colname="Date">
         Published
         <br />
-        <abbr title={post.date}>{post.date}</abbr>
+        <abbr title={page.date}>{page.date}</abbr>
       </td>
       <td className="file-manager__item-actions">
         <div
@@ -121,7 +121,7 @@ const PostCard = props => {
           role="group"
           aria-label="Table row actions"
         >
-          <Link className="text-fiord-blue" to={`/edit-post/${post._id}`}>
+          <Link className="text-fiord-blue" to={`/edit-page/${page._id}`}>
             <button type="button" className="btn btn-white active-light">
               <i className="material-icons"></i>
             </button>
@@ -136,4 +136,4 @@ const PostCard = props => {
   );
 };
 
-export default PostCard;
+export default PageCard;
