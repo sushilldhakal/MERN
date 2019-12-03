@@ -20,6 +20,24 @@ const SidebarNavItem = ({ item }) => (
         />
       )}
     </NavLink>
+    {console.log(item.content)}
+    {item.content ? (
+      <div
+        tabIndex="-1"
+        role="menu"
+        className="collapse show dropdown-menu dropdown-menu-small"
+      >
+        <a
+          className="dropdown-item"
+          tabIndex="0"
+          href="/demo/shards-dashboard-react/user-profile"
+        >
+          {item.content}
+        </a>
+      </div>
+    ) : (
+      ""
+    )}
   </NavItem>
 );
 
