@@ -1,0 +1,348 @@
+// @font-face {
+//   font-family: "Flaticon";
+//   src: url("../fonts/Flaticon.eot");
+//   src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+//     url("../fonts/Flaticon.woff") format("woff"),
+//     url("../fonts/Flaticon.ttf") format("truetype"),
+//     url("../fonts/Flaticon.svg#Flaticon") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @media screen and (-webkit-min-device-pixel-ratio: 0) {
+//   @font-face {
+//     font-family: "Flaticon";
+//     src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+//   }
+// }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.flaticon-verified:before {
+  content: "\f100";
+}
+.flaticon-stop-book:before {
+  content: "\f101";
+}
+.flaticon-sport:before {
+  content: "\f102";
+}
+.flaticon-transport-1:before {
+  content: "\f103";
+}
+.flaticon-transport:before {
+  content: "\f104";
+}
+.flaticon-people-1:before {
+  content: "\f105";
+}
+.flaticon-people:before {
+  content: "\f106";
+}
+.flaticon-healthy:before {
+  content: "\f107";
+}
+.flaticon-tips:before {
+  content: "\f108";
+}
+.flaticon-guarantee:before {
+  content: "\f109";
+}
+
+.top_content_single {
+  .title-single {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+    .title {
+      float: left;
+      h2 {
+        margin: 0 0 15px;
+        color: #333;
+      }
+    }
+    .tour_code {
+      float: right;
+      margin-top: 7px;
+      color: #333;
+    }
+  }
+  .ws-single-nav-slider {
+    margin-bottom: 50px;
+  }
+  .download-pdf {
+    margin-bottom: 30px;
+  }
+}
+
+.single-post-social-share {
+  margin-bottom: 30px;
+}
+
+.tour-info {
+  margin: 0 0 30px;
+  .tour-info-box {
+    border: 1px solid #e0e0e0;
+    background: #f1f1f1;
+    padding: 17px 25px;
+  }
+  .tour-info-column {
+    width: 100%;
+    float: left;
+    display: -webkit-flex;
+    display: -mox-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    justify-content: left;
+    .tour-info-item {
+      display: inline-flex;
+      font-style: italic;
+      color: #595959;
+      width: 50%;
+      float: left;
+      margin: 2px 0;
+      @media (max-width: 574.99px) {
+        width: 100%;
+      }
+      i {
+        font-size: 16px;
+        color: #f83531;
+        padding-right: 10px;
+        line-height: 25px;
+      }
+      .tooltip-area {
+        i {
+          color: #555;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.ws-theme-tabs-content {
+  li {
+    p {
+      color: #333;
+      line-height: 24px;
+    }
+  }
+}
+
+.btn-block.simple {
+  padding: 8px 15px;
+  background: #ffffff;
+  color: #333;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  margin: 0 20px 0 0;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid #333;
+
+  &:hover {
+    color: #f83531;
+    border-color: #f83531;
+  }
+}
+
+.ws-theme-description-overview {
+  margin-bottom: 10px;
+  & + [data-readmore-toggle] {
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100px;
+      top: -100px;
+      position: absolute;
+      background: linear-gradient(rgba(255, 255, 255, 0.5), #fff);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  &[aria-expanded="true"] + [data-readmore-toggle] {
+    &:before {
+      content: "";
+      height: 0;
+      top: 0;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+.tours-tabs_table {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: none;
+  border-top: 2px dotted #e4e4e4;
+  font-size: 12px;
+  display: block;
+
+  th,
+  td {
+    padding: 20px 0;
+    vertical-align: top;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+
+    @media (max-width: 991.99px) and (min-width: 768px) {
+      padding: 20px 5px;
+    }
+
+    @media (max-width: 767.99px) {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+    }
+  }
+  @media (max-width: 767.99px) {
+    th {
+      border-bottom: none;
+    }
+  }
+  table {
+    border: none;
+    margin: 0;
+
+    th,
+    td {
+      padding: 0;
+      border: none;
+      display: block;
+      padding-left: 15px;
+      position: relative;
+
+      i {
+        position: absolute;
+        left: -7px;
+        top: 3px;
+      }
+    }
+  }
+  i {
+    margin-right: 10px;
+  }
+  .icon-tick--on {
+    color: #01cb68;
+  }
+  .icon-tick--off {
+    color: #eb7591;
+  }
+  tr {
+    &:last-of-type {
+      td,
+      th {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.itinerary-item {
+  margin-bottom: 30px;
+  &.intro-item {
+    position: relative;
+    padding-left: 40px;
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f12a";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      background: #f56961;
+      color: #fff;
+      border-radius: 50%;
+      display: block;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  h5 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1;
+    a {
+      @extend h5;
+    }
+  }
+  .intro-item-body {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+.itinerary-day-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  left: 8px;
+  text-transform: uppercase;
+}
+
+.availabily-wrapper {
+  margin-bottom: 30px;
+
+  .section-title {
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  .availabily-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 15px 0;
+      margin: 0px 0;
+      .status {
+        width: 16%;
+      }
+      .price {
+        width: 13.5%;
+      }
+      &:last-of-type {
+        border-bottom: none;
+      }
+      &.sold-out {
+        pointer-events: none;
+      }
+    }
+    .availabily-content .action .btn {
+      padding: 5px 8px;
+    }
+  }
+}

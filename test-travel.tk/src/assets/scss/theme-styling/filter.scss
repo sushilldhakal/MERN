@@ -1,0 +1,320 @@
+.ws-theme-section-filter{
+
+
+
+	.wp-travel-toolbar{
+		display: inline-block;
+	    width: 100%;
+	    background-color: transparent;
+	    overflow: visible;
+	    border: none;
+	    margin-bottom: 40px;
+		.form-control{
+		    margin-right: 10px;
+			float: left;
+			padding:0;
+			position:relative;
+			&.wp-travel-filter-button{
+				margin-right:0;
+			}
+			@media (max-width:767.99px) and (min-width:575px){
+				margin-top: 0;
+    			margin-bottom: 0;
+    			&:not(.wp-travel-filter-button){
+					width:calc( 33.333% - 34px );
+    			}
+			}
+			@media (max-width:574.99px) and (min-width:420px){
+				margin-top: 5px;
+				margin-bottom: 5px;
+				width: calc( 50% - 5px );	
+
+				&:nth-of-type(even) {
+				    margin-right: 0;
+				    margin-left: 0;
+				}
+				.btn-wp-travel-filter{
+					display: block;
+					width: 100%;
+				}
+			}
+			@media (max-width:419.99px){
+				width: 100%;
+				margin: 5px 0;
+				.btn-wp-travel-filter{
+					width:100%;
+				}
+			}
+			.bs-searchbox{
+				.form-control{
+					width:100%;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		h4{
+			margin:0 40px 0 0;
+			display:inline-block;
+			float:left;
+			line-height: 34px;
+			@media (max-width:1199.99px){
+				margin:0 15px 0 0;
+			}
+			@media (max-width:991.99px){
+				display:none;
+			}
+		}
+		.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+		    width: auto;
+		    display: block;
+		    position: relative;
+		    padding: 0;
+		    height: 34px;
+		}
+		.bootstrap-select{
+			& > .dropdown-toggle{
+			    background-color: white;
+			    margin-bottom: 0px;
+			    padding: 0 5px;
+			    color: #333;
+			    border: 1px solid #ddd;
+			    font-size: 14px;
+			    height: auto;
+			    line-height: 32px;
+			    overflow: hidden;
+    			height: 34px;
+    			@media (min-width:1200px){
+					width:150px;
+				}
+				@media (min-width:992px) and (max-width:1199.99px){
+					width:115px;
+				}
+			    @media (max-width:991.99px) and (min-width:768px){
+    				width: 126px;
+
+			    }
+
+			    .filter-option{
+    				width: auto;
+			    }
+			}
+
+			.dropdown-toggle{
+
+				.bs-caret{
+					width: 20px;
+				    height: calc( 100% - 2px );
+				    position: absolute;
+				    right: 1px;
+				    top: 1px;
+				    background-color: #eaeaea;
+				    transition: all 0.4s ease-in-out;
+				}
+				.caret {
+				    position: relative;
+				    color: #333;
+				    top:3px;
+				    right:0;
+				    margin-top:0;
+				    transition: all 0.4s ease-in-out;
+				    &:before {
+					    content: '';
+					    display: inline-block;
+					    width: 0;
+					    height: 0;
+					    position: absolute;
+					    top: -11px;
+					    left: -4px;
+					    vertical-align: middle;
+					    border-bottom: 4px dashed;
+					    border-top: 4px solid \9;
+					    border-right: 4px solid transparent;
+					    border-left: 4px solid transparent;
+					}
+				}
+				&:focus{
+					outline:1px solid #ddd;
+				}
+				&:hover,&:focus,&:active{
+					transition: all 0.4s ease-in-out;
+					.bs-caret{
+					    background-color: #f83531;
+					    transition: all 0.4s ease-in-out;
+					    .caret{
+					    	color:#fff;
+					    }
+					}
+					.filter-option{
+						color:#333;
+						transition: all 0.4s ease-in-out;
+					}
+
+				}
+			} 
+		}
+		.view-control{
+			float:right;
+			margin-left:10px;
+			@media(max-width:991.99px){
+				display:none;
+			}
+			a{
+				width: 34px;
+			    height: 34px;
+			    display: block;
+			    text-align: center;
+			    border: 1px solid #373939;
+			    line-height: 30px;
+				transition: all 0.4s ease-in-out;
+			    i:before{
+			    	vertical-align:middle;
+			    	color:#333;
+			    	transition: all 0.4s ease-in-out;
+			    }
+				&.active,
+			    &:hover{
+					background-color:#f83531;
+					border-color:#f83531;
+					transition: all 0.4s ease-in-out;
+					i:before{
+						color:#fff;
+					}
+			    }
+			}	
+		} 
+		.wp-travel-filter-button{
+			.btn-wp-travel-filter {
+			    padding: 5px 10px;
+			    background: #373939;
+			    border-radius:0px;
+			    transition: all 0.4s ease-in-out;
+
+			    &:hover{
+			    	background: #f83531;
+			    	transition: all 0.4s ease-in-out;
+			    }
+			}
+		} 
+	} 
+}
+
+.widget-area{
+	.ws-advance-form {
+		margin-bottom:30px;
+		@media (max-width:991.99px){
+		    padding:20px 15px;
+		}
+		@media (max-width:991.99px) and (min-width:768px){
+		    .form-top-wrapper{
+				margin-top: 0px;
+
+		    	.form-content{
+				    margin: 5px 0;
+				    width: 100%;
+				}
+		    }
+		    .prices{
+		    	width:100%;
+		    	margin: 5px 0;
+		    } 
+		    input[type="submit"]{
+		    	width:100%;
+		    }
+
+		}
+
+		&.dark-layout{
+			@media (max-width:991.99px){
+			    background: rgba(37, 41, 41, 0.8);
+			}
+		}
+		&.light-layout{
+
+			border:1px solid #eee;
+
+			input:not([type="submit"]),button{
+				border:1px solid #eee;
+			}
+		}
+	}
+}
+
+.ws-listing-trips.grid-view{
+	.card {
+	    margin-bottom: 70px;
+	    display: block;
+	}
+	.featured-image {
+	    width: 100%;
+	    display: block;
+	    padding-right:0;
+	}
+	.card-body {
+	    width: 100%;
+	    display: block;
+	}
+	.right-wrapper {
+	    width: 100%;
+	    padding: 0;
+	    display: inline-block;
+	    background-color: #e7e7e7;
+	    .prices {
+		    background: #f5f5f5;
+		    display: block;
+		    width: auto;
+		    padding: 10px 15px;
+		    text-align: left;
+		     p {
+			    width: 50%;
+			    float: left;
+			    display: inline-block;
+
+			    &:last-of-type {
+				    text-align: right;
+				    margin-bottom: 0;
+				}
+				b {
+				    color: #f83531;
+				    font-size: 18px;
+				    padding-left: 10px;
+				}
+			}
+		}
+		.ws-rating-more {
+		    display: inline-block;
+		    width: 100%;
+		    position: absolute;
+		    left: 0;
+		    background-color: #e7e7e7;
+		    bottom: -43px;
+		    .rating {
+			    text-align: left;
+			    width: 45%;
+			    float: left;
+			    padding: 10px 15px;
+			}
+			.dream-btn-wrap {
+			    width: 55%;
+			    float: left;
+			    margin-top: 0;
+			    a {
+				    display: block;
+				    position: relative;
+
+				    &:before {
+					    position: absolute;
+					    top: 0;
+					    left: -1px;
+					    content: "";
+					    width: 0;
+					    height: 0;
+					    border-top: 20px solid transparent;
+					    border-left: 20px solid #e7e7e7;
+					    border-bottom: 20px solid transparent;
+					}
+				}
+			}
+		}
+	}
+}
+

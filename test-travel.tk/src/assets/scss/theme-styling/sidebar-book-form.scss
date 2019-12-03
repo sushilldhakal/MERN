@@ -1,0 +1,190 @@
+
+
+.ws-advance-booking-form{
+	margin-bottom:30px;
+	position:relative;
+	@media (min-width:992px){
+		margin-top: -60px;
+	}
+	.ws-theme-tabs-navigation{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		li{
+			width:50%;
+			border-right: none;
+		}
+	}
+	.ws-theme-booking-head {
+	    
+	    height: auto;
+	    display: inline-block;
+	    width: 100%;
+	    z-index: 1;
+		@media (min-width:992px){
+		    position: absolute;
+		    bottom: 100%;
+		    left: 0;
+		}
+	}
+	.ws-theme-tour-contact-number {
+	    font-size: 12px;
+	    line-height: 30px;
+	    padding: 0;
+	    color: #fff;
+	    background-color: #9a3533;
+	    text-align: center;
+	}
+	.ws-theme-tour-price {
+		padding:10px;
+		text-align: center;
+		background: #827474;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;
+	    .ws-theme-tour-total-price{
+	    	display:block;
+	    	width:100%;
+	    	font-size:28px;
+	    }
+	}
+	.tab-content{
+	    border-left: 1px;
+	    border-right: 1px;
+	    border-bottom: 1px;
+	    border-color: #ddd;
+	    border-style: solid;
+	    margin-top: 0;
+	    border-top: none;
+	}
+	.tab-pane{
+		display:none;
+		padding:20px;
+		background-color:#fff;
+		&.active{
+			display:block;
+		}
+	}
+	.ws-theme-tabs-navigation{
+		li{
+			a{
+				@media (min-width:992px){
+					padding:15px 10px;
+				}
+				@media (max-width:991.99px){
+					padding:10px;
+					width:100%;
+				}
+			}
+		}
+	}
+	.form-top-wrapper{
+
+		.form-content{
+			position:relative;
+			margin-bottom: 10px;
+			input{
+				width:100%;
+			}
+			input:not([type="submit"]){
+				line-height:40px;
+				color: #333;
+				background-color: rgba(255, 255, 255, 0.7);
+				border: 1px solid #ddd;
+				border-radius: 0;
+				margin-top: 0px;
+				margin-bottom: 10px;
+				height: 40px;
+				padding: 0 8px;
+				transition:all 0.4s ease-in-out;
+				&:hover,
+				&:focus{
+					border-color:#f83531;
+					outline:none;
+					transition:all 0.4s ease-in-out;
+				}
+				input[type=number]{
+					padding-right:0;
+				}
+			}
+			textarea{
+				background-color: rgba(255, 255, 255, 0.7);
+				border: 1px solid #ddd;
+				border-radius: 0;
+				margin-top: 0px;
+				margin-bottom: 10px;
+				padding: 0 8px;
+				transition:all 0.4s ease-in-out;
+				&:hover,
+				&:focus{
+					border-color:#f83531;
+					outline:none;
+					transition:all 0.4s ease-in-out;
+				}
+
+			}
+			label{
+				margin-top: 0;
+			    margin-left: 5px;
+			    display: block;
+			    letter-spacing: 0.6px;
+			    position: absolute;
+			    top: -10px;
+			    background: #fff;
+			    padding: 0px 8px;
+			    color: #333;
+			    font-size: 12px;
+			    z-index:1;
+			}
+		}
+		.group-number-count{
+		    display: inline-block;
+		    width: 50%;
+		    float: left;
+		    min-height:50px;
+		    position:relative;
+
+		    input{
+		    	padding-right:0px !important;
+		    }
+		}
+		.ws-theme-book_price{
+			padding: 7px 0 0 0;
+			@media (max-width:991.99px) and (min-width:768px){
+				padding: 10px 0 0 0;
+    			font-size: 10px;
+			}
+		}
+		.input-number-ticket{
+			padding-right:15px;
+			position:relative;
+		}
+		input[type="submit"]{
+			width: 100%;
+			padding: 10px 15px;
+			background-color: transparent;
+			color: #333;
+			border: 1px solid #333;
+			border-radius: 0px;
+			transition: all 0.4s ease-in-out;
+
+			&:hover {
+			    border-color: #f83531;
+			    color: #fff;
+			    background-color: #f83531;
+			    transition: all 0.4s ease-in-out;
+			}
+		}
+	}
+}
+
+
+.is_stuck{
+	.ws-advance-booking-form{
+		margin-top: 0;
+	}
+}

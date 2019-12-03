@@ -1,0 +1,309 @@
+/* call to action widget section */
+/* line 25, ../sass/ws-theme-addons-public.scss */
+.highlight-tag {
+  padding: 50px 0;
+  background: #8b8b8b;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+/* line 32, ../sass/ws-theme-addons-public.scss */
+.highlight-tag .theme-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* line 40, ../sass/ws-theme-addons-public.scss */
+.highlight-tag .highlight-wrapper {
+  padding: 50px 0;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+/* line 45, ../sass/ws-theme-addons-public.scss */
+.highlight-tag .highlight-wrapper h2 {
+  font-size: 28px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+/* line 52, ../sass/ws-theme-addons-public.scss */
+.highlight-tag .highlight-wrapper p {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+}
+/* line 57, ../sass/ws-theme-addons-public.scss */
+.highlight-tag .highlight-wrapper .highlight-book {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-top: 30px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  background: #f83531;
+}
+
+/* line 75, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .container-box {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 83, ../sass/ws-theme-addons-public.scss */
+  .before-footer-wrap .container-box {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 89, ../sass/ws-theme-addons-public.scss */
+  .before-footer-wrap .container-box {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 95, ../sass/ws-theme-addons-public.scss */
+  .before-footer-wrap .container-box {
+    width: 1170px;
+  }
+}
+/* line 100, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .row-area {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 105, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .clearfix:before,
+.before-footer-wrap .clearfix:after,
+.before-footer-wrap .row-area:before,
+.before-footer-wrap .row-area:after,
+.before-footer-wrap .container-box:before,
+.before-footer-wrap .container-box:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+/* line 116, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .clearfix:after,
+.before-footer-wrap .row-area:after,
+.before-footer-wrap .container-box:after {
+  clear: both;
+}
+/* line 122, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .col-two-third {
+  width: 75%;
+  text-align: left;
+}
+@media (max-width: 767.99px) {
+  /* line 122, ../sass/ws-theme-addons-public.scss */
+  .before-footer-wrap .col-two-third {
+    width: 100%;
+  }
+}
+/* line 130, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .col-one-third {
+  width: 25%;
+}
+@media (max-width: 767.99px) {
+  /* line 130, ../sass/ws-theme-addons-public.scss */
+  .before-footer-wrap .col-one-third {
+    width: 100%;
+  }
+}
+/* line 137, ../sass/ws-theme-addons-public.scss */
+.before-footer-wrap .col-one-third,
+.before-footer-wrap .col-two-third {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 149, ../sass/ws-theme-addons-public.scss */
+.widget .highlight-tag .highlight-wrapper {
+  text-align: center;
+}
+/* line 152, ../sass/ws-theme-addons-public.scss */
+.widget .highlight-tag .highlight-wrapper a {
+  color: #fff !important;
+}
+
+/* end call to action widget section */
+/* weather widget styling */
+/* line 164, ../sass/ws-theme-addons-public.scss */
+.widget_weather_widget,
+.weather-block {
+  position: relative;
+  margin-bottom: 0;
+  padding: 0 0 40px;
+  font-size: 14px;
+  clear: both;
+}
+
+/* line 172, ../sass/ws-theme-addons-public.scss */
+.weather {
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto;
+  padding: 30px 15px 150px;
+  position: relative;
+  background-color: transparent;
+}
+/* line 179, ../sass/ws-theme-addons-public.scss */
+.weather p {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  text-transform: none;
+}
+/* line 185, ../sass/ws-theme-addons-public.scss */
+.weather div {
+  color: #fff;
+  position: relative;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+}
+/* line 192, ../sass/ws-theme-addons-public.scss */
+.weather h2 {
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+/* line 198, ../sass/ws-theme-addons-public.scss */
+.weather h2 i {
+  font-size: 50px;
+}
+/* line 202, ../sass/ws-theme-addons-public.scss */
+.weather h4 {
+  color: #fff;
+  position: relative;
+  font-size: 26px;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  text-align: center;
+}
+/* line 210, ../sass/ws-theme-addons-public.scss */
+.weather span.min-max {
+  position: absolute;
+  top: 31%;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+/* line 217, ../sass/ws-theme-addons-public.scss */
+.weather .max {
+  left: 15px;
+}
+/* line 220, ../sass/ws-theme-addons-public.scss */
+.weather .min {
+  right: 15px;
+}
+/* line 223, ../sass/ws-theme-addons-public.scss */
+.weather .column-for-weather {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+/* line 227, ../sass/ws-theme-addons-public.scss */
+.weather .column-for-weather span {
+  font-size: 16px;
+  width: 33.33333%;
+  display: block;
+  float: left;
+}
+/* line 233, ../sass/ws-theme-addons-public.scss */
+.weather .column-for-weather i {
+  font-size: 30px;
+}
+
+/* line 238, ../sass/ws-theme-addons-public.scss */
+.weather:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(30, 82, 142, 0.5) 0%, #265889 50%, #9da671 100%);
+}
+
+/* line 247, ../sass/ws-theme-addons-public.scss */
+.input-group-sm {
+  position: absolute;
+  bottom: 120px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+/* line 256, ../sass/ws-theme-addons-public.scss */
+.input-group-sm input {
+  height: 44px;
+  padding: 5px 15px;
+}
+/* line 260, ../sass/ws-theme-addons-public.scss */
+.input-group-sm button {
+  padding: 10px 15px;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  /* line 266, ../sass/ws-theme-addons-public.scss */
+  .weather input {
+    width: 85%;
+  }
+  /* line 269, ../sass/ws-theme-addons-public.scss */
+  .weather .input-group-sm button {
+    padding: 10px 15px;
+    width: 85%;
+    margin-top: 10px;
+    outline: none;
+  }
+  /* line 275, ../sass/ws-theme-addons-public.scss */
+  .weather .input-group-sm {
+    bottom: 80px;
+  }
+  /* line 278, ../sass/ws-theme-addons-public.scss */
+  .weather .column-for-weather {
+    margin-top: 10px;
+  }
+  /* line 281, ../sass/ws-theme-addons-public.scss */
+  .weather .weather span.min-max {
+    position: relative;
+    top: 0;
+    display: block;
+    left: 0;
+    right: 0;
+  }
+}
+/* line 293, ../sass/ws-theme-addons-public.scss */
+footer#footer .copy-right-footer .travel-copyright p {
+  font-weight: 400;
+}
+/* line 296, ../sass/ws-theme-addons-public.scss */
+footer#footer .copy-right-footer .travel-copyright a {
+  color: #f83531;
+}
+/* line 298, ../sass/ws-theme-addons-public.scss */
+footer#footer .copy-right-footer .travel-copyright a:hover {
+  color: #df1814;
+}
+
+/* end weather widget styling */

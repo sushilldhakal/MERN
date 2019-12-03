@@ -1,0 +1,258 @@
+
+
+.ws-theme-cart-page{
+    background-color: #fff;
+
+    .ws-theme-cart-list{
+        margin-bottom:0;
+        .item_cart{
+            h4{
+                margin:0;
+
+                @media (max-width:767.99px){
+                    width: calc( 100% - 100px );
+                    text-align: right;
+                    margin-left: 100px;
+                }
+            }
+            @media (max-width:767.99px){
+                .variation {
+                    display: block;
+
+                    span:first-of-type {
+                        float: left;
+                    }
+                }
+            }
+        }
+        thead{
+            @media (max-width:767.99px){
+                display:none;
+            }
+            tr{
+                th {
+                    border-top: 0;
+                    border-left: 0;
+                    border-right: 0;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #000;
+                    border-bottom: 1px solid #dc8051;
+                    padding: 14px 10px;
+                }
+            } 
+        }
+        tr{
+             strong {
+                font-size: 14px;
+                color: #2a2a2a;
+            }
+            p span {
+                font-size: 14px;
+                font-weight: 700;
+            }
+            p.total{
+                strong {
+                    color: #dc8051;
+                }
+            } 
+        }
+        tbody{
+            td,th{
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 24px 10px;
+                border-top:0;
+                border-left:0;
+                border-right:0;
+                @media (max-width:767.999px){
+                    padding:10px;
+                }
+
+                .label {
+                    font-weight: 600;
+                    color: #333;
+                }
+                .ws-theme-currencySymbol {
+                    padding-left: 5px;
+                }
+            } 
+        }
+        .product-thumbnail {
+            width: 100px;
+        }
+        .product-remove{
+            width:50px;
+            text-align: center;
+            a{
+                margin: 0 auto;
+                width: 30px;
+                height: 30px;
+                display: block;
+                line-height: 30px;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 18px;
+                color: #df1814;
+                font-weight: 600;
+
+                &:hover{
+                    background: #dc8051;
+                    color: #fff;
+                }
+            }
+        } 
+
+        .responsive-cart{
+            td{
+
+                @media (max-width:767.99px){
+                    width:100%;
+                    display:block;
+                    text-align:right;
+                    position:relative;
+                    &:before{
+                        content: attr(data-title) ": ";
+                        font-weight: 700;
+                        float: left;
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                    }
+                }
+
+                &.product-thumbnail{
+                    @media (max-width:767.99px){
+                        display:none;
+                    }
+                }
+
+                &.product-remove{
+                    &:before{
+                        content:none;
+                    }
+                }
+                
+            }
+
+            &:nth-of-type(even){
+                td, th {
+                    background-color: #eee;
+                }
+            } 
+        }
+
+        &.table-total-info{
+            margin-bottom:30px;
+        }
+    }
+    .actions{
+        float:right;
+        @media (max-width:574.99px){
+            width:100%;
+            float:left;
+        }
+        .book-now-btn {
+            float: right;
+            background: #383838;
+            display: inline-block;
+            line-height: 45px;
+            color: #fff;
+            font-size: 14px;
+
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0 100px;
+            margin-left: 15px;
+
+            @media (max-width:991.99px){
+                font-size:12px;
+                padding: 0 30px;
+            }
+            @media (max-width:574.99px){
+                width:100%;
+                display:block;
+                margin-left:0;
+            }
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -ms-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+
+
+        }
+        a {
+            background: #383838;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 45px;
+            min-width: 160px;
+            text-align: center;
+            padding: 0;
+            @media (max-width:991.99px){
+                font-size:12px;
+            }
+            @media (max-width:574.99px){
+                width:100%;
+                display:block;
+                margin-bottom:15px;
+            }
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -ms-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+
+            &:hover{
+                background-color:#dc8051;
+            }
+        } 
+
+
+
+        
+    } 
+    .st_adults,
+    .st_children {
+        margin-bottom: 10px;
+        .label {
+            color: initial;
+            font-size: 100%;
+            font-weight: 400;
+            text-align: left;
+            display: inline-block;
+            padding: 0 10px 0 0;
+            min-width: 60px;
+        }
+        input {
+            border: 1px solid #ddd;
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+}
+.coupon-row{
+    .coupon{
+        input {
+            height: 40px;
+            padding: 0 8px;
+            line-height: 40px;
+        }
+    } 
+    input[type="submit"]{
+        height: 40px;
+        line-height: 18px;
+        padding: 10px 15px;
+        background-color: #383838;
+        border-radius: 0;
+
+        &:hover{
+            background-color:#dc8051;
+        }
+    }
+} 

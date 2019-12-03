@@ -1,0 +1,230 @@
+// colors
+$color-1: #f1f1f1; // light yellow
+$color-2: #f83531; // red
+$color-3: #f83531; // dark blue
+$color-4: #ffffff; // white
+$color-5: #333; // brown - icons
+
+.ws-theme-tabs {
+	position: relative;
+	width: 100%;
+	margin:0 0 30px;
+	@include clearfix;
+	nav {
+		@media (min-width:992px) {
+			position: relative;
+			float: none;
+			background: transparent;
+			line-height:0;
+		}
+		@media (min-width:768px) and (max-width:991.99px){
+		    box-shadow: inset -2px 0 3px rgba(203, 196, 130, 0.06);
+		    z-index: 1;
+		    float:left;
+
+		    .ws-theme-tabs-navigation {
+			    width: 80px;
+			    float: left;
+
+			    li.active a {
+				    box-shadow: inset 2px 0 0 #f05451;
+				}
+			}
+		}
+	}
+	.ws-theme-tabs-content,
+	.ws-theme-tabs-navigation{
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.panel-group{
+		.panel-heading{
+			.panel-title{
+				margin:0;
+				font-size:14px;
+				a{
+					background-color: #fff;
+					padding: 5px 10px;
+					display:block;
+				}
+			}
+		}
+		.panel-collapse{
+			background-color:#fff;
+		}
+		
+	}
+	.main-panel-default{
+		margin-bottom:20px;
+		.main-pane-title{
+			font-size:14px !important;
+			a{
+				padding:15px !important;
+				position:relative;
+				box-shadow: inset 2px 0px 0 #f05451;
+				color: #333;
+    			text-transform: uppercase;
+				&:before {
+				    position: absolute;
+				    top: 15px;
+				    right: 15px;
+				    content: '\f077';
+				    font-family: fontawesome;
+				    color: #999;
+				}
+
+				&.collapsed{
+
+					&:before{
+						content: '\f078';
+					}
+				}
+			}
+		}
+
+		.main-panel-collapse{
+			background: #fff;
+		    margin: 0;
+		    padding: 15px;
+		    box-shadow: inset 2px 0px 0 #f05451;
+		}
+	}
+}
+.ws-theme-tabs-navigation {
+	@include clearfix;
+	li {
+		float: left;
+			
+			@media (min-width:992px) {
+				border-right: 2px solid #fff;
+			}
+
+			@media (min-width:768px) and (max-width:991.99px){
+				border-bottom: 2px solid #fff;
+			}
+			&:last-of-type {
+			    border-right: none;
+			}
+		a {
+			position: relative;
+			display: block;
+			text-align: center;
+			font-size:14px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-weight: 700;
+			color: $color-5;
+
+			@media (min-width:992px) {
+				padding:20px 15px;
+			}
+
+			@media (min-width:768px) and (max-width:991.99px){
+				padding: 30px 0;
+				width: 80px;
+				word-break: break-all;
+
+			}
+			.no-touch &:hover {
+				color: $color-3;
+				background-color: rgba(darken($color-1, 10%), .3);
+			}
+			i{
+				padding-right:5px;
+				@media (min-width:768px) and (max-width:991.99px){
+					display:block;
+				}
+			}
+			
+		}
+		&.active {
+			a{
+				background-color:$color-4;
+				box-shadow: inset 0 2px 0 #f05451;
+				i{
+					color: $color-2;
+				}
+				&:hover{
+					background-color:$color-4;
+				}
+			}
+			
+		}
+	}
+
+	/* tabbed on top on big devices */
+	width: auto;
+	display:inline-block;
+	background-color: $color-1;
+	box-shadow: inset 0 -2px 3px rgba(darken($color-1, 30%), .06);
+}
+.ws-theme-tabs-content {
+	background: $color-4;
+	li {
+		display: none;
+		padding: 20px;
+		&.selected {
+			display: block;
+			-webkit-animation: cd-fade-in 0.5s;
+			-moz-animation: cd-fade-in 0.5s;
+			animation: cd-fade-in 0.5s;
+		}
+	}
+}
+@-webkit-keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ws-theme-tabs{
+
+	.tab-pane{
+		opacity:0;
+		visibility:hidden;
+		height:0px;
+		width:100%;
+		display:none;
+
+		&.active{
+			opacity:1;
+			visibility:visible;
+			height:auto;
+			display:block;
+			@media (min-width:992px) {
+				padding: 20px;
+			}
+			@media (min-width:768px) and (max-width:991.99px){
+				padding: 20px 10px;
+			}
+		}
+	}
+	.tab-content{
+		@media (min-width:768px) and (max-width:991.99px){
+			float: left;
+			width: calc( 100% - 80px );
+		}
+		background-color:#fff;
+	}
+}
+

@@ -1,0 +1,202 @@
+
+
+.checkout-page-wrap{
+	.checkout-block {
+	    background-color: #fff;
+	    padding: 20px 15px;
+
+	    h3{
+			color: #f56860;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 24px;
+			margin-top: 0;
+
+			small {
+				font-size: 70%;
+				color: #999;
+				font-weight: 500;
+			}
+	    }
+
+		@media (max-width:767.99px){
+			margin-bottom:30px;
+		}
+	}
+	.checkout-right{
+		border: 4px solid #EEE;
+    	border-radius: 3px;
+	}
+
+
+	.number-accordion{
+		position:relative;
+		border-left: 1px dashed #CCC;
+		margin-left:15px;
+		margin-bottom: 0;
+		.ws-theme-timeline-img{
+			left:-15px;
+			top:-5px;
+		}
+		h4{
+			position:relative;
+			margin-top: 0;
+    		margin-bottom: 15px;
+    		font-size:16px;
+			&:before{
+				content: "";
+			    width: 25px;
+			    position: absolute;
+			    left: -30px;
+			    top: 10px;
+			    border-top: 1px dashed #CCC;
+			}    
+		}
+		.panel-heading,
+		.panel-collapse {
+		    margin-left: 35px;
+		}
+		.panel-heading{
+			font-size:16px;
+		}
+		.panel-body{
+			.btn-block{
+				margin-right: 0;
+				float: right;
+				padding: 5px 10px;
+				font-size: 12px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+			}
+			.center-div{
+				float:none;
+			}
+		}
+	} 
+	.ws-theme-timeline-block {
+	    margin: 0 0 40px;
+	    border-bottom: 1px solid #E3E3E3;
+	    padding-bottom: 30px;
+	}
+
+
+	.payment-traveller {
+	    margin: 0 0 30px;
+	    border-bottom: 1px solid #E3E3E3;
+	    padding-bottom: 20px;
+	    position: relative;
+	}
+	.form-horizontal{
+		display:inline-block;
+		width:100%;
+		.form-group {
+		    margin-right: -15px;
+		    margin-left: -15px;
+		}
+	} 
+	.wp-travel-form-field{
+		margin:10px 0;
+		display: inline-block;
+		width: 100%;
+
+		label,
+		.wp-travel-text-info{
+			width:50%;
+			float:left;
+			min-height:1px;
+			position:relative;
+		}
+	}
+}
+
+.price-summary-wrapper {
+    h4{
+    	color: #F56961;
+    	line-height: 1;
+    	margin-bottom: 15px;
+    	margin-top: 0;
+    }
+    ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+    }
+	.price-summary-list{
+		li {
+		    margin-bottom: 18px;
+		    line-height: 1.2;
+		}
+		.divider {
+		    border-top: 1px solid #EEE;
+		}
+		.total-price {
+		    background: #F56961;
+		    color: #FFF;
+		    margin: 25px -19px -29px;
+		    padding: 20px 19px;
+
+		    span{
+		    	display:block;
+		    }
+		}
+	} 
+}
+
+
+.help-list{
+	li {
+	    border-bottom: 1px solid #E3E3E3;
+	    line-height: 1.2;
+	    padding-bottom: 10px;
+	    margin-bottom: 10px;
+
+	    .icon {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 34px;
+		    height: 34px;
+		    display: block;
+		    line-height: 30px;
+		    text-align: center;
+		    color: #F56961;
+		    border: 2px solid #F56961;
+		    font-size: 16px;
+		    border-radius: 3px;
+		}
+	}
+
+} 
+
+.featured-list-sm{
+	li {
+		position: relative;
+		padding-left: 50px;
+		margin: 15px 0 25px;
+		line-height: 1.5;
+		border-bottom: 1px solid #E3E3E3;
+	    padding-bottom:20px;
+
+	    .icon {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 34px;
+		    height: 34px;
+		    display: block;
+		    line-height: 30px;
+		    text-align: center;
+		    color: #F56961;
+		    border: 2px solid #F56961;
+		    font-size: 16px;
+		    border-radius: 3px;
+		}
+	}
+}
+.book-sum-list{
+	li {
+	    position: relative;
+	    margin: 20px 0;
+	    line-height: 1.2;
+	}
+} 

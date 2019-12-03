@@ -1,0 +1,180 @@
+
+
+//border for one direction mixin
+@mixin border($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+//border for all direction mixin
+@mixin border-all($width, $style, $color) {
+  border: $width $style $color;
+}
+
+//border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+//no-select 
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin padding($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+  }
+  //Margin mixin
+  @mixin margin($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left;
+  }
+  //font-size
+  @mixin font-size($sizeValue: 14 ){
+    font-size: $sizeValue + px; //fallback for old browsers
+    font-size: (0.0625 * $sizeValue) + rem;
+  }
+  //line-height
+  @mixin line-height($heightValue: 20 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.0625 * $heightValue) + rem;
+  }
+  //rhythm
+  @mixin rhythm($sizeValue: 14, $heightValue: 20) {
+    @include font-size($sizeValue);
+    @include line-height($heightValue);
+  }
+  
+  //opacity
+  @mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+  }
+  //center align
+  @mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  //box-sizing
+  @mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+       -moz-box-sizing: $box-model; // Firefox <= 19
+            box-sizing: $box-model;
+  }
+
+  //transition
+  @mixin transition($prop, $values...) {
+    -moz-#{$prop}: $values;
+    -ms-#{$prop}: $values;
+    -o-#{$prop}: $values;
+    -webkit-#{$prop}: $values;
+    $prop: $values;
+  }
+  // Transition Delay
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
+}
+@mixin transition-timing-function($effect){
+  -webkit-transition-timing-function: $effect;
+  -moz-transition-timing-function: $effect;
+  -o-transition-timing-function: $effect;
+  transition-timing-function: $effect;
+}
+//clearfix
+@mixin clearfix {
+  &:before,&:after{
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//media query mixin
+@mixin large-screen{
+  @media (min-width: 1200px){
+     @content;
+   }
+}
+@mixin large-screen-max{
+  @media (max-width: 1199.99px){
+     @content;
+   }
+}
+@mixin mid-screen{
+ @media (min-width: 992px){
+   @content;
+   }
+}
+@mixin mid-screen-max{
+  @media (max-width: 991.99px){
+    @content;
+    }
+ }
+@mixin tab-screen{
+ @media (min-width:768px){
+   @content;
+ }
+}
+@mixin tab-screen-max{
+  @media (max-width:767.99px){
+    @content;
+  }
+ }
+@mixin mob{
+ @media (min-width: 576px){
+   @content;
+   }
+}
+@mixin mob-max{
+  @media (max-width: 575.99px){
+    @content;
+    }
+ }
+@mixin xs{
+ @media (min-width: 320px){
+   @content;
+   }
+}
+
+
+

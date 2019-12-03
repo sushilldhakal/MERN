@@ -1,0 +1,168 @@
+.ws-theme-top-header {
+    background-color: #000;
+}
+
+.ws-theme-social-icons.soc-icon-transparent li a{
+	color:#fff;
+}
+
+.soc-icon-circle{
+    li{
+        a {
+            background: #fff;
+            color: #333;
+            &:hover {
+                color:#fff;
+            }
+     	}   
+	}
+}         
+.soc-icon-flat{
+    li{
+        a {
+            background-color: #fff;
+            color:#333;
+            &:hover {
+                color:#fff;
+            }    
+        }
+    }
+}        
+.soc-icon-rounded{
+    li{
+        a {
+            background-color: #fff;
+            color:#333;
+            &:hover {
+                color:#fff;
+            }    
+        }
+    }
+} 
+
+.dark-layout{
+    li{
+        a{
+            color:#fff;
+
+            &:hover{
+                opacity:0.8;
+            }
+        }
+       &.facebook a {
+            background-color: #3B5998;
+        }
+        &.twitter a {
+            background-color: #55ACEE;
+        }
+        &.linkedin a {
+            background-color: #007ab5;
+        }
+        &.pinterest a {
+            background-color: #c91921;
+        }
+        &.google-plus a {
+            background-color: #dd4937;
+        }
+        &.youtube a {
+            background-color: #e22b26;
+        }
+        &.rss a {
+            background-color: #f75f0b;
+        }
+        &.tumblr a {
+            background-color: #34465d;
+        }
+        &.reddit a {
+            background-color: #FF4500;
+        }
+        &.dribbble a {
+            background-color: #ea4886;
+        }
+        &.digg a {
+            background-color: #1b5891;
+        }
+        &.flickr a {
+            background-color: #ff0082;
+        }
+        &.instagram a {
+            background-color: #9A6851;
+        }
+        &.vimeo a {
+            background-color: #17B3E8;
+        }
+        &.skype a {
+            background-color: #00a9f1;
+        }
+        &.blogger a {
+            background-color: #ff9334;
+        }
+        &.yahoo a {
+            background-color: #65106d;
+        }
+    }
+
+    &.soc-icon-transparent{
+
+        li{
+
+            a{
+                &:hover{
+                    opacity:0.8;
+                }
+            }
+
+            &.facebook a{
+                color: #3B5998;
+            }
+            &.twitter a {
+                color: #55ACEE;
+            }
+            &.linkedin a {
+                color: #007ab5;
+            }
+            &.pinterest a {
+                color: #c91921;
+            }
+            &.google-plus a {
+                color: #dd4937;
+            }
+            &.youtube a {
+                color: #e22b26;
+            }
+            &.rss a {
+                color: #f75f0b;
+            }
+            &.tumblr a {
+                color: #34465d;
+            }
+            &.reddit a {
+                color: #FF4500;
+            }
+            &.dribbble a {
+                color: #ea4886;
+            }
+            &.digg a {
+                color: #1b5891;
+            }
+            &.flickr a {
+                color: #ff0082;
+            }
+            &.instagram a {
+                color: #9A6851;
+            }
+            &.vimeo a {
+                color: #17B3E8;
+            }
+            &.skype a {
+                color: #00a9f1;
+            }
+            &.blogger a {
+                color: #ff9334;
+            }
+            &.yahoo a {
+                color: #65106d;
+            } 
+        }
+    } 
+}

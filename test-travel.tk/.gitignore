@@ -1,7 +1,5 @@
 .DS_STORE
 node_modules
-backend/node_modules
-Dashboard/node_modules
 scripts/flow/*/.flowconfig
 *~
 *.pyc
@@ -24,7 +22,7 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
-*yarn.lock
+
 packages/react-devtools-core/dist
 packages/react-devtools-extensions/chrome/build
 packages/react-devtools-extensions/chrome/*.crx
