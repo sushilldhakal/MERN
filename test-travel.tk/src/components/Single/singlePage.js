@@ -4,6 +4,30 @@ import customHeader from "../../assets/img/beach1.jpg";
 import Feature from "../Slider/Feature";
 
 class singlePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: ""
+    };
+    this.tabClick = this.tabClick.bind(this);
+  }
+  tabClick = e => {
+    e.preventDefault();
+
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-pane");
+    tablinks = document
+      .getElementById("myTab")
+      .getElementsByTagName("li")
+      .getElementsByTagName("a")
+      .getAttribute("href");
+
+    console.log(tablinks);
+
+    // document.getElementById(tabName).style.display = "block";
+    // e.currentTarget.className += "show";
+  };
+
   render() {
     var customHeaderImage = {
       backgroundImage: `url(${customHeader})`
@@ -97,7 +121,10 @@ class singlePage extends Component {
 
                     <div className="tour-info tour-has-image-itinerary">
                       <div className="tour-info-box clearfix">
-                        <div className="tour-info-column" style={{ flexWrap: 'wrap' }}>
+                        <div
+                          className="tour-info-column"
+                          style={{ flexWrap: "wrap" }}
+                        >
                           <span className="tour-info-item tour-info-type">
                             <i className="fa fa-flag" aria-hidden="true" />
                             Special Tour
@@ -204,187 +231,184 @@ class singlePage extends Component {
                       </a>
                     </div>
                     {
-                    //   <div className="ws-single-nav-slider">
-                    //   <div className="slider slider-single">
-                    //     <div className="item-video">
-                    //       <div
-                    //         className="slick-video-wrapper"
-                    //         data-href="https://www.youtube.com/watch?v=LF0wJgg6WCk"
-                    //       >
-                    //         {/* <!-- <div className="slick-video-frame">
-                    //                             load iframe here after clicking on image by a href link
-                    //                         </div> --> */}
-                    //         <div className="slick-video-play-icon" />
-                    //         <div className="slick-video-tn">
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-3.jpg" />
-                    //         </div>
-                    //       </div>
-                    //     </div>
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         {/* <!-- data-effect="mfp-zoom-in"
-                    //                         data-effect="mfp-newspaper"
-                    //                         data-effect="mfp-move-horizontal"
-                    //                         data-effect="mfp-move-from-top"
-                    //                         data-effect="mfp-3d-unfold"
-                    //                         data-effect="mfp-zoom-out"
-                    //                         --> */}
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out" 
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out"
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out"
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out"
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out"
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out"
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-                    //     <div className="item-image">
-                    //       <div className="slick-image-wrapper">
-                    //         <a
-                    //           className="slick-image"
-                    //           data-effect="mfp-zoom-out"
-                    //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
-                    //         >
-                    //           <div className="slick-image-tn">
-                    //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
-                    //           </div>
-                    //         </a>
-                    //       </div>
-                    //     </div>
-                    //   </div>
-                    //   <div className="slider slider-nav">
-                    //     <div className="projectitem video-item">
-                    //       <article className="module-post">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-6.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post video-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post video-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post image-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post image-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post image-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post image-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //     <div className="projectitem">
-                    //       <article className="module-post image-thumb">
-                    //         <figure>
-                    //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
-                    //         </figure>
-                    //       </article>
-                    //     </div>
-                    //   </div>
-                    // </div>
-}
+                      //   <div className="ws-single-nav-slider">
+                      //   <div className="slider slider-single">
+                      //     <div className="item-video">
+                      //       <div
+                      //         className="slick-video-wrapper"
+                      //         data-href="https://www.youtube.com/watch?v=LF0wJgg6WCk"
+                      //       >
+                      //         {/* <!-- <div className="slick-video-frame">
+                      //                             load iframe here after clicking on image by a href link
+                      //                         </div> --> */}
+                      //         <div className="slick-video-play-icon" />
+                      //         <div className="slick-video-tn">
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-3.jpg" />
+                      //         </div>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         {/* <!-- data-effect="mfp-zoom-in"
+                      //                         data-effect="mfp-newspaper"
+                      //                         data-effect="mfp-move-horizontal"
+                      //                         data-effect="mfp-move-from-top"
+                      //                         data-effect="mfp-3d-unfold"
+                      //                         data-effect="mfp-zoom-out"
+                      //                         --> */}
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //     <div className="item-image">
+                      //       <div className="slick-image-wrapper">
+                      //         <a
+                      //           className="slick-image"
+                      //           data-effect="mfp-zoom-out"
+                      //           href="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg"
+                      //         >
+                      //           <div className="slick-image-tn">
+                      //             <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/single-31.jpg" />
+                      //           </div>
+                      //         </a>
+                      //       </div>
+                      //     </div>
+                      //   </div>
+                      //   <div className="slider slider-nav">
+                      //     <div className="projectitem video-item">
+                      //       <article className="module-post">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-6.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post video-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post video-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post image-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post image-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post image-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post image-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //     <div className="projectitem">
+                      //       <article className="module-post image-thumb">
+                      //         <figure>
+                      //           <img src="https://raw.githubusercontent.com/sushilldhakal/lordbuddha/master/assets/img/slider-small-61.jpg" />
+                      //         </figure>
+                      //       </article>
+                      //     </div>
+                      //   </div>
+                      // </div>
+                    }
                     <div className="ws-single-nav-slider ws-theme-feature-video-slider bg-white-slider wow fadeInUp">
-                        <Feature />
-                      </div>
+                      <Feature />
+                    </div>
 
                     <div className="ws-theme-tabs clearfix">
                       <div id="someTab">
@@ -403,6 +427,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-description"
                                       role="tab"
                                       data-toggle="tab"
+                                      onClick={this.tabClick}
                                     >
                                       <i
                                         className="fa fa-info-circle"
@@ -417,6 +442,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-itinerary"
                                       role="tab"
                                       data-toggle="tab"
+                                      onClick={this.tabClick}
                                     >
                                       <i
                                         className="fa fa-calendar-check-o"
@@ -431,6 +457,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-location"
                                       role="tab"
                                       data-toggle="tab"
+                                      onClick={this.tabClick}
                                     >
                                       <i
                                         className="fa fa-location-arrow"
@@ -445,6 +472,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-reviews"
                                       role="tab"
                                       data-toggle="tab"
+                                      onClick={this.tabClick}
                                     >
                                       <i
                                         className="fa fa-star"
@@ -459,6 +487,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-trip-faq"
                                       role="tab"
                                       data-toggle="tab"
+                                      onClick={this.tabClick}
                                     >
                                       <i
                                         className="fa fa-question-circle"
@@ -1262,10 +1291,10 @@ class singlePage extends Component {
                                               </div>
                                               <p>
                                                 Sed ut perspiciatis unde omnis
-                                                iste natus singlePage sit voluptatem
-                                                accusantium doloremque
-                                                laudantium, totam rem aperiam,
-                                                eaque ipsa quae ab illo
+                                                iste natus singlePage sit
+                                                voluptatem accusantium
+                                                doloremque laudantium, totam rem
+                                                aperiam, eaque ipsa quae ab illo
                                                 inventore veritatis et quasi
                                                 architecto beatae vitae dicta
                                                 sunt explicabo.
@@ -1491,7 +1520,6 @@ class singlePage extends Component {
                                                 rel="nofollow"
                                                 id="cancel-comment-reply-link"
                                                 href=""
-                                                
                                               >
                                                 Cancel reply
                                               </a>
