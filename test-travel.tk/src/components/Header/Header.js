@@ -22,6 +22,8 @@ class Header extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
+  onChangeSearch() {}
+
   // Hide or show the menu.
   handleScroll = () => {
     const { prevScrollpos } = this.state;
@@ -105,6 +107,7 @@ class Header extends Component {
                           name="s"
                           className="form-control"
                           placeholder="Search"
+                          onChange={this.onChangeSearch}
                         />
                         <span className="input-group-btn">
                           <button className="btn btn-search" type="submit">
@@ -301,10 +304,11 @@ class Header extends Component {
                           <div className="input-group">
                             <input
                               type="text"
-                              value=""
+                              value="search"
                               name="s"
                               className="form-control"
                               placeholder="Search"
+                              onChange={this.onChangeSearch}
                             />
                             <span className="input-group-btn">
                               <button className="btn btn-search" type="submit">

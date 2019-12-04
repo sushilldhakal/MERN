@@ -11,18 +11,12 @@ class singlePage extends Component {
     };
     this.tabClick = this.tabClick.bind(this);
   }
+
+  onChangeSearch() {}
   tabClick = e => {
     e.preventDefault();
-
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-pane");
-    tablinks = document
-      .getElementById("myTab")
-      .getElementsByTagName("li")
-      .getElementsByTagName("a")
-      .getAttribute("href");
-
-    console.log(tablinks);
+    var tabLink = e.currentTarget.href;
+    console.log(tabLink);
 
     // document.getElementById(tabName).style.display = "block";
     // e.currentTarget.className += "show";
@@ -427,6 +421,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-description"
                                       role="tab"
                                       data-toggle="tab"
+                                      value="ws-theme-tab-description"
                                       onClick={this.tabClick}
                                     >
                                       <i
@@ -442,6 +437,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-itinerary"
                                       role="tab"
                                       data-toggle="tab"
+                                      value="ws-theme-tab-itinerary"
                                       onClick={this.tabClick}
                                     >
                                       <i
@@ -457,6 +453,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-location"
                                       role="tab"
                                       data-toggle="tab"
+                                      value="ws-theme-tab-loaction"
                                       onClick={this.tabClick}
                                     >
                                       <i
@@ -472,6 +469,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-reviews"
                                       role="tab"
                                       data-toggle="tab"
+                                      value="ws-theme-tab-reviews"
                                       onClick={this.tabClick}
                                     >
                                       <i
@@ -487,6 +485,7 @@ class singlePage extends Component {
                                       aria-controls="ws-theme-tab-trip-faq"
                                       role="tab"
                                       data-toggle="tab"
+                                      value="ws-theme-tab-trip-faq"
                                       onClick={this.tabClick}
                                     >
                                       <i
@@ -1549,6 +1548,7 @@ class singlePage extends Component {
                                                 rows="7"
                                                 required="required"
                                                 placeholder="Leave your comment..."
+                                                onChange={this.onChangeSearch}
                                               />
                                             </p>
                                             <div className="content-form">
@@ -1561,6 +1561,7 @@ class singlePage extends Component {
                                                   size="30"
                                                   aria-required="true"
                                                   placeholder="Your Name"
+                                                  onChange={this.onChangeSearch}
                                                 />
                                               </p>
                                               <p className="comment-form-email clearfix">
@@ -1573,6 +1574,7 @@ class singlePage extends Component {
                                                   aria-describedby="email-notes"
                                                   aria-required="true"
                                                   placeholder="Your Email"
+                                                  onChange={this.onChangeSearch}
                                                 />
                                               </p>
                                               <p className="comment-form-url clearfix">
@@ -1584,6 +1586,7 @@ class singlePage extends Component {
                                                   size="30"
                                                   aria-required="true"
                                                   placeholder="Website"
+                                                  onChange={this.onChangeSearch}
                                                 />
                                               </p>
                                             </div>
@@ -1591,11 +1594,11 @@ class singlePage extends Component {
                                               className="ws-theme-field"
                                               className="clearfix"
                                             >
-                                              <div id="wp-travel_rate" />
                                               <input
                                                 type="hidden"
                                                 name="ws-theme-rating"
                                                 value="0"
+                                                onChange={this.onChangeSearch}
                                               />
                                             </p>
                                             <p className="form-submit">
@@ -1605,6 +1608,7 @@ class singlePage extends Component {
                                                 id="submit"
                                                 className="submit"
                                                 value="Submit"
+                                                onChange={this.onChangeSearch}
                                               />
                                             </p>
                                           </form>
