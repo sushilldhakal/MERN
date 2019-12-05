@@ -13,6 +13,7 @@ import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
 import UpdatePostInfo from "./components/Post/UpdatePostInfo";
+import UpdatePageInfo from "./components/Page/UpdatePageInfo";
 import AddNewPage from "./views/AddNewPage";
 
 import Pages from "./views/Pages";
@@ -33,6 +34,11 @@ export default [
     path: "/edit-post/:id",
     layout: DefaultLayout,
     component: UpdatePostInfo
+  },
+  {
+    path: "/edit-page/:id",
+    layout: DefaultLayout,
+    component: UpdatePageInfo
   },
   {
     path: "/pages",

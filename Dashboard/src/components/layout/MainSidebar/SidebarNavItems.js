@@ -12,7 +12,8 @@ class SidebarNavItems extends React.Component {
     super(props);
 
     this.state = {
-      navItems: Store.getSidebarItems()
+      navItems: Store.getSidebarItems(),
+      active: false
     };
 
     this.onChange = this.onChange.bind(this);
@@ -26,6 +27,14 @@ class SidebarNavItems extends React.Component {
     Store.removeChangeListener(this.onChange);
   }
 
+  clickNavBar(e) {
+    this.setState = {
+      ...this.state,
+      active: true
+    };
+    console.log(this.state);
+  }
+
   onChange() {
     this.setState({
       ...this.state,
@@ -35,6 +44,9 @@ class SidebarNavItems extends React.Component {
 
   render() {
     const { navItems: items } = this.state;
+
+    var contentKeys = Object.keys(items);
+    //console.log(contentKeys);
     // const innerMenu = if(this.navItems.hasContent){
     //   console.log(navItems.content)
     // }
@@ -54,24 +66,27 @@ class SidebarNavItems extends React.Component {
                 {item.title && <span>{item.title}</span>}
                 {item.htmlAfter && (
                   <div
-                    className="d-inline-block item-icon-wrapper"
+                    className="d-inline-block item-icon-wrapper float-right"
                     dangerouslySetInnerHTML={{ __html: item.htmlAfter }}
                   />
                 )}
               </NavLink>
 
-              {item.content ? (
+              {item.title == "Page" ? (
                 <div
                   tabIndex="-1"
                   role="menu"
                   className="collapse show dropdown-menu dropdown-menu-small"
                 >
+                  <a className="dropdown-item" tabIndex="0" href="/pages">
+                    All Pages
+                  </a>
                   <a
                     className="dropdown-item"
                     tabIndex="0"
-                    href="/demo/shards-dashboard-react/user-profile"
+                    href="/add-new-page"
                   >
-                    {item.content.title}
+                    Add New Page
                   </a>
                 </div>
               ) : (

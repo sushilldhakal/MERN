@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const PostSchema = new Schema(
+const PageSchema = new Schema(
   {
     _id: mongoose.Schema.Types.ObjectId,
     title: { type: String, required: true },
@@ -30,8 +30,8 @@ const PostSchema = new Schema(
     // ]
   },
   {
-    collection: "posts"
+    collection: "pages"
   }
 );
 
-module.exports = Post = mongoose.model("post", PostSchema);
+module.exports = Page = mongoose.model("page", PageSchema);

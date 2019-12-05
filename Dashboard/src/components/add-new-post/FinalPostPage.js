@@ -15,9 +15,6 @@ import {
   FormCheckbox
 } from "shards-react";
 import axios from "axios";
-import ReactQuill, { Quill, Mixin, Toolbar } from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import "../../assets/quill.css";
 
 import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
@@ -25,39 +22,13 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 class FinalPostPage extends Component {
   constructor(props) {
     super(props);
-
-    this.modules = {
-      toolbar: [
-        [{ font: [] }],
-        [{ size: ["small", false, "large", "huge"] }],
-        ["bold", "italic", "underline"],
-        [{ list: "ordered" }, { list: "bullet" }],
-        [{ align: [] }],
-        [{ color: [] }, { background: [] }],
-        ["clean"]
-      ]
-    };
-
-    this.formats = [
-      "font",
-      "size",
-      "bold",
-      "italic",
-      "underline",
-      "list",
-      "bullet",
-      "align",
-      "color",
-      "background"
-    ];
-
     this.state = {
       title: "",
       description: "",
       profileImg: "",
-      status: "",
-      visibility: "",
-      schedule: "",
+      status: "Draft",
+      visibility: "Public",
+      schedule: "Now",
       readability: "ok",
       uncategorized: false,
       design: false,
@@ -65,24 +36,12 @@ class FinalPostPage extends Component {
       writing: false,
       model: "this is atest "
     };
-    // this.fileInput = React.createRef();
-
     this.onChangeHandler = this.onChangeHandler.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleTextareaChange = this.handleTextareaChange.bind(this);
     this.handleCategories = this.handleCategories.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
-
-    //this.handleModelChange = this.handleModelChange.bind(this);
   }
-
-  // handleModelChange = model => {
-  //   this.setState({
-  //     model: model
-  //   });
-  //   //this.props.updateState(this.state.model);
-  // };
-
   handleCategories = name => e => {
     this.setState({
       [name]: e.target.checked
@@ -99,15 +58,6 @@ class FinalPostPage extends Component {
     });
   };
 
-  // handleTextareaChange = (content, delta, source, editor) => {
-  //   // console.log(editor.getHTML()); // rich text
-  //   // console.log(editor.getText()); // plain text
-  //   // console.log(editor.getLength()); // number of characters
-  //   this.setState({
-  //     description: editor.getHTML()
-  //   });
-  // };
-
   handleTextareaChange = (e, editor) => {
     const data = editor.getData();
     console.log({ data });
@@ -116,10 +66,6 @@ class FinalPostPage extends Component {
     });
     console.log(this.state);
   };
-
-  // (value) {
-  //   this.setState({ description: value });
-  // }
 
   onChangeHandler = e => {
     this.setState({
@@ -130,14 +76,6 @@ class FinalPostPage extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    //console.log(this.fileInput.current.files[0].name);
-
-    // const data = {
-    //   title: this.state.title,
-    //   description: this.state.description,
-    //   profileImg: (this.state.profileImg, this.state.profileImg.name)
-    // };
-
     const data = new FormData();
     data.append("profileImg", this.state.profileImg);
     data.append("title", this.state.title);
@@ -191,20 +129,11 @@ class FinalPostPage extends Component {
                   onChange={this.handleInputChange}
                   size="lg"
                 />
-                {/* <ReactQuill
-                  className="add-new-post__editor mb-1"
-                  theme="snow"
-                  modules={this.modules}
-                  formats={this.formats}
-                  value={this.state.description}
-                  onChange={this.handleTextareaChange || ""}
-                /> */}
                 <CKEditor
                   editor={ClassicEditor}
                   data=""
                   placeholder="Description"
                   onInit={editor => {
-                    // You can store the "editor" and use when it is needed.
                     console.log("Editor is ready to use!", editor);
                   }}
                   onChange={this.handleTextareaChange}
@@ -213,22 +142,7 @@ class FinalPostPage extends Component {
                       uploadUrl: "http://localhost/8082/backend/public"
                     }
                   }}
-                  // onBlur={(event, editor) => {
-                  //   console.log("Blur.", editor);
-                  // }}
-                  // onFocus={(event, editor) => {
-                  //   console.log("Focus.", editor);
-                  // }}
                 />
-
-                {/* <textarea
-                  type="text"
-                  placeholder="Describe this Post"
-                  name="description"
-                  className="form-control add-new-post__editor mb-1"
-                  onChange={this.handleInputChange}
-                  value={this.state.description}
-                /> */}
                 <div className="custom-file mb-3">
                   <input
                     onChange={this.onChangeHandler}

@@ -62,7 +62,7 @@ class BlogPosts extends React.Component {
       postList = posts.map((post, k) => <PostCard post={post} key={k} />);
     }
     return (
-      <Container fluid className="main-content-container px-4">
+      <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
           <PageTitle

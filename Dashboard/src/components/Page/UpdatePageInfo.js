@@ -18,19 +18,15 @@ import {
   Badge
 } from "shards-react";
 import axios from "axios";
-import ReactQuill, { Quill, Mixin, Toolbar } from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import "../../assets/quill.css";
-
 import PageTitle from "../common/PageTitle";
 import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
-class UpdatePostInfo extends Component {
+class UpdatePageInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      post: {},
+      page: {},
       title: "",
       description: "",
       profileImg: "",
@@ -80,7 +76,7 @@ class UpdatePostInfo extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8082/api/posts/" + this.props.match.params.id)
+      .get("http://localhost:8082/api/pages/" + this.props.match.params.id)
       .then(res => {
         this.setState({
           title: res.data.title,
@@ -97,18 +93,18 @@ class UpdatePostInfo extends Component {
         });
       })
       .catch(err => {
-        console.log("Error from UpdatePostInfo");
+        console.log("Error from UpdatePageInfo");
       });
   }
 
   onDeleteClick(id) {
     axios
-      .delete("http://localhost:8082/api/posts/" + this.props.match.params.id)
+      .delete("http://localhost:8082/api/pages/" + this.props.match.params.id)
       .then(res => {
-        this.props.history.push("/blog-posts");
+        this.props.history.push("/pages");
       })
       .catch(err => {
-        console.log("Error form ShowPostDetails_deleteClick");
+        console.log("Error form ShowPageDetails_deleteClick");
       });
   }
 
@@ -134,19 +130,19 @@ class UpdatePostInfo extends Component {
     };
     axios
       .put(
-        "http://localhost:8082/api/posts/" + this.props.match.params.id,
+        "http://localhost:8082/api/pages/" + this.props.match.params.id,
         data
       )
       .then(res => {
-        this.props.history.push("/blog-posts/");
+        this.props.history.push("/pages/");
       })
       .catch(err => {
-        console.log("Error in UpdatePostInfo!");
+        console.log("Error in UpdatePageInfo!");
       });
   };
 
   render() {
-    const post = this.state.post;
+    const page = this.state.page;
     return (
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
@@ -154,7 +150,7 @@ class UpdatePostInfo extends Component {
           <PageTitle
             sm="4"
             title={this.state.title}
-            subtitle="Post"
+            subtitle="Page"
             className="text-sm-left"
           />
         </Row>
@@ -308,7 +304,7 @@ class UpdatePostInfo extends Component {
                         type="button"
                         size="sm"
                         theme="danger"
-                        onClick={this.onDeleteClick.bind(this, post._id)}
+                        onClick={this.onDeleteClick.bind(this, page._id)}
                       >
                         <i className="material-icons">delete</i>Delete Post
                       </Button>
@@ -391,13 +387,13 @@ class UpdatePostInfo extends Component {
   }
 }
 
-export default UpdatePostInfo;
+export default UpdatePageInfo;
 
 // import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 // import axios from "axios";
 
-// class UpdatePostInfo extends Component {
+// class UpdatePageInfo extends Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = {
@@ -418,7 +414,7 @@ export default UpdatePostInfo;
 //         });
 //       })
 //       .catch(err => {
-//         console.log("Error from UpdatePostInfo");
+//         console.log("Error from UpdatePageInfo");
 //       });
 //   }
 
@@ -443,13 +439,13 @@ export default UpdatePostInfo;
 //         this.props.history.push("/blog-posts/");
 //       })
 //       .catch(err => {
-//         console.log("Error in UpdatePostInfo!");
+//         console.log("Error in UpdatePageInfo!");
 //       });
 //   };
 
 //   render() {
 //     return (
-//       <div className="UpdatePostInfo">
+//       <div className="UpdatePageInfo">
 //         <div className="container">
 //           <div className="row">
 //             <div className="col-md-8 m-auto">
@@ -505,4 +501,4 @@ export default UpdatePostInfo;
 //   }
 // }
 
-// export default UpdatePostInfo;
+// export default UpdatePageInfo;

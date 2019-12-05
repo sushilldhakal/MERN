@@ -11,23 +11,12 @@ const AddNewPage = () => (
     <Row noGutters className="page-header py-4">
       <PageTitle
         sm="4"
-        title="Add New Post"
-        subtitle="Blog Posts"
+        title="Add New Page"
+        subtitle="Pages"
         className="text-sm-left"
       />
     </Row>
     <FinalPage />
-    <Row>
-      {/* Editor */}
-      {/* <Col lg="9" md="12">
-        <Editor />
-      </Col> */}
-      {/* Sidebar Widgets */}
-      {/* <Col lg="3" md="12">
-        <SidebarActions />
-        <SidebarCategories />
-      </Col> */}
-    </Row>
   </Container>
 );
 

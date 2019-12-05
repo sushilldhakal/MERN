@@ -24,7 +24,11 @@
 }
 
 .ck-content {
-  min-height: 500px;
+  min-height: 350px;
+}
+
+.collapse.dropdown-menu a {
+  padding-left: 50px !important;
 }
 
 @keyframes App-logo-spin {

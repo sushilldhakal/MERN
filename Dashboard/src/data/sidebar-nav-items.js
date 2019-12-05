@@ -24,6 +24,7 @@ export default function() {
       title: "Page",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
       to: "#",
+      htmlAfter: '<i class="fas fa-chevron-down"></i>',
       content: [
         {
           id: 5,
