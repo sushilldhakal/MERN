@@ -11,6 +11,8 @@ const posts = require("./routes/api/posts");
 
 const pages = require("./routes/api/pages");
 
+const tours = require("./routes/api/tours");
+
 const app = express();
 
 // Connect Database
@@ -35,6 +37,7 @@ app.get("/", (req, res) => res.send("Hello world!"));
 // use Routes
 app.use("/api/posts", posts);
 app.use("/api/pages", pages);
+app.use("/api/tours", tours);
 
 const port = process.env.PORT || 8082;
 
