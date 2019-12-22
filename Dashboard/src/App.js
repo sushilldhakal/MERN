@@ -5,7 +5,7 @@ import routes from "./routes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 
-const BASE_URL = "http://localhost:8083";
+//const BASE_URL = "http://localhost:8083";
 
 class App extends Component {
   render() {

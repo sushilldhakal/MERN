@@ -13,14 +13,9 @@ import {
   InputGroup,
   InputGroupAddon,
   FormCheckbox,
-  Container,
-  CardFooter,
-  Badge
+  Container
 } from "shards-react";
 import axios from "axios";
-import ReactQuill, { Quill, Mixin, Toolbar } from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import "../../assets/quill.css";
 
 import PageTitle from "../common/PageTitle";
 import CKEditor from "@ckeditor/ckeditor5-react";
@@ -170,13 +165,11 @@ class UpdatePostInfo extends Component {
                 <CardBody>
                   <FormInput
                     type="text"
-                    placeholder="Title of the Post"
                     name="title"
-                    className="form-control"
+                    className="form-control mb-3"
                     value={this.state.title}
                     onChange={this.handleInputChange}
                     size="lg"
-                    className="mb-3"
                     placeholder="Your Post Title"
                   />
                   <CKEditor

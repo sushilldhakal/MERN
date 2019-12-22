@@ -1,25 +1,15 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 import React, { Component } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardFooter,
-  Badge,
-  Button
-} from "shards-react";
+import { Container, Row } from "shards-react";
 
 import axios from "axios";
-import { Link } from "react-router-dom";
 import TourCard from "../components/Tour/TourCard";
 
 import PageTitle from "../components/common/PageTitle";
 
 import "../App.css";
 
-class Tours extends React.Component {
+class Tours extends Component {
   constructor(props) {
     super(props);
     this.state = {

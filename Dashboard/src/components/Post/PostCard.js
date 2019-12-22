@@ -1,20 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardFooter,
-  Badge,
-  Button
-} from "shards-react";
-import axios from "axios";
+import { Button } from "shards-react";
 
 //import bannerOneImage from "../../assets/img/beach1.jpg";
-import authorAvatar from "../../images/avatars/1.jpg";
 
 // onDeleteClick(id) {
 //   axios
@@ -30,15 +19,6 @@ import authorAvatar from "../../images/avatars/1.jpg";
 
 const PostCard = props => {
   const post = props.post;
-  const backgroundImage = {
-    backgroundImage: "url(" + post.profileImg + ")"
-  };
-  // const backgroundImageDefault = {
-  //   backgroundImage: "url(" + bannerOneImage + ")"
-  // };
-  const avatar = {
-    backgroundImage: "url(" + authorAvatar + ")"
-  };
 
   const values = [];
 
@@ -54,10 +34,6 @@ const PostCard = props => {
   if (props.post.writing) {
     values.push("Writing");
   }
-
-  console.log(values);
-
-  var finalPostImage = backgroundImage;
 
   return (
     // <Col lg="3" md="6" sm="12" className="mb-4">
@@ -95,7 +71,11 @@ const PostCard = props => {
     <tr role="row" className="odd">
       <td className="file-manager__item-icon" tabIndex="0">
         <div>
-          <img src={post.profileImg} className="img-responsive" />
+          <img
+            src={post.profileImg}
+            className="img-responsive"
+            alt={post.profileImg.title}
+          />
         </div>
       </td>
       <td className="text-left">

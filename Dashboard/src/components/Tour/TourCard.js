@@ -1,20 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardFooter,
-  Badge,
-  Button
-} from "shards-react";
-import axios from "axios";
+import { Button } from "shards-react";
 
 //import bannerOneImage from "../../assets/img/beach1.jpg";
-import authorAvatar from "../../images/avatars/1.jpg";
 
 // onDeleteClick(id) {
 //   axios
@@ -30,15 +19,6 @@ import authorAvatar from "../../images/avatars/1.jpg";
 
 const TourCard = props => {
   const tour = props.tour;
-  const backgroundImage = {
-    backgroundImage: "url(" + tour.profileImg + ")"
-  };
-  // const backgroundImageDefault = {
-  //   backgroundImage: "url(" + bannerOneImage + ")"
-  // };
-  const avatar = {
-    backgroundImage: "url(" + authorAvatar + ")"
-  };
 
   const values = [];
 
@@ -55,15 +35,15 @@ const TourCard = props => {
     values.push("Writing");
   }
 
-  console.log(values);
-
-  var finaltourImage = backgroundImage;
-
   return (
     <tr role="row" className="odd">
       <td className="file-manager__item-icon" tabIndex="0">
         <div>
-          <img src={tour.profileImg} className="img-responsive" />
+          <img
+            src={tour.profileImg}
+            className="img-responsive"
+            alt={tour.profileImg.title}
+          />
         </div>
       </td>
       <td className="text-left">

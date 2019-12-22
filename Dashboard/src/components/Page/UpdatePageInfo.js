@@ -13,9 +13,7 @@ import {
   InputGroup,
   InputGroupAddon,
   FormCheckbox,
-  Container,
-  CardFooter,
-  Badge
+  Container
 } from "shards-react";
 import axios from "axios";
 import PageTitle from "../common/PageTitle";
@@ -166,14 +164,12 @@ class UpdatePageInfo extends Component {
                 <CardBody>
                   <FormInput
                     type="text"
-                    placeholder="Title of the Post"
+                    placeholder="Title of the Page"
                     name="title"
-                    className="form-control"
+                    className="form-control mb-3"
                     value={this.state.title}
                     onChange={this.handleInputChange}
                     size="lg"
-                    className="mb-3"
-                    placeholder="Your Post Title"
                   />
                   <CKEditor
                     editor={ClassicEditor}

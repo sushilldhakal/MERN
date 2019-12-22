@@ -1,20 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardFooter,
-  Badge,
-  Button
-} from "shards-react";
-import axios from "axios";
-
+import { Button } from "shards-react";
 //import bannerOneImage from "../../assets/img/beach1.jpg";
-import authorAvatar from "../../images/avatars/1.jpg";
 
 // onDeleteClick(id) {
 //   axios
@@ -30,15 +18,10 @@ import authorAvatar from "../../images/avatars/1.jpg";
 
 const PageCard = props => {
   const page = props.page;
-  const backgroundImage = {
-    backgroundImage: "url(" + page.profileImg + ")"
-  };
+
   // const backgroundImageDefault = {
   //   backgroundImage: "url(" + bannerOneImage + ")"
   // };
-  const avatar = {
-    backgroundImage: "url(" + authorAvatar + ")"
-  };
 
   const values = [];
 
@@ -54,10 +37,6 @@ const PageCard = props => {
   if (props.page.writing) {
     values.push("Writing");
   }
-
-  console.log(values);
-
-  var finalPageImage = backgroundImage;
 
   return (
     // <Col lg="3" md="6" sm="12" className="mb-4">
@@ -95,7 +74,11 @@ const PageCard = props => {
     <tr role="row" className="odd">
       <td className="file-manager__item-icon" tabIndex="0">
         <div>
-          <img src={page.profileImg} className="img-responsive" />
+          <img
+            src={page.profileImg}
+            className="img-responsive"
+            alt={page.profileImg.name}
+          />
         </div>
       </td>
       <td className="text-left">
