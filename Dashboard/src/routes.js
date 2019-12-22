@@ -13,10 +13,14 @@ import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
 import UpdatePostInfo from "./components/Post/UpdatePostInfo";
-import UpdatePageInfo from "./components/Page/UpdatePageInfo";
-import AddNewPage from "./views/AddNewPage";
 
+import AddNewPage from "./views/AddNewPage";
 import Pages from "./views/Pages";
+import UpdatePageInfo from "./components/Page/UpdatePageInfo";
+
+import AddNewTour from "./views/AddNewTour";
+import Tours from "./views/Tours";
+import UpdateTourInfo from "./components/Tour/UpdateTourInfo";
 
 export default [
   {
@@ -41,9 +45,19 @@ export default [
     component: UpdatePageInfo
   },
   {
+    path: "/edit-tour/:id",
+    layout: DefaultLayout,
+    component: UpdateTourInfo
+  },
+  {
     path: "/pages",
     layout: DefaultLayout,
     component: Pages
+  },
+  {
+    path: "/tours",
+    layout: DefaultLayout,
+    component: Tours
   },
   {
     path: "/user-profile-lite",
@@ -59,6 +73,11 @@ export default [
     path: "/add-new-page",
     layout: DefaultLayout,
     component: AddNewPage
+  },
+  {
+    path: "/add-new-tour",
+    layout: DefaultLayout,
+    component: AddNewTour
   },
   {
     path: "/errors",

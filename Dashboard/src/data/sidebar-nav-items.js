@@ -5,19 +5,22 @@ export default function() {
       title: "Blog Dashboard",
       to: "/blog-overview",
       htmlBefore: '<i class="material-icons">edit</i>',
-      htmlAfter: ""
+      htmlAfter: "",
+      content: []
     },
     {
       id: 2,
       title: "Blog Posts",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
-      to: "/blog-posts"
+      to: "/blog-posts",
+      content: []
     },
     {
       id: 3,
       title: "Add New Post",
       htmlBefore: '<i class="material-icons">note_add</i>',
-      to: "/add-new-post"
+      to: "/add-new-post",
+      content: []
     },
     {
       id: 4,
@@ -41,28 +44,47 @@ export default function() {
       ]
     },
     {
+      id: 12,
+      title: "All Tour",
+      htmlBefore: '<i class="material-icons">vertical_split</i>',
+      to: "/tours",
+      content: []
+    },
+    {
+      id: 13,
+      title: "Add New Tour",
+      htmlBefore: '<i class="material-icons">note_add</i>',
+      to: "/add-new-tour",
+      content: []
+    },
+
+    {
       id: 7,
       title: "Forms & Components",
       htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/components-overview"
+      to: "/components-overview",
+      content: []
     },
     {
       id: 8,
       title: "Tables",
       htmlBefore: '<i class="material-icons">table_chart</i>',
-      to: "/tables"
+      to: "/tables",
+      content: []
     },
     {
       id: 9,
       title: "User Profile",
       htmlBefore: '<i class="material-icons">person</i>',
-      to: "/user-profile-lite"
+      to: "/user-profile-lite",
+      content: []
     },
     {
       id: 10,
       title: "Errors",
       htmlBefore: '<i class="material-icons">error</i>',
-      to: "/errors"
+      to: "/errors",
+      content: []
     }
   ];
 }

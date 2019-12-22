@@ -72,6 +72,26 @@ class SidebarNavItems extends React.Component {
                 )}
               </NavLink>
 
+              {console.log("inner menu" + item.content.title)}
+
+              {/* {item.content ? (
+                <div
+                  tabIndex="-1"
+                  role="menu"
+                  className="collapse show dropdown-menu dropdown-menu-small"
+                >
+                  <a
+                    className="dropdown-item"
+                    tabIndex="0"
+                    href={item.content.to}
+                  >
+                    {item.content.title}
+                  </a>
+                </div>
+              ) : (
+                ""
+              )} */}
+
               {item.title == "Page" ? (
                 <div
                   tabIndex="-1"

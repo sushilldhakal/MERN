@@ -32,7 +32,7 @@ const SidebarNavItem = ({ item }) => (
           tabIndex="0"
           href="/demo/shards-dashboard-react/user-profile"
         >
-          {item.content}
+          {item.content.title}
         </a>
       </div>
     ) : (
