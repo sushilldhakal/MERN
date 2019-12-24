@@ -19,6 +19,14 @@
   color: white;
 }
 
+image-gallery ul {
+  padding: 0;
+}
+
+image-gallery ul li {
+  list-style: none;
+}
+
 .App-link {
   color: #61dafb;
 }

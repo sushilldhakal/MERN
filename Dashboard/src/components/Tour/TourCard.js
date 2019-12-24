@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
 import { Button } from "shards-react";
+import axios from "axios";
 
 //import bannerOneImage from "../../assets/img/beach1.jpg";
 
@@ -76,7 +77,7 @@ const TourCard = props => {
           </Link>
 
           <Button type="button" size="sm" theme="danger">
-            <i className="material-icons"></i>
+            <i className="material-icons">delete</i>
           </Button>
         </div>
       </td>
