@@ -16,6 +16,12 @@ class SidebarNavItems extends React.Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    const currentState = this.state.active;
+    this.setState({ active: !currentState });
   }
 
   componentWillMount() {
@@ -42,13 +48,7 @@ class SidebarNavItems extends React.Component {
   }
 
   render() {
-    const { navItems: items } = this.state;
-
-    //var contentKeys = Object.keys(items);
-    //console.log(contentKeys);
-    // const innerMenu = if(this.navItems.hasContent){
-    //   console.log(navItems.content)
-    // }
+    const { navItems: items, active } = this.state;
     return (
       <div className="nav-wrapper">
         <Nav className="nav--borders flex-column">
@@ -71,7 +71,17 @@ class SidebarNavItems extends React.Component {
                 )}
               </NavLink>
 
-              {console.log("inner menu" + item.content.title)}
+              {item.content.length ? (
+                <Nav className=" show nav--borders flex-column collapse dropdown-menu dropdown-menu-small">
+                  {item.content.map((innerContent, idx) => (
+                    <NavItem key={innerContent.id}>
+                      <NavLink tag={RouteNavLink} to={innerContent.to}>
+                        {innerContent.title}
+                      </NavLink>
+                    </NavItem>
+                  ))}
+                </Nav>
+              ) : null}
 
               {/* {item.content ? (
                 <div
@@ -79,19 +89,21 @@ class SidebarNavItems extends React.Component {
                   role="menu"
                   className="collapse show dropdown-menu dropdown-menu-small"
                 >
-                  <a
+                  {console.log(item.content)} */}
+              {/* {item.content[3].title} */}
+              {/* <a
                     className="dropdown-item"
                     tabIndex="0"
                     href={item.content.to}
                   >
                     {item.content.title}
-                  </a>
-                </div>
+                  </a> */}
+              {/* </div>
               ) : (
                 ""
               )} */}
 
-              {item.title === "Page" ? (
+              {/* {item.title === "Page" ? (
                 <div
                   tabIndex="-1"
                   role="menu"
@@ -110,7 +122,7 @@ class SidebarNavItems extends React.Component {
                 </div>
               ) : (
                 ""
-              )}
+              )} */}
             </NavItem>
           ))}
         </Nav>

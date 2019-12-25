@@ -183,7 +183,8 @@ class UpdatePostInfo extends Component {
                     onChange={this.handleTextareaChange}
                     config={{
                       ckfinder: {
-                        uploadUrl: "http://localhost/8082/backend/public"
+                        uploadUrl:
+                          "http://localhost:8082/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images&responseType=json"
                       }
                     }}
                     // onBlur={(event, editor) => {
@@ -193,24 +194,7 @@ class UpdatePostInfo extends Component {
                     //   console.log("Focus.", editor);
                     // }}
                   />
-                  {/* <ReactQuill
-                    className="add-new-post__editor mb-1 form-control add-new-post__editor mb-"
-                    theme="snow"
-                    placeholder="Describe this Post"
-                    name="description"
-                    // modules={this.modules}
-                    // formats={this.formats}
-                    value={this.state.description}
-                    onChange={this.handleTextareaChange || ""}
-                  /> */}
-                  {/* <textarea
-                  type="text"
-                  placeholder="Describe this Post"
-                  name="description"
-                  className="form-control add-new-post__editor mb-1"
-                  onChange={this.handleInputChange}
-                  value={this.state.description}
-                /> */}
+
                   <div className="custom-file mb-3">
                     <input
                       onChange={this.onChangeHandler}

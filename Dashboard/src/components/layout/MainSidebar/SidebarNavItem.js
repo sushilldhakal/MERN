@@ -20,7 +20,6 @@ const SidebarNavItem = ({ item }) => (
         />
       )}
     </NavLink>
-    {console.log(item.content)}
     {item.content ? (
       <div
         tabIndex="-1"

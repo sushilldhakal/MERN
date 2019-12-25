@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd backend && node app.js\" \"cd Dashboard && npm run start\""
+    "start": "concurrently \"cd backend && node app.js\" \"cd Dashboard && npm run start\"",
+    "install": "concurrently \"npm install\" \"cd backend && npm install\"  \"cd Dashboard && npm install\""
   },
   "keywords": [],
   "author": "",
