@@ -490,7 +490,7 @@ class FinalTour extends Component {
                       type="button"
                       onClick={this.handleAddingFact}
                     >
-                      <i className="material-icons">file_copy</i> {"Add FAQs"}
+                      <i className="material-icons">file_copy</i> {"Add Facts"}
                     </Button>
                   </TabPanel>
                   <TabPanel>
