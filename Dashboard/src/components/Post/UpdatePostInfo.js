@@ -61,7 +61,6 @@ class UpdatePostInfo extends Component {
   };
   handleTextareaChange = (e, editor) => {
     const data = editor.getData();
-    console.log({ data });
     this.setState({
       description: data
     });
@@ -187,12 +186,6 @@ class UpdatePostInfo extends Component {
                           "http://localhost:8082/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images&responseType=json"
                       }
                     }}
-                    // onBlur={(event, editor) => {
-                    //   console.log("Blur.", editor);
-                    // }}
-                    // onFocus={(event, editor) => {
-                    //   console.log("Focus.", editor);
-                    // }}
                   />
 
                   <div className="custom-file mb-3">
@@ -208,14 +201,7 @@ class UpdatePostInfo extends Component {
                       Choose image...
                     </label>
                   </div>
-                  {/* <input
-                    className="form-control "
-                    //ref={this.fileInput}
-                    onChange={this.onChangeHandler}
-                    type="file"
-                    accept="image/*"
-                    name="Choose Image"
-                  /> */}
+
                   <br />
                 </CardBody>
               </Card>
@@ -278,9 +264,6 @@ class UpdatePostInfo extends Component {
                       </span>
                     </ListGroupItem>
                     <ListGroupItem className="d-flex px-3 border-0">
-                      {/* <Button outline theme="accent" size="sm">
-                        Save Draft
-                      </Button> */}
                       <Button
                         type="button"
                         size="sm"
@@ -369,117 +352,3 @@ class UpdatePostInfo extends Component {
 }
 
 export default UpdatePostInfo;
-
-// import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// import axios from "axios";
-
-// class UpdatePostInfo extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       title: "",
-//       description: ""
-//     };
-//   }
-
-//   componentDidMount() {
-//     // console.log("Print id: " + this.props.match.params.id);
-//     axios
-//       .get("http://localhost:8082/api/posts/" + this.props.match.params.id)
-//       .then(res => {
-//         // this.setState({...this.state, post: res.data})
-//         this.setState({
-//           title: res.data.title,
-//           description: res.data.description
-//         });
-//       })
-//       .catch(err => {
-//         console.log("Error from UpdatePostInfo");
-//       });
-//   }
-
-//   onChange = e => {
-//     this.setState({ [e.target.name]: e.target.value });
-//   };
-
-//   onSubmit = e => {
-//     e.preventDefault();
-
-//     const data = {
-//       title: this.state.title,
-//       description: this.state.description
-//     };
-
-//     axios
-//       .put(
-//         "http://localhost:8082/api/posts/" + this.props.match.params.id,
-//         data
-//       )
-//       .then(res => {
-//         this.props.history.push("/blog-posts/");
-//       })
-//       .catch(err => {
-//         console.log("Error in UpdatePostInfo!");
-//       });
-//   };
-
-//   render() {
-//     return (
-//       <div className="UpdatePostInfo">
-//         <div className="container">
-//           <div className="row">
-//             <div className="col-md-8 m-auto">
-//               <br />
-//               <Link to="/" className="btn btn-outline-warning float-left">
-//                 Show post List
-//               </Link>
-//             </div>
-//             <div className="col-md-8 m-auto">
-//               <h1 className="display-4 text-center">Edit post</h1>
-//               <p className="lead text-center">Update post's Info</p>
-//             </div>
-//           </div>
-
-//           <div className="col-md-8 m-auto">
-//             <form noValidate onSubmit={this.onSubmit}>
-//               <div className="form-group">
-//                 <label htmlFor="title">Title</label>
-//                 <input
-//                   type="text"
-//                   placeholder="Title of the post"
-//                   name="title"
-//                   className="form-control"
-//                   value={this.state.title}
-//                   onChange={this.onChange}
-//                 />
-//               </div>
-//               <br />
-
-//               <div className="form-group">
-//                 <label htmlFor="description">Description</label>
-//                 <input
-//                   type="text"
-//                   placeholder="Describe this post"
-//                   name="description"
-//                   className="form-control"
-//                   value={this.state.description}
-//                   onChange={this.onChange}
-//                 />
-//               </div>
-
-//               <button
-//                 type="submit"
-//                 className="btn btn-outline-info btn-lg btn-block"
-//               >
-//                 Update post
-//               </button>
-//             </form>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default UpdatePostInfo;

@@ -33,8 +33,7 @@ class BlogPosts extends Component {
     axios
       .delete("http://localhost:8082/api/posts/" + this.props.match.params.id)
       .then(res => {
-        //this.props.history.push("/blog-posts");
-        console.log(this.state);
+        this.props.history.push("/blog-posts");
       })
       .catch(err => {
         console.log("Error form ShowPostDetails_deleteClick");
@@ -43,7 +42,6 @@ class BlogPosts extends Component {
 
   render() {
     const posts = this.state.posts;
-    console.log("PrintPost: " + posts);
     let postList;
 
     if (!posts) {
@@ -51,6 +49,7 @@ class BlogPosts extends Component {
     } else {
       postList = posts.map((post, k) => <PostCard post={post} key={k} />);
     }
+
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}

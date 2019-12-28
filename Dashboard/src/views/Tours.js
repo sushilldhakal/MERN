@@ -32,7 +32,6 @@ class Tours extends Component {
 
   render() {
     const tours = this.state.tours;
-    console.log("PrintPost: " + tours);
     let tourList;
 
     if (!tours) {
@@ -40,7 +39,6 @@ class Tours extends Component {
     } else {
       tourList = tours.map((tour, k) => <TourCard tour={tour} key={k} />);
     }
-    console.log("tourList" + tourList);
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}

@@ -39,38 +39,6 @@ const PageCard = props => {
   }
 
   return (
-    // <Col lg="3" md="6" sm="12" className="mb-4">
-    //   <Card small className="card-page card-page--1">
-    //     <div className="card-page__image" style={finalpageImage}>
-    //       <Badge
-    //         pill
-    //         className={`card-page__category bg-${page.categoryTheme}`}
-    //       >
-    //         {page.category}
-    //       </Badge>
-    //       <div className="card-page__author d-flex">
-    //         <a
-    //           href={`/edit-page/${page._id}`}
-    //           style={avatar}
-    //           className="card-page__author-avatar card-page__author-avatar--small"
-    //         >
-    //           Written by {page.author}
-    //         </a>
-    //       </div>
-    //     </div>
-    //     <CardBody>
-    //       <h5 className="card-title">
-    //         <Link className="text-fiord-blue" to={`/edit-page/${page._id}`}>
-    //           {page.title}
-    //         </Link>
-    //       </h5>
-    //       <div className="card-text d-inline-block mb-3">
-    //         {page.description}
-    //       </div>
-    //       <span className="text-muted">{page.published_date}</span>
-    //     </CardBody>
-    //   </Card>
-    // </Col>
     <tr role="row" className="odd">
       <td className="file-manager__item-icon" tabIndex="0">
         <div>

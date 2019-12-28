@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { NavLink as RouteNavLink } from "react-router-dom";
-import { NavItem, NavLink } from "shards-react";
+import { NavItem, NavLink, Nav } from "shards-react";
 
 const SidebarNavItem = ({ item }) => (
-  <NavItem>
+  <NavItem className="sidebar-Nav">
     <NavLink tag={RouteNavLink} to={item.to}>
       {item.htmlBefore && (
         <div
@@ -13,30 +13,26 @@ const SidebarNavItem = ({ item }) => (
         />
       )}
       {item.title && <span>{item.title}</span>}
+
       {item.htmlAfter && (
         <div
-          className="d-inline-block item-icon-wrapper"
+          className="d-inline-block item-icon-wrapper float-right"
           dangerouslySetInnerHTML={{ __html: item.htmlAfter }}
         />
       )}
     </NavLink>
-    {item.content ? (
-      <div
-        tabIndex="-1"
-        role="menu"
-        className="collapse show dropdown-menu dropdown-menu-small"
-      >
-        <a
-          className="dropdown-item"
-          tabIndex="0"
-          href="/demo/shards-dashboard-react/user-profile"
-        >
-          {item.content.title}
-        </a>
-      </div>
-    ) : (
-      ""
-    )}
+
+    {item.content.length ? (
+      <Nav className="nav--borders flex-column show collapse dropdown-menu dropdown-menu-small">
+        {item.content.map((innerContent, idx) => (
+          <NavItem key={innerContent.id}>
+            <NavLink tag={RouteNavLink} to={innerContent.to}>
+              {innerContent.title}
+            </NavLink>
+          </NavItem>
+        ))}
+      </Nav>
+    ) : null}
   </NavItem>
 );
 

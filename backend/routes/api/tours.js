@@ -7,33 +7,62 @@ let express = require("express"),
 const DIR = "./public/";
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, DIR);
-  },
-  filename: (req, file, cb) => {
-    const fileName = file.originalname
-      .toLowerCase()
-      .split(" ")
-      .join("-");
-    cb(null, uuidv4() + "-" + fileName);
+  destination: "./uploads/",
+  filename: function(req, file, cb) {
+    // Mimetype stores the file type, set extensions according to filetype
+    switch (file.mimetype) {
+      case "image/jpeg":
+        ext = ".jpeg";
+        break;
+      case "image/png":
+        ext = ".png";
+        break;
+      case "image/gif":
+        ext = ".gif";
+        break;
+    }
+
+    cb(null, file.originalname.slice(0, 4) + Date.now() + ext);
   }
+});
+const upload = multer({ storage: storage });
+
+router.post("/uploadHandler", upload.single("file"), function(req, res, next) {
+  if (req.file && req.file.originalname) {
+    console.log(`Received file ${req.file.originalname}`);
+  }
+
+  res.send({ responseText: req.file.path }); // You can send any response to the user here
 });
 
-var upload = multer({
-  storage: storage,
-  fileFilter: (req, file, cb) => {
-    if (
-      file.mimetype == "image/png" ||
-      file.mimetype == "image/jpg" ||
-      file.mimetype == "image/jpeg"
-    ) {
-      cb(null, true);
-    } else {
-      cb(null, false);
-      return cb(new Error("Only .png, .jpg and .jpeg format allowed!"));
-    }
-  }
-});
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, DIR);
+//   },
+//   filename: (req, file, cb) => {
+//     const fileName = file.originalname
+//       .toLowerCase()
+//       .split(" ")
+//       .join("-");
+//     cb(null, uuidv4() + "-" + fileName);
+//   }
+// });
+
+// var upload = multer({
+//   storage: storage,
+//   fileFilter: (req, file, cb) => {
+//     if (
+//       file.mimetype == "image/png" ||
+//       file.mimetype == "image/jpg" ||
+//       file.mimetype == "image/jpeg"
+//     ) {
+//       cb(null, true);
+//     } else {
+//       cb(null, false);
+//       return cb(new Error("Only .png, .jpg and .jpeg format allowed!"));
+//     }
+//   }
+// });
 
 // Load tour model
 const Tour = require("../../models/Tour");
@@ -73,12 +102,14 @@ router.get("/:id", (req, res) => {
 
 router.post("/", upload.single("profileImg"), (req, res, next) => {
   const url = req.protocol + "://" + req.get("host");
+
   const tour = new Tour({
     _id: new mongoose.Types.ObjectId(),
     title: req.body.title,
     description: req.body.description,
     name: req.body.name,
     profileImg: url + "/public/" + req.file.filename,
+    profileImg: req.file.path,
     status: req.body.status,
     schedule: req.body.schedule,
     visibility: req.body.visibility,

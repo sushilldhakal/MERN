@@ -1,4 +1,4 @@
-.dropzone {
+/* .dropzone {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   list-style: none;
   display: inline-block;
   float: left;
-}
+} */
 .react-tabs {
   margin-top: 30px;
 }
@@ -83,4 +83,58 @@
   font-weight: 500;
   color: #00b8d8;
   padding: 0 0 5px;
+}
+
+.accordion__item {
+  position: relative;
+}
+
+.accordion__item:before {
+  content: counter(mycounter);
+  counter-increment: mycounter;
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: teal;
+  text-align: center;
+}
+
+.itineary-accordion .accordion__item:before {
+  left: 130px;
+}
+
+.accordion__item .btn-danger {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  padding: 1px 6px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column-reverse;
+  counter-reset: mycounter;
+}
+.accordion__heading .accordion__button {
+  background-color: #cacedb;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid #737373;
+}
+
+.sort-drag {
+  position: absolute;
+  top: 0;
+  height: 41px;
+  line-height: 41px;
+  font-size: 25px;
+  color: #333;
+  cursor: all-scroll;
+  width: 30px;
+  padding-left: 4px;
 }

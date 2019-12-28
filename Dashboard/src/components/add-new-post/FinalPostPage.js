@@ -46,7 +46,6 @@ class FinalPostPage extends Component {
     this.setState({
       [name]: e.target.checked
     });
-    console.log(this.state);
   };
 
   handleInputChange = e => {
@@ -60,18 +59,15 @@ class FinalPostPage extends Component {
 
   handleTextareaChange = (e, editor) => {
     const data = editor.getData();
-    console.log({ data });
     this.setState({
       description: data
     });
-    console.log(this.state);
   };
 
   onChangeHandler = e => {
     this.setState({
       profileImg: e.target.files[0]
     });
-    console.log(e.target.files[0]);
   };
 
   handleSubmit = e => {

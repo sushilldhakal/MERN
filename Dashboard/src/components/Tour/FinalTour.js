@@ -24,7 +24,9 @@ import "./tour.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-import { useDropzone } from "react-dropzone";
+import DropzoneComponent from "react-dropzone-component";
+
+import Nestable from "react-nestable";
 
 import {
   Accordion,
@@ -36,88 +38,44 @@ import {
 
 // Demo styles, see 'Styles' section below for some notes on use.
 import "react-accessible-accordion/dist/fancy-example.css";
-
-const thumbsContainer = {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  marginTop: 16
-};
-
-const thumb = {
-  display: "inline-flex",
-  borderRadius: 2,
-  border: "1px solid #eaeaea",
-  marginBottom: 8,
-  marginRight: 8,
-  width: 100,
-  height: 100,
-  padding: 4,
-  boxSizing: "border-box"
-};
-
-const thumbInner = {
-  display: "flex",
-  minWidth: 0,
-  overflow: "hidden"
-};
-
-const img = {
-  display: "block",
-  width: "auto",
-  height: "100%"
-};
-
-function Previews(props) {
-  const [files, setFiles] = useState([]);
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
-    muntiple: true,
-    onDrop: acceptedFiles => {
-      setFiles(
-        acceptedFiles.map(file =>
-          Object.assign(file, {
-            preview: URL.createObjectURL(file)
-          })
-        )
-      );
-    }
-  });
-
-  const thumbs = files.map(file => (
-    <li key={file.path}>
-      <div style={thumb} key={file.name}>
-        <div style={thumbInner}>
-          <img src={file.preview} style={img} />
-        </div>
-      </div>
-    </li>
-  ));
-
-  useEffect(
-    () => () => {
-      // Make sure to revoke the data uris to avoid memory leaks
-      files.forEach(file => URL.revokeObjectURL(file.preview));
-    },
-    [files]
-  );
-
-  return (
-    <section className="image-gallery">
-      <div {...getRootProps({ className: "dropzone" })}>
-        <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
-      </div>
-      <aside style={thumbsContainer}>
-        <ul>{thumbs}</ul>
-      </aside>
-    </section>
-  );
-}
+import ReactDOM from "react-dom";
+import ReactDragListView from "react-drag-listview";
 
 class FinalTour extends Component {
   constructor(props) {
     super(props);
+
+    // For a full list of possible configurations,
+    // please consult http://www.dropzonejs.com/#configuration
+    this.djsConfig = {
+      addRemoveLinks: true,
+      acceptedFiles: "image/jpeg,image/png,image/gif"
+    };
+
+    this.componentConfig = {
+      iconFiletypes: [".jpg", ".png", ".gif"],
+      showFiletypeIcon: true,
+      postUrl: "/uploadHandler"
+    };
+
+    // If you want to attach multiple callbacks, simply
+    // create an array filled with all your callbacks.
+    this.callbackArray = [() => console.log("Hi!"), () => console.log("Ho!")];
+
+    // Simple callbacks work too, of course
+    this.callback = () => console.log("Hello!");
+
+    this.success = file => console.log("uploaded", file);
+
+    this.removedfile = file => console.log("removing...", file);
+
+    this.dropzone = null;
+
+    const faqId = [];
+    const itinearyId = [];
+    // faqId.push({
+    //   title: `rows$`
+    // });
 
     this.state = {
       title: "",
@@ -131,9 +89,11 @@ class FinalTour extends Component {
       design: false,
       development: false,
       writing: false,
-      itinearyCount: 1,
-      faqCount: 1
+      itinearyId,
+      faqId,
+      faqHandel: []
     };
+
     // this.fileInput = React.createRef();
 
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -143,125 +103,32 @@ class FinalTour extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleAddingAccordion = this.handleAddingAccordion.bind(this);
     this.handleAddingFaq = this.handleAddingFaq.bind(this);
+    this.removeItineary = this.removeItineary.bind(this);
+    this.removeFaq = this.removeFaq.bind(this);
   }
-
   handleAddingAccordion() {
-    this.setState({ itinearyCount: this.state.itinearyCount + 1 });
+    let curr = this.state.itinearyId;
+    const uniqueID = Date.now();
+    this.setState({ itinearyId: [...curr, uniqueID] });
   }
   handleAddingFaq() {
-    this.setState({ faqCount: this.state.faqCount + 1 });
+    let curr = this.state.faqId;
+    const uniqueID = Date.now();
+    this.setState({ faqId: [...curr, uniqueID] });
   }
 
-  renderFaq() {
-    let faqCount = this.state.faqCount,
-      faqItems = [];
-    while (faqCount--)
-      faqItems.push(
-        <AccordionItem key={faqCount}>
-          <AccordionItemHeading>
-            <AccordionItemButton>FAQs {faqCount}</AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel>
-            <h6>FAQs Question</h6>
-            <FormInput
-              type="text"
-              placeholder="faq question"
-              name="tripCode"
-              className="form-control mb-3"
-              value={this.state.faq}
-              onChange={this.handleInputChange}
-              size="lg"
-            />
-
-            <CKEditor
-              editor={ClassicEditor}
-              data=""
-              placeholder="faq Description"
-              onInit={editor => {
-                console.log("Editor is ready to use!", editor);
-              }}
-              onChange={this.handleTextareaChange}
-              config={{
-                ckfinder: {
-                  uploadUrl: "http://localhost/8082/backend/public"
-                }
-              }}
-            />
-          </AccordionItemPanel>
-        </AccordionItem>
-      );
-
-    return faqItems;
+  removeItineary(e) {
+    document.getElementById("ai-" + e).remove();
   }
 
-  renderDivs() {
-    let itinearyCount = this.state.itinearyCount,
-      uiItems = [];
-    while (itinearyCount--)
-      uiItems.push(
-        <AccordionItem key={itinearyCount}>
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              Itineary Day {itinearyCount}
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel>
-            <h6>Itineary Title</h6>
-            <FormInput
-              type="text"
-              placeholder="itineary title"
-              name="tripCode"
-              className="form-control mb-3"
-              value={this.state.itineary}
-              onChange={this.handleInputChange}
-              size="lg"
-            />
-
-            <FormInput
-              type="text"
-              placeholder="itineary date"
-              name="tripitineary date"
-              className="form-control mb-3"
-              value={this.state.itineary}
-              onChange={this.handleInputChange}
-              size="lg"
-            />
-
-            <FormInput
-              type="text"
-              placeholder="itineary time"
-              name="trip itineary time"
-              className="form-control mb-3"
-              value={this.state.itineary}
-              onChange={this.handleInputChange}
-              size="lg"
-            />
-
-            <CKEditor
-              editor={ClassicEditor}
-              data=""
-              placeholder="Itineray Description"
-              onInit={editor => {
-                console.log("Editor is ready to use!", editor);
-              }}
-              onChange={this.handleTextareaChange}
-              config={{
-                ckfinder: {
-                  uploadUrl: "http://localhost/8082/backend/public"
-                }
-              }}
-            />
-          </AccordionItemPanel>
-        </AccordionItem>
-      );
-    return uiItems;
+  removeFaq(e) {
+    document.getElementById("ai-" + e).remove();
   }
 
   handleCategories = name => e => {
     this.setState({
       [name]: e.target.checked
     });
-    console.log(this.state);
   };
 
   handleInputChange = e => {
@@ -275,18 +142,15 @@ class FinalTour extends Component {
 
   handleTextareaChange = (e, editor) => {
     const data = editor.getData();
-    console.log({ data });
     this.setState({
       description: data
     });
-    console.log(this.state);
   };
 
   onChangeHandler = e => {
     this.setState({
       profileImg: e.target.files[0]
     });
-    console.log(e.target.files[0]);
   };
 
   handleSubmit = e => {
@@ -328,6 +192,41 @@ class FinalTour extends Component {
   };
 
   render() {
+    const config = this.componentConfig;
+    const djsConfig = this.djsConfig;
+
+    // For a list of all possible events (there are many), see README.md!
+    const eventHandlers = {
+      init: dz => (this.dropzone = dz),
+      drop: this.callbackArray,
+      addedfile: this.callback,
+      success: this.success,
+      removedfile: this.removedfile
+    };
+
+    const that = this;
+    const dragProps = {
+      onDragEnd(fromIndex, toIndex) {
+        const faqId = that.state.faqId;
+        const item = faqId.splice(fromIndex, 1)[0];
+        faqId.splice(toIndex, 0, item);
+        that.setState({ faqId });
+      },
+      nodeSelector: "div",
+      handleSelector: "a"
+    };
+
+    const dragProps1 = {
+      onDragEnd(fromIndex, toIndex) {
+        const itinearyId = that.state.itinearyId;
+        const item = itinearyId.splice(fromIndex, 1)[0];
+        itinearyId.splice(toIndex, 0, item);
+        that.setState({ itinearyId });
+      },
+      nodeSelector: "div",
+      handleSelector: "a"
+    };
+
     return (
       <Row>
         {/* Editor */}
@@ -371,9 +270,6 @@ class FinalTour extends Component {
                       editor={ClassicEditor}
                       data=""
                       placeholder="Description"
-                      onInit={editor => {
-                        console.log("Editor is ready to use!", editor);
-                      }}
                       onChange={this.handleTextareaChange}
                       config={{
                         ckfinder: {
@@ -405,12 +301,84 @@ class FinalTour extends Component {
 
                     <h4 className="tab-content-title">Itineary</h4>
 
-                    <Accordion>{this.renderDivs()}</Accordion>
+                    <Accordion
+                      allowMultipleExpanded={true}
+                      allowZeroExpanded={true}
+                      className="itineary-accordion accordion"
+                    >
+                      <ReactDragListView {...dragProps1}>
+                        {this.state.itinearyId.map((itineary, idx) => (
+                          <AccordionItem key={idx} id={"ai-" + itineary}>
+                            <AccordionItemHeading>
+                              <AccordionItemButton>
+                                Itineary Day
+                              </AccordionItemButton>
+                            </AccordionItemHeading>
+                            <a href="#" className="sort-drag">
+                              <i className="material-icons">reorder</i>
+                            </a>
+                            <Button
+                              type="button"
+                              className="btn btn-danger btn-sm"
+                              onClick={() => this.removeItineary(itineary)}
+                            >
+                              <i className="material-icons">close</i>
+                            </Button>
+                            <AccordionItemPanel>
+                              <h6>Itineary Title</h6>
+                              <FormInput
+                                type="text"
+                                placeholder="itineary title"
+                                name="tripCode"
+                                className="form-control mb-3"
+                                value={this.state.itineary}
+                                onChange={this.handleInputChange}
+                                size="lg"
+                              />
+
+                              <FormInput
+                                type="text"
+                                placeholder="itineary date"
+                                name="tripitineary date"
+                                className="form-control mb-3"
+                                value={this.state.itineary}
+                                onChange={this.handleInputChange}
+                                size="lg"
+                              />
+
+                              <FormInput
+                                type="text"
+                                placeholder="itineary time"
+                                name="trip itineary time"
+                                className="form-control mb-3"
+                                value={this.state.itineary}
+                                onChange={this.handleInputChange}
+                                size="lg"
+                              />
+
+                              <CKEditor
+                                editor={ClassicEditor}
+                                data=""
+                                placeholder="Itineray Description"
+                                onChange={this.handleTextareaChange}
+                                config={{
+                                  ckfinder: {
+                                    uploadUrl:
+                                      "http://localhost/8082/backend/public"
+                                  }
+                                }}
+                              />
+                            </AccordionItemPanel>
+                          </AccordionItem>
+                        ))}
+                      </ReactDragListView>
+                    </Accordion>
+
                     <Button
                       theme="accent"
                       size="sm"
                       className="ml-auto float-right mt-3"
-                      type="submit"
+                      type="button"
                       onClick={this.handleAddingAccordion}
                     >
                       <i className="material-icons">file_copy</i>{" "}
@@ -423,9 +391,6 @@ class FinalTour extends Component {
                       editor={ClassicEditor}
                       data=""
                       placeholder="Description"
-                      onInit={editor => {
-                        console.log("Editor is ready to use!", editor);
-                      }}
                       onChange={this.handleTextareaChange}
                       config={{
                         ckfinder: {
@@ -439,9 +404,6 @@ class FinalTour extends Component {
                       editor={ClassicEditor}
                       data=""
                       placeholder="Description"
-                      onInit={editor => {
-                        console.log("Editor is ready to use!", editor);
-                      }}
                       onChange={this.handleTextareaChange}
                       config={{
                         ckfinder: {
@@ -461,17 +423,72 @@ class FinalTour extends Component {
                     <p>
                       <strong>Create a Image Gallery</strong>
                     </p>
-                    <Previews />
+                    <DropzoneComponent
+                      config={config}
+                      eventHandlers={eventHandlers}
+                      djsConfig={djsConfig}
+                    />
                   </TabPanel>
                   <TabPanel>
                     <h4 className="tab-content-title">FAQs</h4>
 
-                    <Accordion>{this.renderFaq()}</Accordion>
+                    <Accordion
+                      allowMultipleExpanded={true}
+                      allowZeroExpanded={true}
+                    >
+                      <ReactDragListView {...dragProps}>
+                        <div className="sortable">
+                          {this.state.faqId.map((faq, idx) => (
+                            <AccordionItem key={faq} id={"ai-" + faq}>
+                              <AccordionItemHeading>
+                                <AccordionItemButton>FAQs</AccordionItemButton>
+                              </AccordionItemHeading>
+                              <a href="#" className="sort-drag">
+                                <i className="material-icons">reorder</i>
+                              </a>
+                              <Button
+                                type="button"
+                                className="btn btn-danger btn-sm"
+                                onClick={() => this.removeFaq(faq)}
+                              >
+                                <i className="material-icons">close</i>
+                              </Button>
+                              <AccordionItemPanel>
+                                <h6>FAQs Question</h6>
+                                <FormInput
+                                  type="text"
+                                  placeholder="faq question"
+                                  name="tripCode"
+                                  className="form-control mb-3"
+                                  value={this.state.faq}
+                                  onChange={this.handleInputChange}
+                                  size="lg"
+                                />
+
+                                <CKEditor
+                                  editor={ClassicEditor}
+                                  data=""
+                                  placeholder="faq Description"
+                                  onChange={this.handleTextareaChange}
+                                  config={{
+                                    ckfinder: {
+                                      uploadUrl:
+                                        "http://localhost/8082/backend/public"
+                                    }
+                                  }}
+                                />
+                              </AccordionItemPanel>
+                            </AccordionItem>
+                          ))}
+                        </div>
+                      </ReactDragListView>
+                    </Accordion>
+
                     <Button
                       theme="accent"
                       size="sm"
                       className="ml-auto float-right mt-3"
-                      type="submit"
+                      type="button"
                       onClick={this.handleAddingFaq}
                     >
                       <i className="material-icons">file_copy</i> {"Add FAQs"}
@@ -479,19 +496,6 @@ class FinalTour extends Component {
                   </TabPanel>
                 </Tabs>
 
-                {/* <div className="custom-file mb-3">
-                  <input
-                    onChange={this.onChangeHandler}
-                    type="file"
-                    accept="image/*"
-                    name="Choose Image"
-                    className="custom-file-input"
-                    id="customFile2"
-                  />
-                  <label className="custom-file-label" htmlFor="customFile2">
-                    choose image ....
-                  </label>
-                </div> */}
                 <br />
                 <br />
               </CardBody>
@@ -637,7 +641,12 @@ class FinalTour extends Component {
               <CardBody className="p-0">
                 <ListGroup flush>
                   <ListGroupItem className="d-flex px-3">
-                    <Previews />
+                    <DropzoneComponent
+                      config={config}
+                      eventHandlers={eventHandlers}
+                      djsConfig={djsConfig}
+                      multiple="false"
+                    />
                   </ListGroupItem>
                 </ListGroup>
               </CardBody>

@@ -3,20 +3,6 @@ import { Link } from "react-router-dom";
 import "../../App.css";
 import { Button } from "shards-react";
 
-//import bannerOneImage from "../../assets/img/beach1.jpg";
-
-// onDeleteClick(id) {
-//   axios
-//     .delete("http://localhost:8082/api/posts/" + this.props.match.params.id)
-//     .then(res => {
-//       //this.props.history.push("/blog-posts");
-//       console.log(this.state);
-//     })
-//     .catch(err => {
-//       console.log("Error form ShowPostDetails_deleteClick");
-//     });
-// };
-
 const PostCard = props => {
   const post = props.post;
 
@@ -36,38 +22,6 @@ const PostCard = props => {
   }
 
   return (
-    // <Col lg="3" md="6" sm="12" className="mb-4">
-    //   <Card small className="card-post card-post--1">
-    //     <div className="card-post__image" style={finalPostImage}>
-    //       <Badge
-    //         pill
-    //         className={`card-post__category bg-${post.categoryTheme}`}
-    //       >
-    //         {post.category}
-    //       </Badge>
-    //       <div className="card-post__author d-flex">
-    //         <a
-    //           href={`/edit-post/${post._id}`}
-    //           style={avatar}
-    //           className="card-post__author-avatar card-post__author-avatar--small"
-    //         >
-    //           Written by {post.author}
-    //         </a>
-    //       </div>
-    //     </div>
-    //     <CardBody>
-    //       <h5 className="card-title">
-    //         <Link className="text-fiord-blue" to={`/edit-post/${post._id}`}>
-    //           {post.title}
-    //         </Link>
-    //       </h5>
-    //       <div className="card-text d-inline-block mb-3">
-    //         {post.description}
-    //       </div>
-    //       <span className="text-muted">{post.published_date}</span>
-    //     </CardBody>
-    //   </Card>
-    // </Col>
     <tr role="row" className="odd">
       <td className="file-manager__item-icon" tabIndex="0">
         <div>
