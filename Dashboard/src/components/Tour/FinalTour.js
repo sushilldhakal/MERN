@@ -74,6 +74,7 @@ class FinalTour extends Component {
     const faqId = [];
     const itinearyId = [];
     const factId = [];
+    console.log(factId);
     // faqId.push({
     //   title: `rows$`
     // });
