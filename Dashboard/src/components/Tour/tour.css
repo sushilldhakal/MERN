@@ -125,6 +125,12 @@
   background-color: #cacedb;
   padding: 10px 10px 10px 30px;
   border: 1px solid #737373;
+  outline: none;
+}
+.accordion__heading .accordion__button[aria-expanded="true"] {
+  background: #ffb400;
+  color: #fff;
+  border: 1px solid #ffb502;
 }
 
 .sort-drag {

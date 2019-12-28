@@ -73,6 +73,7 @@ class FinalTour extends Component {
 
     const faqId = [];
     const itinearyId = [];
+    const factId = [];
     // faqId.push({
     //   title: `rows$`
     // });
@@ -91,7 +92,7 @@ class FinalTour extends Component {
       writing: false,
       itinearyId,
       faqId,
-      faqHandel: []
+      factId
     };
 
     // this.fileInput = React.createRef();
@@ -103,8 +104,11 @@ class FinalTour extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleAddingAccordion = this.handleAddingAccordion.bind(this);
     this.handleAddingFaq = this.handleAddingFaq.bind(this);
+    this.handleAddingFact = this.handleAddingFact.bind(this);
+
     this.removeItineary = this.removeItineary.bind(this);
     this.removeFaq = this.removeFaq.bind(this);
+    this.removeFact = this.removeFact.bind(this);
   }
   handleAddingAccordion() {
     let curr = this.state.itinearyId;
@@ -117,11 +121,20 @@ class FinalTour extends Component {
     this.setState({ faqId: [...curr, uniqueID] });
   }
 
+  handleAddingFact() {
+    let curr = this.state.factId;
+    const uniqueID = Date.now();
+    this.setState({ factId: [...curr, uniqueID] });
+  }
+
   removeItineary(e) {
     document.getElementById("ai-" + e).remove();
   }
 
   removeFaq(e) {
+    document.getElementById("ai-" + e).remove();
+  }
+  removeFact(e) {
     document.getElementById("ai-" + e).remove();
   }
 
@@ -222,6 +235,16 @@ class FinalTour extends Component {
         const item = itinearyId.splice(fromIndex, 1)[0];
         itinearyId.splice(toIndex, 0, item);
         that.setState({ itinearyId });
+      },
+      nodeSelector: "div",
+      handleSelector: "a"
+    };
+    const dragProps2 = {
+      onDragEnd(fromIndex, toIndex) {
+        const factId = that.state.factId;
+        const item = factId.splice(fromIndex, 1)[0];
+        factId.splice(toIndex, 0, item);
+        that.setState({ factId });
       },
       nodeSelector: "div",
       handleSelector: "a"
@@ -414,6 +437,61 @@ class FinalTour extends Component {
                   </TabPanel>
                   <TabPanel>
                     <h4 className="tab-content-title">Facts</h4>
+
+                    <ReactDragListView {...dragProps2}>
+                      <div className="sortable container">
+                        {this.state.factId.map((fact, idx) => (
+                          <div key={idx} className="row" id={"ai-" + fact}>
+                            <Col lg="2" md="3" xs="6">
+                              <a href="#" className="sort-drag">
+                                <i className="material-icons">reorder</i>
+                              </a>
+                            </Col>
+
+                            <Col lg="4" md="3" xs="6">
+                              <FormInput
+                                type="text"
+                                placeholder="icon code"
+                                name="icon code"
+                                className="form-control mb-3"
+                                value={this.state.faq}
+                                onChange={this.handleInputChange}
+                                size="lg"
+                              />
+                            </Col>
+                            <Col lg="4" md="3" xs="6">
+                              <FormInput
+                                type="text"
+                                placeholder="Fact info"
+                                name="Fact info"
+                                className="form-control mb-3"
+                                value={this.state.faq}
+                                onChange={this.handleInputChange}
+                                size="lg"
+                              />
+                            </Col>
+                            <Col lg="2" md="3" xs="6">
+                              <Button
+                                type="button"
+                                className="btn btn-danger btn-sm"
+                                onClick={() => this.removeFact(fact)}
+                              >
+                                <i className="material-icons">close</i>
+                              </Button>
+                            </Col>
+                          </div>
+                        ))}
+                      </div>
+                    </ReactDragListView>
+                    <Button
+                      theme="accent"
+                      size="sm"
+                      className="ml-auto float-right mt-3"
+                      type="button"
+                      onClick={this.handleAddingFact}
+                    >
+                      <i className="material-icons">file_copy</i> {"Add FAQs"}
+                    </Button>
                   </TabPanel>
                   <TabPanel>
                     <h4 className="tab-content-title">Dates/Prices</h4>
